@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3e0ff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  border-bottom: 4px solid #c8c0ff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.sign-in {
+  border: 1px solid #555;
+  background-color: white;
+  color: black;
+}
+
+.register {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.sign-in:hover {
+  background-color: #f0f0f0;
+}
+
+.register:hover {
+  background-color: #333;
+}
