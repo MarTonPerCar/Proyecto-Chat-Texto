@@ -1,12 +1,30 @@
 /* Estilos para alinear los botones */
 .boton-container {
   display: flex;
-  justify-content: space-between; /* Para separar los botones */
+  justify-content: space-around; /* Para separar los botones */
   padding: 20px;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 15px 30px; /* Botones más grandes */
+  font-size: 18px;    /* Fuente más grande */
   cursor: pointer;
+  border: none;
+  border-radius: 8px;  /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el ratón */
+}
+
+.aceptar {
+  background-color: green;  /* Color de fondo verde */
+  color: white; /* Texto blanco */
+}
+
+.cancelar {
+  background-color: red;    /* Color de fondo rojo */
+  color: white; /* Texto blanco */
+}
+
+/* Efecto de hover para los botones */
+button:hover {
+  opacity: 0.8; /* Efecto de opacidad cuando se pasa el ratón por encima */
 }
