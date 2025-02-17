@@ -1,15 +1,12 @@
-button {
-  width: 51.5%;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+/* Estilos para alinear los botones */
+.boton-container {
+  display: flex;
+  justify-content: space-between; /* Para separar los botones */
+  padding: 20px;
 }
 
-button:hover {
-  background-color: #45a049;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }

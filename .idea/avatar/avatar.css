@@ -1,0 +1,15 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.circular-img {
+  width: 50px; /* Tamaño de la imagen */
+  height: 50px;
+  border-radius: 70%; /* Hace la imagen completamente circular */
+  object-fit: cover; /* Asegura que la imagen se recorte bien */
+  border: 3px solid #333; /* Borde opcional */
+}
