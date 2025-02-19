@@ -1,3 +1,4 @@
+
 /* Reset básico */
 * {
   margin: 0;
@@ -28,8 +29,8 @@ body {
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 }
 
@@ -54,8 +55,8 @@ body {
 }
 
 .btn-img {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
 }
 
 /* Avatar */
@@ -67,14 +68,14 @@ body {
 }
 
 .circular-img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   border: 2px solid #c8c0ff;
 }
 
 .username {
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 20px;
+  margin-top: 0px;
   color: #333;
 }
