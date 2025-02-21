@@ -1,0 +1,42 @@
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.message {
+  display: flex;
+  align-items: center; /* Alinea el avatar con el mensaje */
+}
+
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px; /* Espacio entre el avatar y el mensaje */
+  object-fit: cover; /* Ajusta bien la imagen en el círculo */
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el texto verticalmente */
+}
+
+.text p {
+  margin: 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: none; /* Sin fondo */
+}
+
+time {
+  font-size: 12px;
+  color: gray;
+  align-self: flex-start; /* Alinea la hora a la izquierda */
+}
