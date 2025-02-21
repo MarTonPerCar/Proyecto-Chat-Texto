@@ -8,18 +8,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.message {
-  display: flex;
-  align-items: center; /* Alinea el avatar con el mensaje */
-}
 
-.message img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px; /* Espacio entre el avatar y el mensaje */
-  object-fit: cover; /* Ajusta bien la imagen en el círculo */
-}
 
 .text {
   display: flex;
