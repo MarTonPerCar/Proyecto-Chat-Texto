@@ -5,12 +5,12 @@ body {
 label {
   font-weight: bold;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1vw;
 }
 
 input {
-  height: 20px;
-  width: 50%;
+  height: 2vh;
+  width: 50vw;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
