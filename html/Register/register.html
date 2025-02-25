@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+
+    <title>Title</title>
+
+    <script src="/js/xlu-include-file.js"></script>
+    <link rel="stylesheet" href="register.css">
+  </head>
+  <body>
+
+    <header id="header" xlu-include-file='/Templates/header/header.html'></header>
+
+    <main>
+      <div class="form-container">
+        <form id="input-group">
+          <div xlu-include-file="/Templates/request (Email)/request.html"></div>
+          <div xlu-include-file="/Templates/request (Password)/request.html"></div>
+          <div xlu-include-file="/Templates/request (Name)/request.html"></div>
+          <div xlu-include-file="/Templates/request (Surname)/request.html"></div>
+          <div xlu-include-file="/Templates/request (PhoneNumber)/request.html"></div>
+        </form>
+      </div>
+
+      <!-- Botón para enviar el formulario -->
+      <div class="boton-container">
+        <a href="/html/signIn/signIn.html" target="_self">
+          <button id="btn-registrar">Registrarse</button>
+        </a>
+      </div>
+
+    </main>
+
+    <footer id="footer" xlu-include-file="/Templates/footer/footer.html"></footer>
+
+    <script>
+      xLuIncludeFile();
+    </script>
+
+  </body>
+</html>

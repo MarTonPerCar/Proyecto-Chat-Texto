@@ -5,7 +5,7 @@ body {
 label {
   font-weight: bold;
   display: block;
-  margin-bottom: 1vw;
+  margin-bottom: 5px;
 }
 
 input {
