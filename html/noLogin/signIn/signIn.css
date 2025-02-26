@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Al menos la altura completa de la pantalla */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  margin-bottom: 20px; /* Espaciado con el main */
+}
+
+#footer {
+  margin-top: 20px; /* Espaciado con el main */
+}
+
+main {
+  flex: 1; /* Hace que el main crezca y empuje el footer abajo */
+  padding: 20px;
+}
+
+#email{
+  align-items: center;
+  text-align: center;
+}
+
+#password {
+  align-items: center;
+  text-align: center;
+}
+
+.texto-container {
+  display: flex;
+  justify-content: center; /* Centrar el botón */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.boton-container {
+  display: flex;
+  justify-content: center; /* Centrar el botón */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.boton-container a {
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.boton-container button {
+  height: 3vh; /* Misma altura que el input */
+  width: 50vw; /* Misma anchura que el input */
+  border: 1px solid #333333; /* Mismo borde que el input */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #333333; /* Color de fondo similar al input */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño de letra */
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.boton-container button:hover {
+  background-color: #25D366; /* Cambio de color al pasar el mouse */
+}
+
+
+

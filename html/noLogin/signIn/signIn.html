@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+
+    <title>Title</title>
+
+    <script src="/js/xlu-include-file.js"></script>
+    <link rel="stylesheet" href="../../noLogin/signIn/signIn.css">
+  </head>
+  <body>
+
+    <header id="header" xlu-include-file='/Templates/header/header.html'></header>
+
+    <main>
+      <form>
+        <div id="email" xlu-include-file="/Templates/request (Email)/request.html"></div>
+        <div id="password" xlu-include-file="/Templates/request (Password)/request.html"></div>
+      </form>
+
+      <div class="boton-container">
+        <a href="inicio.html">
+          <button type="button">Iniciar Sesión</button>
+        </a>
+      </div>
+
+      <div class="texto-container">
+        <a href="/html/noLogin/recoverPassword(Email)/recoverPassword.html">Te has olvidado de la contraseña?</a>
+      </div>
+
+    </main>
+
+    <footer id="footer" xlu-include-file="/Templates/footer/footer.html"></footer>
+
+    <script>
+      xLuIncludeFile();
+    </script>
+
+  </body>
+</html>
+
+
