@@ -1,5 +1,4 @@
-/* styles.css */
-body {
+.body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -7,8 +6,6 @@ body {
   height: 100vh;
   background-color: #f0f0f0;
 }
-
-
 
 .text {
   display: flex;
@@ -23,7 +20,7 @@ body {
   background: none; /* Sin fondo */
 }
 
-time {
+.time {
   font-size: 12px;
   color: gray;
   align-self: flex-start; /* Alinea la hora a la izquierda */

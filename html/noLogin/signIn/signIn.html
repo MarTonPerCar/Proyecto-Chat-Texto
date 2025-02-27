@@ -15,10 +15,12 @@
     <header id="header" xlu-include-file='/Templates/header/header.html'></header>
 
     <main>
-      <form>
-        <div id="email" xlu-include-file="/Templates/request (Email)/request.html"></div>
-        <div id="password" xlu-include-file="/Templates/request (Password)/request.html"></div>
-      </form>
+      <div class="form-container">
+        <form id="input-group">
+          <div xlu-include-file="/Templates/request (Email)/request.html"></div>
+          <div xlu-include-file="/Templates/request (Password)/request.html"></div>
+        </form>
+      </div>
 
       <div class="boton-container">
         <a href="inicio.html">
@@ -27,7 +29,7 @@
       </div>
 
       <div class="texto-container">
-        <a href="/html/noLogin/recoverPassword(Email)/recoverPassword.html">Te has olvidado de la contraseña?</a>
+        <a href="/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html">Te has olvidado de la contraseña?</a>
       </div>
 
     </main>

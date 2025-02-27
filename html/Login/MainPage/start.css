@@ -1,0 +1,251 @@
+/* Reset y configuración global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Ajustar el body para que el footer no esté pegado */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  background: white;
+}
+
+/* Permitir que el contenedor principal crezca */
+.container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  min-height: 85vh; /* Aumentamos la altura para hacer espacio */
+  background: gray;
+  overflow: hidden;
+}
+
+/* Ajustar la altura del chat para que ocupe más */
+.chat-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh; /* Aumentamos la altura del chat */
+}
+
+.conversation div {
+  all: unset; /* Resetea estilos heredados del CSS general */
+}
+
+/* Hacer que el footer siempre esté en la parte inferior */
+footer {
+  margin-top: auto;
+  padding: 20px;
+}
+
+/* ------------------- */
+/* BARRA LATERAL */
+/* ------------------- */
+#sidebar {
+  width: 30%;
+  background: white;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-header {
+  display: flex;
+  justify-content: center; /* Centra el texto horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  background: black;
+  color: white;
+}
+
+/* Lista de conversaciones */
+.chat-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 0; /* Elimina espacio entre los chats */
+}
+
+/* Cada chat ocupará todo el ancho y se alineará correctamente */
+.conversation {
+  width: 10%;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+/* El primer chat estará pegado a "Mis Chats" */
+.conversation:first-child {
+  margin-top: 0;
+}
+
+/* Efecto hover en chats */
+.conversation:hover {
+  background: #f0f0f0;
+}
+
+/* ------------------- */
+/* ÁREA DEL CHAT */
+/* ------------------- */
+.chat-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Espacio para el avatar y el nombre */
+.user-info-template {
+  display: flex;
+  align-items: center;
+  height: 60px; /* Espacio adecuado */
+  background: black;
+  padding: 10px;
+  color: white;
+}
+
+#avatar {
+  display: flex;
+  align-items: center; /* Alinea en una misma línea */
+  gap: 8px; /* Espaciado entre imagen y texto */
+}
+
+#avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#avatar p {
+  font-size: 14px;
+  color: white; /* Color blanco */
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; /* Evita que el nombre se corte */
+}
+
+
+/* Asegurar que el contenedor de mensajes mantiene su estructura */
+.chat-messages {
+  flex-grow: 1;
+  padding: 15px;
+  background: gray;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 200px); /* Ajusta para que el footer no lo empuje fuera */
+}
+
+/* Ajustar mensajes dentro del chat */
+.messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* Cada mensaje ocupa su espacio correctamente */
+.message {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* Forzar que los mensajes respeten su propio diseño */
+.message.received {
+  background: white;
+  align-self: flex-start;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message.received time{
+  align-self: flex-end;
+}
+
+.message.sent {
+  background: lawngreen;
+  align-self: flex-end;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------- */
+/* BARRA DE MENSAJES */
+/* ------------------- */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background: black;
+  gap: 10px;
+  align-items: center;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+}
+
+.chat-input button {
+  background: lightslategrey;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.chat-input button:hover {
+  background: darkgrey;
+}
+
+.emoji-btn, .attach-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.emoji-btn:hover, .attach-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------- */
+/* RESPONSIVE */
+/* ------------------- */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .chat-container {
+    width: 100%;
+  }
+}
