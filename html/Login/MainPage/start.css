@@ -11,7 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100vw;
   background: white;
 }
 
@@ -27,14 +26,10 @@ body {
 
 /* Ajustar la altura del chat para que ocupe más */
 .chat-container {
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   min-height: 75vh; /* Aumentamos la altura del chat */
-}
-
-.conversation div {
-  all: unset; /* Resetea estilos heredados del CSS general */
 }
 
 /* Hacer que el footer siempre esté en la parte inferior */
@@ -65,32 +60,108 @@ footer {
   color: white;
 }
 
-/* Lista de conversaciones */
-.chat-list {
-  flex-grow: 1;
-  overflow-y: auto;
-  width: 100%;
+/* ------------------- */
+/* LISTA DE CONVERSACIONES */
+/* ------------------- */
+/* Estilo de la barra lateral */
+#sidebar {
+  width: 30%;
+  background: white;
+  border-right: 1px solid #ddd;
   display: flex;
   flex-direction: column;
   padding: 0;
-  gap: 0; /* Elimina espacio entre los chats */
 }
 
-/* Cada chat ocupará todo el ancho y se alineará correctamente */
-.conversation {
-  width: 10%;
-  margin: 0;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+/* Cabecera de la barra lateral */
+#chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Alinear a la izquierda */
+  padding: 15px;
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+/* Contenedor de los botones */
+.chat-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 8px; /* Espacio entre botones */
+}
+
+/* Estilos de los botones */
+.icon-button {
+  background: white;
+
+  border: none;
   cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background 0.2s ease-in-out;
 }
 
-/* El primer chat estará pegado a "Mis Chats" */
-.conversation:first-child {
-  margin-top: 0;
+.icon-button img {
+  width: 24px; /* Ajusta el tamaño del icono */
+  height: 24px;
 }
 
-/* Efecto hover en chats */
+/* Efecto hover */
+.icon-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Contenedor de la lista de chats */
+.chat-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  width: 100%; /* Ocupar todo el ancho */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Cada conversación ocupará **TODO** el espacio disponible */
+.conversation {
+  width: 100%; /* Ocupar todo el ancho */
+  background: white;
+  transition: background 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+/* Avatar dentro de cada chat */
+.conversation img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Ajuste del contenido del chat */
+.chat-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Permite que el texto ocupe todo el espacio disponible */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estilos de texto en el chat */
+.chat-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.chat-info p strong {
+  font-size: 16px;
+}
+
+/* Efecto hover */
 .conversation:hover {
   background: #f0f0f0;
 }
@@ -134,7 +205,6 @@ footer {
   white-space: nowrap; /* Evita que el nombre se corte */
 }
 
-
 /* Asegurar que el contenedor de mensajes mantiene su estructura */
 .chat-messages {
   flex-grow: 1;
@@ -174,7 +244,7 @@ footer {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.message.received time{
+.message.received time {
   align-self: flex-end;
 }
 
@@ -230,22 +300,4 @@ footer {
 
 .emoji-btn:hover, .attach-btn:hover {
   transform: scale(1.1);
-}
-
-/* ------------------- */
-/* RESPONSIVE */
-/* ------------------- */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    height: auto;
-  }
-
-  .chat-container {
-    width: 100%;
-  }
 }

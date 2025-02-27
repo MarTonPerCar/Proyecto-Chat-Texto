@@ -7,7 +7,7 @@
 }
 
 /* Centrado de la página */
-body {
+.body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ body {
 
 /* Contenedor principal del chat */
 .chat-list {
-  width: 350px;
+  width: 100%;
   max-height: 80vh;
   background: white;
   border-radius: 12px;
@@ -32,7 +32,6 @@ body {
   display: flex;
   align-items: center;
   padding: 12px;
-  border-bottom: 1px solid #ddd;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
 }

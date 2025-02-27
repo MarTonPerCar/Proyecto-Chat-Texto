@@ -7,7 +7,7 @@
     <title>Chat Estilo WhatsApp Web</title>
 
     <script src="/js/xlu-include-file.js"></script>
-    <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="/html/Login/MainPage/start.css">
   </head>
   <body>
 
@@ -16,7 +16,17 @@
     <div class="container">
       <!-- Barra lateral de conversaciones -->
       <aside id="sidebar">
-        <div id="chat-header">Mis Chats</div>
+        <div id="chat-header">
+          <span>Mis Chats</span>
+          <div class="chat-buttons">
+            <button class="icon-button" id="add-contact">
+              <img src="/html/Login/MainPage/addContact.png" alt="Añadir Contacto">
+            </button>
+            <button class="icon-button" id="create-group">
+              <img src="/html/Login/MainPage/addGroup.png" alt="Crear Grupo">
+            </button>
+          </div>
+        </div>
         <div class="chat-list" id="chatContainer">
           <!-- Aquí se cargarán los templates de los chats -->
           <div class="conversation" xlu-include-file="/Templates/conversations/conversations.html"></div>
@@ -27,15 +37,15 @@
       <!-- Área de chat principal -->
       <main class="chat-container">
         <div class="user-info-template" id="userInfo">
-          <!-- Aquí irá el template del avatar + nombre
-          <div id="avatar" xlu-include-file="/Templates/avatarNombre/avatarNombre.html"></div> -->
+          <!-- Aquí irá el template del avatar + nombre -->
+          <div id="avatar" xlu-include-file="/Templates/avatarNombre/avatarNombre.html"></div>
         </div>
         <div class="chat-messages" id="messageContainer">
-          <!-- Aquí se generarán los mensajes dinámicamente
+          <!-- Aquí se generarán los mensajes dinámicamente -->
           <div class="messages">
             <div class="message received" xlu-include-file="/Templates/menssages/menssages.html"></div>
             <div class="message sent" xlu-include-file="/Templates/menssages/menssages.html"></div>
-          </div> -->
+          </div>
         </div>
 
         <!-- Barra de entrada de mensajes -->
