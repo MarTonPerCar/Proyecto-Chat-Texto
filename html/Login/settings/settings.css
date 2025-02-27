@@ -5,8 +5,13 @@
   font-family: Arial, sans-serif;
 }
 
+body {
+  min-height: 100vh; /* La página ocupará al menos el 100% de la pantalla */
+}
+
 /* Contenedor principal de ajustes */
 #settings-main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,11 +22,6 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: auto; /* Centra el contenedor en la página */
-}
-
-/* Título de ajustes */
-#settings-main h2 {
-  font-size: 30px;
 }
 
 /* Campos seleccionables */
@@ -37,27 +37,38 @@
   border: 1px solid #ccc;
 }
 
-/* Contenedor de botones */
+/* Asegurar que el contenedor de botones mantiene la estructura */
 .buttons-container {
   display: flex;
-  width: 80%;
-  gap: 20%
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Botones */
-.buttons-container button {
-  width: 100%;
+/* Enlace dentro de los botones: ocupa todo el ancho */
+.buttons-container a {
+  text-decoration: none;
+}
+
+/* Botón con enlace */
+.buttons-container a button {
+  width: 63vb;
   padding: 14px;
   font-size: 16px;
   color: white;
+
   background: #222;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 4px;
   text-align: center;
 }
 
-.buttons-container button:hover {
+.buttons-container a button:hover {
   background: #444;
+}
+
+#footer {
+  margin-top: auto;
 }

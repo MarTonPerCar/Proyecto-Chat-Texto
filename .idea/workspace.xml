@@ -4,33 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Finish Main Page">
-      <change afterPath="$PROJECT_DIR$/Templates/notChangeableText/notChangeableText (Phonenumber).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/requestSelector/requestSelector (Theme).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/profile/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/profile/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/settings/settings.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/settings/settings.html" afterDir="false" />
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Working on Logon">
+      <change afterPath="$PROJECT_DIR$/html/Login/editProfile/editProfile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Not changeable Text/Not changeable Text.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Not changeable Text/Not changeable Text.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/notChangeableText/notChangeableText (Email).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (Email)/request.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (Email)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (Email).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (Name)/request.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (Name)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (Name).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (Password)/request.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (Password)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (Password).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (PhoneNumber)/request.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (PhoneNumber)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (PhoneNumber).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (RepeatPassword)/request.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (RepeatPassword)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (RepeatPassword).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (Surname)/request.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/request (Surname)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (Surname).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/requestSelector/requestSelector.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/requestSelector/requestSelector.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/requestSelector/requestSelector.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/footer/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request/request.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/settings/settings.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +71,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Sprint-1",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mario/WebstormProjects/Proyecto-Chat-Texto/Templates/request",
+    "last_opened_file_path": "C:/Users/Mario/WebstormProjects/Proyecto-Chat-Texto/html/Login",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -105,11 +86,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\requestSelector" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\settings" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates" />
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
@@ -146,7 +127,7 @@
       <workItem from="1740600937349" duration="13328000" />
       <workItem from="1740620662148" duration="639000" />
       <workItem from="1740624127292" duration="3739000" />
-      <workItem from="1740661623517" duration="5687000" />
+      <workItem from="1740661623517" duration="9133000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -204,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740629061132</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Working on Logon">
+      <option name="closed" value="true" />
+      <created>1740667455721</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740667455721</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +217,7 @@
     <MESSAGE value="Added button template" />
     <MESSAGE value="Working on noLogin" />
     <MESSAGE value="Finish Main Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish Main Page" />
+    <MESSAGE value="Working on Logon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on Logon" />
   </component>
 </project>

@@ -1,0 +1,63 @@
+/* Centrar el contenido en la pantalla */
+
+body{
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  gap: 20px; /* Espaciado entre los elementos */
+}
+
+/* Contenedor del formulario */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 0 20px;
+  background: white;
+  width: 80%; /* Ancho del formulario */
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.a {
+  display: inline-block;
+}
+
+/* Enlace de cambiar contraseña */
+#changePassword {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+
+}
+
+#edit-profile {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+
+  background: #222;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
