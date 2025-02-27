@@ -4,12 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Working on Login">
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Finish Main Page">
+      <change afterPath="$PROJECT_DIR$/Templates/notChangeableText/notChangeableText (Phonenumber).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/requestSelector/requestSelector (Theme).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Login/profile/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Login/profile/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Login/settings/settings.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Login/settings/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/conversations/conversations.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/conversations/conversations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/conversations/conversations.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/conversations/conversations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Not changeable Text/Not changeable Text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Not changeable Text/Not changeable Text.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/notChangeableText/notChangeableText (Email).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (Email)/request.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (Email)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (Email).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (Name)/request.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (Name)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (Name).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (Password)/request.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (Password)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (Password).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (PhoneNumber)/request.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (PhoneNumber)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (PhoneNumber).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (RepeatPassword)/request.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (RepeatPassword)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (RepeatPassword).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (Surname)/request.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/request (Surname)/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/request/request (Surname).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/requestSelector/requestSelector.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/requestSelector/requestSelector.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/requestSelector/requestSelector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,53 +70,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.addButton.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.asdsad.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.avatar.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.button.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.footer.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.prueba.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.request.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.requestSelector.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.sigIn.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Sprint-1&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mario/WebstormProjects/Proyecto-Chat-Texto/Templates/conversations&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Mario/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.addButton.html.executor": "Run",
+    "JavaScript Debug.asdsad.html.executor": "Run",
+    "JavaScript Debug.avatar.html.executor": "Run",
+    "JavaScript Debug.button.html.executor": "Run",
+    "JavaScript Debug.footer.html.executor": "Run",
+    "JavaScript Debug.header.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.prueba.html.executor": "Run",
+    "JavaScript Debug.register.html.executor": "Run",
+    "JavaScript Debug.request.html.executor": "Run",
+    "JavaScript Debug.requestSelector.html.executor": "Run",
+    "JavaScript Debug.sigIn.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Sprint-1",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Mario/WebstormProjects/Proyecto-Chat-Texto/Templates/request",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/Mario/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\conversations" />
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login" />
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\noLogin" />
+      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
+      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\requestSelector" />
+      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\settings" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates" />
-      <recent name="C:\Users\enriq\WebstormProjects\untitled1\js" />
+      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
+      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\notChangeableText" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\MainPage" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\avatarNombre" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\avatar" />
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login" />
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\noLogin" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -124,7 +145,8 @@
       <workItem from="1740441010316" duration="891000" />
       <workItem from="1740600937349" duration="13328000" />
       <workItem from="1740620662148" duration="639000" />
-      <workItem from="1740624127292" duration="3487000" />
+      <workItem from="1740624127292" duration="3739000" />
+      <workItem from="1740661623517" duration="5687000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -174,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740616241158</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finish Main Page">
+      <option name="closed" value="true" />
+      <created>1740629061132</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740629061132</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +227,7 @@
     <MESSAGE value="Added footer and changed avatar" />
     <MESSAGE value="Added button template" />
     <MESSAGE value="Working on noLogin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on noLogin" />
+    <MESSAGE value="Finish Main Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Main Page" />
   </component>
 </project>

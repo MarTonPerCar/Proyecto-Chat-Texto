@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   font-family: Arial, sans-serif;
   display: flex;
   align-items: center;

@@ -1,0 +1,23 @@
+/* Reset y configuración global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+#profile-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+}
+
+/* Ajustar los div internos */
+#avatar, .notChan {
+  width: 60%; /* Controla el ancho */
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+}

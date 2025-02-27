@@ -6,7 +6,7 @@
 
 /* Cuerpo */
 
-body {
+.body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Al menos la altura completa de la pantalla */

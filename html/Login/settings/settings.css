@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de ajustes */
+#settings-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Centra el contenedor en la página */
+}
+
+/* Título de ajustes */
+#settings-main h2 {
+  font-size: 30px;
+}
+
+/* Campos seleccionables */
+.selectable {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Asegurar que los inputs ocupen todo el ancho */
+.selectable select, .selectable input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+/* Contenedor de botones */
+.buttons-container {
+  display: flex;
+  width: 80%;
+  gap: 20%
+}
+
+/* Botones */
+.buttons-container button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  color: white;
+  background: #222;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.buttons-container button:hover {
+  background: #444;
+}

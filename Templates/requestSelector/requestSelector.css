@@ -1,14 +1,14 @@
-body {
+.body {
   font-family: "Times New Roman", sans-serif;
 }
 
-label {
+.label-selector {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
 }
 
-select {
+.select {
   height: 45px;
   width: 51.5%;
   padding: 10px;
