@@ -9,23 +9,26 @@
 
     <script src="/js/xlu-include-file.js"></script>
     <!--../../noLogin/Register/-->
-    <link rel="stylesheet" href="/html/noLogin/recoverPassword(Email)/recoverPassword(Email).css">
+    <link rel="stylesheet" href="/html/Login/addContact/addContact.css">
   </head>
   <body>
 
-    <header id="header" xlu-include-file='/Templates/header/header.html'></header>
+    <header id="header" xlu-include-file="../../../Templates/Header Sign In/Header_Sign_In.html"></header>
 
     <main>
       <div class="form-container">
         <form id="input-group">
           <div xlu-include-file="/Templates/request/request (Email).html"></div>
+          <div xlu-include-file="/Templates/request/request (Name).html"></div>
+          <div xlu-include-file="/Templates/request/request (Surname).html"></div>
+          <div xlu-include-file="/Templates/request/request (PhoneNumber).html"></div>
         </form>
       </div>
 
       <!-- Botón para enviar el formulario -->
       <div class="boton-container">
-        <a href="/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" target="_self">
-          <button id="btn-registrar">Mandar Correo</button>
+        <a href="/html/Login/MainPage/start.html" target="_self">
+          <button id="btn-registrar">Añadir Conctato</button>
         </a>
       </div>
 

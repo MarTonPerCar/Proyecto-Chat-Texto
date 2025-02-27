@@ -40,21 +40,21 @@
 }
 
 /* Sección de usuario */
-.user-section {
+.user-section-header {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 /* Botones */
-.btn {
+.button-header-login {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
 }
 
-.btn-img {
+.button-header-login img {
   width: 25px;
   height: 25px;
 }

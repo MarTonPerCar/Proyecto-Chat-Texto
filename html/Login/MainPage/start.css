@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: white;
+  background-color: #3ec9a7;
 }
 
 /* Permitir que el contenedor principal crezca */
@@ -36,6 +36,10 @@ body {
 footer {
   margin-top: auto;
   padding: 20px;
+}
+
+html:has(#content-special) footer {
+  position: relative !important;
 }
 
 /* ------------------- */

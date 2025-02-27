@@ -1,0 +1,124 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background-color: #3ec9a7;
+}
+
+/* Contenedor principal sin afectar body */
+.group-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px); /* Ajuste para evitar afectar el header y footer */
+  padding: 20px;
+}
+
+/* Contenedor del formulario */
+.group-container {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del grupo */
+.group-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.group-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  object-fit: cover;
+}
+
+/* Formulario */
+.group-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group-form label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.group-form input,
+.group-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Sección de usuarios */
+.user-section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.user-section img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-list img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.add-user {
+  width: 40px;
+  height: 40px;
+  background: #4caf50;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Botones */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-group {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.decline {
+  background: red;
+}
+
+.create {
+  background: blue;
+}

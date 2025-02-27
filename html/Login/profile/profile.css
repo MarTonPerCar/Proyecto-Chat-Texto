@@ -6,6 +6,10 @@
   font-family: Arial, sans-serif;
 }
 
+.body {
+  background-color: #3ec9a7;
+}
+
 #profile-main {
   display: flex;
   flex-direction: column;
