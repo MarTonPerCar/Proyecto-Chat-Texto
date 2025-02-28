@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Finish Login">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/header/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/header/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/addContact/addContact.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/addContact/addContact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/addGroup/addGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/addGroup/addGroup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/profile/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/settings/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/signIn/signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/signIn/signIn.html" afterDir="false" />
-    </list>
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Changes on &lt;a&gt; reference" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +121,7 @@
       <workItem from="1740620662148" duration="639000" />
       <workItem from="1740624127292" duration="3739000" />
       <workItem from="1740661623517" duration="18214000" />
-      <workItem from="1740754586461" duration="3352000" />
+      <workItem from="1740754586461" duration="3791000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -226,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740697695401</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Changes on &lt;a&gt; reference">
+      <option name="closed" value="true" />
+      <created>1740758326842</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740758326842</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +246,7 @@
     <MESSAGE value="Working on Logon" />
     <MESSAGE value="Working on Login" />
     <MESSAGE value="Finish Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish Login" />
+    <MESSAGE value="Changes on &lt;a&gt; reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes on &lt;a&gt; reference" />
   </component>
 </project>

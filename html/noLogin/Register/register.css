@@ -47,10 +47,8 @@ main {
   width: 50vw; /* Mismo ancho que los inputs */
 }
 
-#input-group > div {
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+.form-container form div {
+  width: 100%; /* Asegura que los elementos dentro del form ocupen todo */
 }
 
 /* Botón */
