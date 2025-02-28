@@ -4,34 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Working on Login">
-      <change afterPath="$PROJECT_DIR$/Templates/footerMAINPAGE/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/footerMAINPAGE/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/addContact/addContact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/addContact/addContact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/addGroup/addGroup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/addGroup/addGroup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Finish Login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/header/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/header/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/editProfile/editProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/editProfile/editProfile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/profile/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/settings/settings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/Main/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Main/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/Main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/addContact/addContact.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/addContact/addContact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/addGroup/addGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/addGroup/addGroup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/profile/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/settings/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/signIn/signIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/signIn/signIn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/signIn/signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/signIn/signIn.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +62,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.Header_Sign_In.html.executor": "Run",
     "JavaScript Debug.addButton.html.executor": "Run",
     "JavaScript Debug.asdsad.html.executor": "Run",
     "JavaScript Debug.avatar.html.executor": "Run",
@@ -91,7 +79,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Sprint-1",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mario/WebstormProjects/Proyecto-Chat-Texto/html/Login/addGroup",
+    "last_opened_file_path": "C:/Users/Mario/Downloads/new_example_templates_HTML5",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -147,7 +135,8 @@
       <workItem from="1740600937349" duration="13328000" />
       <workItem from="1740620662148" duration="639000" />
       <workItem from="1740624127292" duration="3739000" />
-      <workItem from="1740661623517" duration="17671000" />
+      <workItem from="1740661623517" duration="18214000" />
+      <workItem from="1740754586461" duration="3352000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -221,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740679212363</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finish Login">
+      <option name="closed" value="true" />
+      <created>1740697580186</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740697580186</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Finish Login">
+      <option name="closed" value="true" />
+      <created>1740697695401</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740697695401</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +252,7 @@
     <MESSAGE value="Finish Main Page" />
     <MESSAGE value="Working on Logon" />
     <MESSAGE value="Working on Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on Login" />
+    <MESSAGE value="Finish Login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Login" />
   </component>
 </project>

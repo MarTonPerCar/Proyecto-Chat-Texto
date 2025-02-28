@@ -43,6 +43,10 @@ main {
   width: 50vw; /* Mismo ancho que los inputs */
 }
 
+.form-container form div {
+  width: 100%; /* Asegura que los elementos dentro del form ocupen todo */
+}
+
 .texto-container {
   display: flex;
   justify-content: center; /* Centrar el botón */
