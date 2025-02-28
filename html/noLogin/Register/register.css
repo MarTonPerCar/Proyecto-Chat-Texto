@@ -6,7 +6,7 @@
 
 /* Cuerpo */
 
-.body {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Al menos la altura completa de la pantalla */
@@ -17,16 +17,15 @@
 }
 
 #header {
-  margin-bottom: 20px; /* Espaciado con el main */
+  margin-bottom: 10px; /* Espaciado con el main */
 }
 
 #footer {
-  margin-top: 20px; /* Espaciado con el main */
+  margin-top: 10px; /* Espaciado con el main */
 }
 
 main {
   flex: 1; /* Hace que el main crezca y empuje el footer abajo */
-  padding: 20px;
 }
 
 /* Formulario */
@@ -43,7 +42,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra los elementos */
-  gap: 15px; /* Espaciado entre los inputs */
+  gap: 10px; /* Espaciado entre los inputs */
   width: 50vw; /* Mismo ancho que los inputs */
 }
 

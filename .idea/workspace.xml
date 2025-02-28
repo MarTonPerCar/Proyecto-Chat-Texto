@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Changes on &lt;a&gt; reference" />
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Changes on &lt;a&gt; reference 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/header/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/header/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/profile/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/settings/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/settings/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/Main/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Main/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +131,7 @@
       <workItem from="1740620662148" duration="639000" />
       <workItem from="1740624127292" duration="3739000" />
       <workItem from="1740661623517" duration="18214000" />
-      <workItem from="1740754586461" duration="3791000" />
+      <workItem from="1740754586461" duration="5571000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -219,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740758326842</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changes on &lt;a&gt; reference 2">
+      <option name="closed" value="true" />
+      <created>1740758594963</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740758594963</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +265,7 @@
     <MESSAGE value="Working on Login" />
     <MESSAGE value="Finish Login" />
     <MESSAGE value="Changes on &lt;a&gt; reference" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes on &lt;a&gt; reference" />
+    <MESSAGE value="Changes on &lt;a&gt; reference 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes on &lt;a&gt; reference 2" />
   </component>
 </project>
