@@ -10,18 +10,18 @@
 .text {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el texto verticalmente */
+  justify-content: center;
 }
 
 .text p {
   margin: 0;
   padding: 8px;
   border-radius: 8px;
-  background: none; /* Sin fondo */
+  background: none;
 }
 
 .time {
   font-size: 12px;
   color: gray;
-  align-self: flex-start; /* Alinea la hora a la izquierda */
+  align-self: flex-start;
 }

@@ -17,11 +17,11 @@ body {
 }
 
 #header {
-  margin-bottom: 20px; /* Espaciado con el main */
+  margin-bottom: 20px;
 }
 
 #footer {
-  margin-top: 20px; /* Espaciado con el main */
+  margin-top: 20px;
 }
 
 main {

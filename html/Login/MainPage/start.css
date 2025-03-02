@@ -203,13 +203,13 @@ html:has(#content-special) footer {
 
 #avatar p {
   font-size: 14px;
-  color: white; /* Color blanco */
+  color: white;
   margin: 0;
   padding: 0;
-  white-space: nowrap; /* Evita que el nombre se corte */
+  white-space: nowrap;
 }
 
-/* Asegurar que el contenedor de mensajes mantiene su estructura */
+
 .chat-messages {
   flex-grow: 1;
   padding: 15px;
@@ -217,7 +217,7 @@ html:has(#content-special) footer {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 200px); /* Ajusta para que el footer no lo empuje fuera */
+  max-height: calc(100vh - 200px);
 }
 
 /* Ajustar mensajes dentro del chat */

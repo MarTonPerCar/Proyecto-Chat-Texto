@@ -1,5 +1,4 @@
 
-/* styles.css */
 body {
   font-family: Arial, sans-serif;
   display: flex;
@@ -11,28 +10,28 @@ body {
 
 .message {
   display: flex;
-  align-items: center; /* Alinea el avatar con el mensaje */
+  align-items: center;
 }
 
 .message img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 10px; /* Espacio entre el avatar y el mensaje */
-  object-fit: cover; /* Ajusta bien la imagen en el círculo */
+  margin-right: 10px;
+  object-fit: cover;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el texto verticalmente */
+  justify-content: center;
 }
 
 .text p {
   margin: 0;
   padding: 8px;
   border-radius: 8px;
-  background: none; /* Sin fondo */
+  background: none;
 }
 
 time {

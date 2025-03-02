@@ -15,16 +15,16 @@ button {
 }
 
 .aceptar {
-  background-color: green;  /* Color de fondo verde */
-  color: white; /* Texto blanco */
+  background-color: green;
+  color: white;
 }
 
 .cancelar {
-  background-color: red;    /* Color de fondo rojo */
-  color: white; /* Texto blanco */
+  background-color: red;
+  color: white;
 }
 
-/* Efecto de hover para los botones */
+
 button:hover {
-  opacity: 0.8; /* Efecto de opacidad cuando se pasa el ratón por encima */
+  opacity: 0.8;
 }

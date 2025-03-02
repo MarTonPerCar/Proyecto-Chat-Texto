@@ -13,15 +13,15 @@ body {
 #profile-main {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
+  align-items: center;
 }
 
 /* Ajustar los div internos */
 #avatar, .notChan {
-  width: 60%; /* Controla el ancho */
+  width: 60%;
   padding: 15px;
 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
+  align-items: center;
 }
