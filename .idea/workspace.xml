@@ -5,23 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Changes on &lt;a&gt; reference 2">
-      <change beforePath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/button/button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/conversations/conversations.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/conversations/conversations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/mensajeGrupo/mensajeGrupo.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/mensajeGrupo/mensajeGrupo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/menssages/menssages.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/menssages/menssages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/addContact/addContact.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/addContact/addContact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/addContact/addContact.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/addContact/addContact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/header/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/header/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Login/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/profile/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/profile/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/Main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/settings/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/settings/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/Main/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Main/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/Register/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Register/register.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +38,12 @@
     &quot;assignee&quot;: &quot;enrique-eg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MarTonPerCar/Proyecto-Chat-Texto.git",
-    "accountId": "62c00ac1-80fc-4440-963e-6c7c493d9d8d"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto&quot;,
+    &quot;accountId&quot;: &quot;6b7bb4c0-f567-4728-b3a6-ee00cedcd083&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -88,7 +80,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
+    "nodejs_interpreter_path": "C:/Users/Mario/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.nodejs",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
@@ -140,7 +132,6 @@
       <workItem from="1740624127292" duration="3739000" />
       <workItem from="1740661623517" duration="18214000" />
       <workItem from="1740754586461" duration="5571000" />
-      <workItem from="1740938567099" duration="886000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
