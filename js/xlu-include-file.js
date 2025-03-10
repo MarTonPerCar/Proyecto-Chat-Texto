@@ -49,7 +49,7 @@ async function xLuIncludeFile() {
                     let content = await response.text();
 
                     // Si el archivo es una plantilla, reemplazamos los placeholders
-                    if (file === "article-template.html") {
+                    if (file === "article-template.main") {
                         let articleData = {
                             title: z[i].getAttribute("data-title"),
                             subtitle: z[i].getAttribute("data-subtitle"),

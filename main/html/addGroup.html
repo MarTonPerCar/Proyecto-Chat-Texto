@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <title>Crear Grupo</title>
+
+    <script src="/js/xlu-include-file.js"></script>
+    <link rel="stylesheet" href="/main/css/addGroup.css">
+  </head>
+  <body>
+
+    <header id="header" xlu-include-file="../../../Templates/Header Sign In/Header_Sign_In.html"></header>
+
+    <main class="group-container">
+      <!-- Imagen del grupo -->
+      <div class="group-image">
+        <img src="/main/externalSource/avatar.png" alt="Foto del grupo">
+      </div>
+
+      <!-- Formulario -->
+      <form class="group-form">
+        <label for="group-name">Nombre grupo</label>
+        <input type="text" id="group-name" placeholder="Nombre del grupo">
+
+        <label for="group-description">Descripción</label>
+        <textarea id="group-description" placeholder="Añade una descripción"></textarea>
+      </form>
+
+      <!-- Sección de imágenes de usuarios -->
+      <div class="user-section">
+        <img src="/main/externalSource/avatar.png" alt="Usuario">
+        <div class="user-list">
+          <!-- -->
+          <img src="/main/externalSource/avatar.png" alt="Usuario">
+          <img src="/main/externalSource/avatar.png" alt="Usuario">
+          <button class="add-user">+</button>
+        </div>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="action-buttons">
+        <a href="start.html" class="button-group decline">Decline</a>
+        <a href="start.html" class="button-group create">Create</a>
+      </div>
+    </main>
+
+    <script>
+      xLuIncludeFile();
+    </script>
+
+    <footer id="footer" xlu-include-file="../../../Templates/footerMAINPAGE/footer.html"></footer>
+
+  </body>
+</html>
+
