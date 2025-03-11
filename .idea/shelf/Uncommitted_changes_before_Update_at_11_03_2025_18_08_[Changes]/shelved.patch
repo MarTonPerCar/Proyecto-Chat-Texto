@@ -1,0 +1,514 @@
+Index: Templates/footer/footer.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/footer/footer.html b/Templates/html/footer.html
+rename from Templates/footer/footer.html
+rename to Templates/html/footer.html
+--- a/Templates/footer/footer.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/footer.html	(date 1741628273461)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Página con Footer</title>
+-  <link rel="stylesheet" href="/Templates/footer/footer.css">
++  <link rel="stylesheet" href="/Templates/css/footer.css">
+ </head>
+   <body>
+     <footer>
+Index: Templates/header/header.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/header/header.html b/Templates/html/header.html
+rename from Templates/header/header.html
+rename to Templates/html/header.html
+--- a/Templates/header/header.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/header.html	(date 1741628273440)
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Header Template</title>
+-    <link rel="stylesheet" href="/Templates/header/header.css">
++    <link rel="stylesheet" href="/Templates/css/header.css">
+   </head>
+   <body>
+ 
+Index: Templates/footerMAINPAGE/footer.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/footerMAINPAGE/footer.html b/Templates/html/footer_main_page.html
+rename from Templates/footerMAINPAGE/footer.html
+rename to Templates/html/footer_main_page.html
+--- a/Templates/footerMAINPAGE/footer.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/footer_main_page.html	(date 1741628273361)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Página con Footer</title>
+-  <link rel="stylesheet" href="/Templates/footerMAINPAGE/footer.css">
++  <link rel="stylesheet" href="/Templates/css/footer_main_page.css">
+ </head>
+   <body>
+     <footer>
+Index: Templates/Header Sign In/Header_Sign_In.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/Header Sign In/Header_Sign_In.html b/Templates/html/Header_Sign_In.html
+rename from Templates/Header Sign In/Header_Sign_In.html
+rename to Templates/html/Header_Sign_In.html
+--- a/Templates/Header Sign In/Header_Sign_In.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/Header_Sign_In.html	(date 1741628273396)
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Header Template</title>
+-    <link rel="stylesheet" href="/Templates/Header Sign In/Header_Sign_In.css">
++    <link rel="stylesheet" href="/Templates/css/Header_Sign_In.css">
+   </head>
+ 
+   <body>
+@@ -19,17 +19,17 @@
+ 
+     <div class="user-section-header">
+       <button class="button-header-login">
+-        <a href="../../Login/MainPage/start.html"><img src="/Templates/Header Sign In/Inicio.png" alt="Inicio" class="btn-img"></a>
++        <a href="../../Login/MainPage/start.html"><img src="/Templates/externalSource/Inicio.png" alt="Inicio" class="btn-img"></a>
+       </button>
+ 
+       <button class="button-header-login">
+-        <a href="../../Login/settings/settings.html"><img src="/Templates/Header Sign In/Configuración.png" alt="Configuración" class="btn-img"></a>
++        <a href="../../Login/settings/settings.html"><img src="/Templates/externalSource/Configuración.png" alt="Configuración" class="btn-img"></a>
+       </button>
+ 
+       <span class="username">Usuario</span>
+ 
+       <div class="avatar-container">
+-        <a href="../../Login/profile/profile.html"><img src="/Templates/Header Sign In/avatar.jpg" alt="Foto de perfil" class="circular-img"></a>
++        <a href="../../Login/profile/profile.html"><img src="/Templates/externalSource/avatar.jpg" alt="Foto de perfil" class="circular-img"></a>
+       </div>
+     </div>
+ 
+Index: Templates/requestSelector/requestSelector (Language).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/requestSelector/requestSelector (Language).html b/Templates/html/requestSelector (Language).html
+rename from Templates/requestSelector/requestSelector (Language).html
+rename to Templates/html/requestSelector (Language).html
+--- a/Templates/requestSelector/requestSelector (Language).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/requestSelector (Language).html	(date 1741628273343)
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario de Email</title>
+-    <link rel="stylesheet" href="/Templates/requestSelector/requestSelector.css">
++    <link rel="stylesheet" href="/Templates/css/requestSelector.css">
+   </head>
+   <body>
+     <form>
+Index: Templates/request/request (Font size).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/request/request (Font size).html b/Templates/html/request (Font size).html
+rename from Templates/request/request (Font size).html
+rename to Templates/html/request (Font size).html
+--- a/Templates/request/request (Font size).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/request (Font size).html	(date 1741628273383)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario de Email</title>
+-  <link rel="stylesheet" href="/Templates/request/request.css">
++  <link rel="stylesheet" href="/Templates/css/request.css">
+ </head>
+ <body>
+ <form>
+Index: Templates/menssages/menssages.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/menssages/menssages.html b/Templates/html/menssages.html
+rename from Templates/menssages/menssages.html
+rename to Templates/html/menssages.html
+--- a/Templates/menssages/menssages.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/menssages.html	(date 1741628273330)
+@@ -3,7 +3,7 @@
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <link rel="stylesheet" href="/Templates/menssages/menssages.css">
++    <link rel="stylesheet" href="/Templates/css/menssages.css">
+     <title></title>
+   </head>
+   <body>
+Index: Templates/request/request (Email).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/request/request (Email).html b/Templates/html/request (Email).html
+rename from Templates/request/request (Email).html
+rename to Templates/html/request (Email).html
+--- a/Templates/request/request (Email).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/request (Email).html	(date 1741628273338)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario de Email</title>
+-  <link rel="stylesheet" href="/Templates/request/request.css">
++  <link rel="stylesheet" href="/Templates/css/request.css">
+ </head>
+ <body>
+ <form>
+Index: Templates/mensajeGrupo/mensajeGrupo.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/mensajeGrupo/mensajeGrupo.html b/Templates/html/mensajeGrupo.html
+rename from Templates/mensajeGrupo/mensajeGrupo.html
+rename to Templates/html/mensajeGrupo.html
+--- a/Templates/mensajeGrupo/mensajeGrupo.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/mensajeGrupo.html	(date 1741628273403)
+@@ -5,12 +5,12 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mensaje con Avatar</title>
+-  <link rel="stylesheet" href="mensajeGrupo.css">
++  <link rel="stylesheet" href="../css/mensajeGrupo.css">
+ </head>
+ <body>
+ 
+ <div class="message">
+-  <img src="avatar.jpg" alt="Avatar">
++  <img src="../externalSource/avatar.jpg" alt="Avatar">
+   <div class="text">
+     <p>¡Hola! ¿Cómo estás?</p>
+     <time datetime="10:00">10:00 AM</time>
+Index: Templates/request/request (Name).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/request/request (Name).html b/Templates/html/request (Name).html
+rename from Templates/request/request (Name).html
+rename to Templates/html/request (Name).html
+--- a/Templates/request/request (Name).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/request (Name).html	(date 1741628273447)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario de Email</title>
+-  <link rel="stylesheet" href="/Templates/request/request.css">
++  <link rel="stylesheet" href="/Templates/css/request.css">
+ </head>
+ <body>
+ <form>
+Index: Templates/requestSelector/requestSelector (Theme).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/requestSelector/requestSelector (Theme).html b/Templates/html/requestSelector (Theme).html
+rename from Templates/requestSelector/requestSelector (Theme).html
+rename to Templates/html/requestSelector (Theme).html
+--- a/Templates/requestSelector/requestSelector (Theme).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/requestSelector (Theme).html	(date 1741628273323)
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario de Email</title>
+-    <link rel="stylesheet" href="/Templates/requestSelector/requestSelector.css">
++    <link rel="stylesheet" href="/Templates/css/requestSelector.css">
+   </head>
+   <body>
+     <form>
+Index: Templates/request/request (Surname).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/request/request (Surname).html b/Templates/html/request (Surname).html
+rename from Templates/request/request (Surname).html
+rename to Templates/html/request (Surname).html
+--- a/Templates/request/request (Surname).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/request (Surname).html	(date 1741628273375)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario de Email</title>
+-  <link rel="stylesheet" href="/Templates/request/request.css">
++  <link rel="stylesheet" href="/Templates/css/request.css">
+ </head>
+ <body>
+ <form>
+Index: Templates/request/request (PhoneNumber).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/request/request (PhoneNumber).html b/Templates/html/request (PhoneNumber).html
+rename from Templates/request/request (PhoneNumber).html
+rename to Templates/html/request (PhoneNumber).html
+--- a/Templates/request/request (PhoneNumber).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/request (PhoneNumber).html	(date 1741628273455)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario de Email</title>
+-  <link rel="stylesheet" href="/Templates/request/request.css">
++  <link rel="stylesheet" href="/Templates/css/request.css">
+ </head>
+ <body>
+ <form>
+Index: html/noLogin/Main/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta name=\"keywords\" content=\"HTML5, CSS3, JavaScript\">\r\n\r\n    <title>Title</title>\r\n\r\n    <script src='../../../js/loadTemplates.js'></script>\r\n    <link rel=\"stylesheet\" href=\"/html/noLogin/Main/index.css\">\r\n  </head>\r\n  <body>\r\n\r\n  <!-- <header id=\"header\" xlu-include-file=\"../../../Templates/header/header.html\"></header> -->\r\n  <header id=\"header\"></header>\r\n\r\n  <section class=\"hero\">\r\n    <div class=\"hero-content\">\r\n      <div class=\"hero-image\"></div>\r\n      <div class=\"hero-text\">\r\n        <h1>Proyecto X</h1>\r\n        <p>Ejemplo de texto que escribir</p>\r\n      </div>\r\n    </div>\r\n  </section>\r\n\r\n  <footer id=\"footer\"></footer>\r\n\r\n  <!-- <footer id=\"footer\" xlu-include-file=\"../../../Templates/footer/footer.html\"></footer> -->\r\n\r\n    <!--\r\n    <script>\r\n      xLuIncludeFile();\r\n    </script>\r\n    -->\r\n  </body>\r\n</html>\r\n
+===================================================================
+diff --git a/html/noLogin/Main/index.html b/html/noLogin/Main/index.html
+--- a/html/noLogin/Main/index.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/html/noLogin/Main/index.html	(date 1741628273435)
+@@ -27,12 +27,16 @@
+ 
+   <footer id="footer"></footer>
+ 
+-  <!-- <footer id="footer" xlu-include-file="../../../Templates/footer/footer.html"></footer> -->
++  <!-- <footer id="footer" xlu-include-file="../../../Templates/footer/footer_main_page.html"></footer> -->
+ 
+     <!--
+     <script>
+       xLuIncludeFile();
+     </script>
+     -->
++  <script>
++    cargarTemplates();
++  </script>
++
+   </body>
+ </html>
+Index: Templates/request/request (Password).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/request/request (Password).html b/Templates/html/request (Password).html
+rename from Templates/request/request (Password).html
+rename to Templates/html/request (Password).html
+--- a/Templates/request/request (Password).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/request (Password).html	(date 1741628273368)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario de Email</title>
+-  <link rel="stylesheet" href="/Templates/request/request.css">
++  <link rel="stylesheet" href="/Templates/css/request.css">
+ </head>
+ <body>
+ <form>
+Index: Templates/avatarNombre/avatarNombre.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/avatarNombre/avatarNombre.html b/Templates/html/avatarNombre.html
+rename from Templates/avatarNombre/avatarNombre.html
+rename to Templates/html/avatarNombre.html
+--- a/Templates/avatarNombre/avatarNombre.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/avatarNombre.html	(date 1741628273410)
+@@ -4,11 +4,11 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario de Email</title>
+-  <link rel="stylesheet" href="/Templates/avatarNombre/avatarNombre.css">
++  <link rel="stylesheet" href="/Templates/css/avatarNombre.css">
+ </head>
+   <body>
+     <div id="avatar">
+-      <img src="/Templates/avatarNombre/avatar.png" alt="Foto de perfil" class="circular-img">
++      <img src="/Templates/externalSource/avatar.png" alt="Foto de perfil" class="circular-img">
+       <p id="username">Usuario</p>
+     </div>
+   </body>
+Index: Templates/conversations/conversations.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/conversations/conversations.html b/Templates/html/conversations.html
+rename from Templates/conversations/conversations.html
+rename to Templates/html/conversations.html
+--- a/Templates/conversations/conversations.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/conversations.html	(date 1741628273416)
+@@ -4,12 +4,12 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Chat Estilo WhatsApp Web</title>
+-    <link rel="stylesheet" href="/Templates/conversations/conversations.css">
++    <link rel="stylesheet" href="/Templates/css/conversations.css">
+   </head>
+   <body>
+   <div class="chat-list">
+     <div class="chat-item">
+-      <img src="/Templates/conversations/avatar.png" alt="Foto de perfil" class="avatar">
++      <img src="/Templates/externalSource/avatar.png" alt="Foto de perfil" class="avatar">
+       <div class="chat-info">
+         <p class="username"><strong>username</strong></p>
+         <p class="message">Mensaje</p>
+Index: html/noLogin/Main/index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { addFuction } from '../../../js/loadTemplates.js';\r\n\r\ndocument.addEventListener('DOMContentLoaded', init);\r\n\r\nfunction init() {\r\n\r\n  addFuction('../../../Templates/header/header.html', 'header');\r\n  addFuction('../../../Templates/footer/footer.html', 'footer');\r\n}\r\n
+===================================================================
+diff --git a/html/noLogin/Main/index.js b/html/noLogin/Main/index.js
+--- a/html/noLogin/Main/index.js	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/html/noLogin/Main/index.js	(date 1741628273349)
+@@ -5,5 +5,5 @@
+ function init() {
+ 
+   addFuction('../../../Templates/header/header.html', 'header');
+-  addFuction('../../../Templates/footer/footer.html', 'footer');
++  addFuction('../../../Templates/footer/footer_main_page.html', 'footer');
+ }
+Index: Templates/request/request (RepeatPassword).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/request/request (RepeatPassword).html b/Templates/html/request (RepeatPassword).html
+rename from Templates/request/request (RepeatPassword).html
+rename to Templates/html/request (RepeatPassword).html
+--- a/Templates/request/request (RepeatPassword).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/request (RepeatPassword).html	(date 1741628273356)
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario de Email</title>
+-    <link rel="stylesheet" href="/Templates/request/request.css">
++    <link rel="stylesheet" href="/Templates/css/request.css">
+   </head>
+   <body>
+     <form>
+Index: Templates/notChangeableText/notChangeableText (Email).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/notChangeableText/notChangeableText (Email).html b/Templates/html/notChangeableText (Email).html
+rename from Templates/notChangeableText/notChangeableText (Email).html
+rename to Templates/html/notChangeableText (Email).html
+--- a/Templates/notChangeableText/notChangeableText (Email).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/notChangeableText (Email).html	(date 1741628273430)
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Estado del Usuario</title>
+-    <link rel="stylesheet" href="/Templates/notChangeableText/notChangeableText.css">
++    <link rel="stylesheet" href="/Templates/css/notChangeableText.css">
+   </head>
+   <body>
+     <div class="status-container">
+Index: Templates/notChangeableText/notChangeableText (Phonenumber).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/notChangeableText/notChangeableText (Phonenumber).html b/Templates/html/notChangeableText (Phonenumber).html
+rename from Templates/notChangeableText/notChangeableText (Phonenumber).html
+rename to Templates/html/notChangeableText (Phonenumber).html
+--- a/Templates/notChangeableText/notChangeableText (Phonenumber).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/notChangeableText (Phonenumber).html	(date 1741628273318)
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Estado del Usuario</title>
+-    <link rel="stylesheet" href="/Templates/notChangeableText/notChangeableText.css">
++    <link rel="stylesheet" href="/Templates/css/notChangeableText.css">
+   </head>
+   <body>
+     <div class="status-container">
+Index: Templates/notChangeableText/notChangeableText (State).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/notChangeableText/notChangeableText (State).html b/Templates/html/notChangeableText (State).html
+rename from Templates/notChangeableText/notChangeableText (State).html
+rename to Templates/html/notChangeableText (State).html
+--- a/Templates/notChangeableText/notChangeableText (State).html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/notChangeableText (State).html	(date 1741628273423)
+@@ -4,7 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Estado del Usuario</title>
+-    <link rel="stylesheet" href="/Templates/notChangeableText/notChangeableText.css">
++    <link rel="stylesheet" href="/Templates/css/notChangeableText.css">
+   </head>
+   <body>
+     <div class="status-container">
+Index: Templates/button/button.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/button/button.html b/Templates/html/button.html
+rename from Templates/button/button.html
+rename to Templates/html/button.html
+--- a/Templates/button/button.html	(revision 3df9af3b3a16ff03775e1e50f2ea80267fcac55a)
++++ b/Templates/html/button.html	(date 1741628273391)
+@@ -4,7 +4,7 @@
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Formulario de Email</title>
+-  <link rel="stylesheet" href="button.css">
++  <link rel="stylesheet" href="../css/button.css">
+ </head>
+ <body>
+ <form>
+diff --git a/Templates/header/header.css b/Templates/css/header.css
+rename from Templates/header/header.css
+rename to Templates/css/header.css
+diff --git a/Templates/menssages/menssages.css b/Templates/css/menssages.css
+rename from Templates/menssages/menssages.css
+rename to Templates/css/menssages.css
+diff --git a/Templates/request/request.css b/Templates/css/request.css
+rename from Templates/request/request.css
+rename to Templates/css/request.css
+diff --git a/Templates/mensajeGrupo/mensajeGrupo.css b/Templates/css/mensajeGrupo.css
+rename from Templates/mensajeGrupo/mensajeGrupo.css
+rename to Templates/css/mensajeGrupo.css
+diff --git a/Templates/footerMAINPAGE/footer.css b/Templates/css/footer_main_page.css
+rename from Templates/footerMAINPAGE/footer.css
+rename to Templates/css/footer_main_page.css
+diff --git a/Templates/requestSelector/requestSelector.css b/Templates/css/requestSelector.css
+rename from Templates/requestSelector/requestSelector.css
+rename to Templates/css/requestSelector.css
+diff --git a/Templates/Header Sign In/Header_Sign_In.css b/Templates/css/Header_Sign_In.css
+rename from Templates/Header Sign In/Header_Sign_In.css
+rename to Templates/css/Header_Sign_In.css
+diff --git a/Templates/avatarNombre/avatarNombre.css b/Templates/css/avatarNombre.css
+rename from Templates/avatarNombre/avatarNombre.css
+rename to Templates/css/avatarNombre.css
+diff --git a/Templates/conversations/conversations.css b/Templates/css/conversations.css
+rename from Templates/conversations/conversations.css
+rename to Templates/css/conversations.css
+diff --git a/Templates/notChangeableText/notChangeableText.css b/Templates/css/notChangeableText.css
+rename from Templates/notChangeableText/notChangeableText.css
+rename to Templates/css/notChangeableText.css
+diff --git a/Templates/button/button.css b/Templates/css/button.css
+rename from Templates/button/button.css
+rename to Templates/css/button.css
+diff --git a/Templates/footer/footer.css b/Templates/css/footer.css
+rename from Templates/footer/footer.css
+rename to Templates/css/footer.css

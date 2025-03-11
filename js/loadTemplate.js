@@ -1,7 +1,7 @@
 export async function cargarEstructura() {
   // HEADER
   if (document.getElementById('header')) {
-    await cargarTemplate('/Templates/html/header.html', 'header');
+    await cargarTemplate('/Templates/html/header.html', 'header', 'Templates/javascript/header.js');
   }
   if (document.getElementById('header-sign-in')) {
     await cargarTemplate('/Templates/html/Header_Sign_In.html', 'header-sign-in');
@@ -74,9 +74,41 @@ export async function cargarEstructura() {
   }
 }
 
-// Función para cargar un template en un elemento específico
-async function cargarTemplate(url, id) {
-  console.log("Oh yeah")
+// --------------------------------------------------------------------------
+
+function getProjectBase() {
+  let pathParts = window.location.pathname.split('/').filter(p => p !== ""); // Filtra partes vacías
+  if (pathParts.length > 1) {
+    return window.location.origin + "/" + pathParts[0] + "/"; // Detecta la carpeta raíz
+  } else {
+    return window.location.origin + "/"; // Si está en la raíz del servidor
+  }
+}
+
+export function getAbsolutePath(relativePath) {
+  return getProjectBase() + relativePath.replace(/^\/+/, ''); // Evita dobles barras "//"
+}
+
+// --------------------------------------------------------------------------
+
+async function cargarTemplate(url, id, scriptPath = "") {
+  console.log(`Cargando ${url} en ${id}`);
+
   let response = await fetch(url);
   document.getElementById(id).innerHTML = await response.text();
+
+  // Si scriptPath NO es 0, cargar y ejecutar el script
+  if (scriptPath !== "") {
+    cargarScript(scriptPath);
+  }
+}
+
+// Función para cargar un script dinámicamente si es necesario
+function cargarScript(scriptPath) {
+  let script = document.createElement("script");
+  script.src = getAbsolutePath(scriptPath); // Convierte la ruta en absoluta
+  script.async = false; // Mantener el orden de ejecución
+  script.type = "module";
+  document.body.appendChild(script);
+  console.log(`Ejecutando script: ${script.src}`);
 }

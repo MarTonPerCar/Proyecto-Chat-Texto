@@ -7,38 +7,35 @@
 
     <title>Title</title>
 
-    <script src="/js/xlu-include-file.js"></script>
-    <link rel="stylesheet" href="/main/css/signIn.css">
+    <script type="module" src="../javascript/signIn.js"></script>
+    <link id="cssLink" rel="stylesheet">
+
   </head>
   <body>
 
-    <header id="header" xlu-include-file='/Templates/header/header.html'></header>
+    <header id="header"></header>
 
     <main>
       <div class="form-container">
         <form id="input-group">
-          <div xlu-include-file="/Templates/request/request (Email).html"></div>
-          <div xlu-include-file="/Templates/request/request (Password).html"></div>
+          <div id="request-email"></div>
+          <div id="request-password"></div>
         </form>
       </div>
 
       <div class="boton-container">
-        <a href="start.html">
+        <a id="startLink">
           <button type="button">Iniciar Sesión</button>
         </a>
       </div>
 
       <div class="texto-container">
-        <a href="recoverPassword(Email).html">Te has olvidado de la contraseña?</a>
+        <a id="recoverPasswordEmail" >Te has olvidado de la contraseña?</a>
       </div>
 
     </main>
 
-    <footer id="footer" xlu-include-file="/Templates/footer/footer.html"></footer>
-
-    <script>
-      xLuIncludeFile();
-    </script>
+    <footer id="footer"></footer>
 
   </body>
 </html>

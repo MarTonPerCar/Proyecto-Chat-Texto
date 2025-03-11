@@ -1,7 +1,9 @@
 import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
 
 async function init() {
-  document.getElementById("cssLink").href = getAbsolutePath("main/css/index.css");
+  document.getElementById("cssLink").href = getAbsolutePath("main/css/signIn.css");
+  document.getElementById("startLink").href = getAbsolutePath("main/html/start.html");
+  document.getElementById("recoverPasswordEmail").href = getAbsolutePath("main/html/recoverPassword(Email).html");
   await cargarEstructura();
 }
 
@@ -11,3 +13,4 @@ if (document.readyState === "loading") {
 } else {
   await init(); // Si el DOM ya está cargado, ejecutarlo inmediatamente
 }
+
