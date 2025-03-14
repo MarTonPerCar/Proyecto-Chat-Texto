@@ -86,6 +86,7 @@ function getProjectBase() {
 }
 
 export function getAbsolutePath(relativePath) {
+  console.log("Cargando", relativePath);
   return getProjectBase() + relativePath.replace(/^\/+/, ''); // Evita dobles barras "//"
 }
 

@@ -1,4 +1,4 @@
-import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
+import { getAbsolutePath } from '../../js/loadTemplate.js';
 
 console.log("Arriba España");
 

@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
 
-    <title>Title</title>
+  <title>Profile Page</title>
 
-    <script src="/js/xlu-include-file.js"></script>
-    <link rel="stylesheet" href="../css/profile.css">
-  </head>
-  <body>
-    <header id="header" xlu-include-file="../../../Templates/Header Sign In/Header_Sign_In.html"></header>
+  <script type="module" src="../javascript/profile.js"></script>
+  <link id="cssProfileLink" rel="stylesheet">
+</head>
 
-    <main id="profile-main">
-      <div id="avatar" xlu-include-file="/Templates/avatarNombre/avatarNombre.html"></div>
-      <div class="notChan" xlu-include-file="/Templates/notChangeableText/notChangeableText (State).html"></div>
-      <div class="notChan" xlu-include-file="/Templates/notChangeableText/notChangeableText (Email).html"></div>
-      <div class="notChan" xlu-include-file="/Templates/notChangeableText/notChangeableText (Phonenumber).html"></div>
-    </main>
+<body>
+<header id="header"></header>
 
-    <footer id="footer" xlu-include-file="../../../Templates/footer/footer.html"></footer>
+<main id="profile-main">
+  <div id="avatar-nombre"></div>
+  <div id="not-changeable-text-state"></div>
+  <div id="not-changeable-text-email"></div>
+  <div id="not-changeable-text-phonenumber"></div>
+</main>
 
-    <script>
-      xLuIncludeFile();
-    </script>
-  </body>
+<footer id="footer"></footer>
+</body>
 </html>
+
