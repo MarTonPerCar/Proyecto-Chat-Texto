@@ -7,28 +7,26 @@
 
     <title>Title</title>
 
-    <script src="/js/xlu-include-file.js"></script>
-    <link rel="stylesheet" href="/main/css/editProfile.css">
+
+    <script type="module" src="../javascript/editProfile.js"></script>
+    <link id="cssEditProfile" rel="stylesheet">
   </head>
   <body>
-    <header id="header" xlu-include-file="../Templates/Header Sign In/Header_Sign_In.html"></header>
+    <header id="header"></header>
 
     <main>
       <div class="form-container">
         <form id="input-group">
-          <div xlu-include-file="/Templates/request/request (Name).html"></div>
-          <div xlu-include-file="/Templates/request/request (Surname).html"></div>
-          <div xlu-include-file="/Templates/request/request (PhoneNumber).html"></div>
+          <div id = 'request-name'></div>
+          <div id = 'request-surname'></div>
+          <div id = 'request-phonenumber'></div>
         </form>
       </div>
-      <a id="changePassword" href="recoverPassword(Password).html"> Cambiar la contraseña</a>
-      <a id="editProfile" href="settings.html"><button id="edit-profile">Actualizar Información</button></a>
+      <a id="changePassword" > Cambiar la contraseña</a>
+      <a id="editProfile" ><button id="edit-profile">Actualizar Información</button></a>
     </main>
 
-    <script>
-      xLuIncludeFile();
-    </script>
 
-      <footer id="footer" xlu-include-file="../../../Templates/footer/footer.html"></footer>
+      <footer id="footer"></footer>
   </body>
 </html>

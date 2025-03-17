@@ -6,12 +6,12 @@
     <meta name="keywords" content="HTML5, CSS3, JavaScript">
     <title>Crear Grupo</title>
 
-    <script src="/js/xlu-include-file.js"></script>
-    <link rel="stylesheet" href="/main/css/addGroup.css">
+    <script type="module" src="../javascript/addGroup.js"></script>
+    <link id="cssAddGroup" rel="stylesheet">
   </head>
   <body>
 
-    <header id="header" xlu-include-file="../../../Templates/Header Sign In/Header_Sign_In.html"></header>
+    <header id="header"></header>
 
     <main class="group-container">
       <!-- Imagen del grupo -->
@@ -41,16 +41,14 @@
 
       <!-- Botones de acción -->
       <div class="action-buttons">
-        <a href="start.html" class="button-group decline">Decline</a>
-        <a href="start.html" class="button-group create">Create</a>
+        <a id = "startLink" class="button-group decline">Decline</a>
+        <a id = "startLink2" class="button-group create">Create</a>
       </div>
     </main>
 
-    <script>
-      xLuIncludeFile();
-    </script>
 
-    <footer id="footer" xlu-include-file="../../../Templates/footerMAINPAGE/footer.html"></footer>
+
+    <footer id="footer"></footer>
 
   </body>
 </html>

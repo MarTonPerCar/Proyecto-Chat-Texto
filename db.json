@@ -1,0 +1,24 @@
+{
+
+  "persona": [{
+
+    "email":"pepe15@gmail.com",
+    "contraseña":"Hola666",
+    "repite":"Hola666",
+    "nombre":"Pepe",
+    "apellidos":"Viyuela",
+    "telefono":"666121517"
+
+  },
+    {
+    "email":"ayoze15@gmail.com",
+    "contraseña":"Hola666",
+    "repite":"Hola666",
+    "nombre":"Ayoze",
+    "apellidos":"Hernandez",
+    "telefono":"666121518"
+  }
+
+
+  ]
+}
