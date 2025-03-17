@@ -1,0 +1,77 @@
+{
+  "email": {
+    "label": "Correo Electrónico",
+    "type": "email",
+    "nameID": "email",
+    "placeholder": "Ingrese su correo",
+    "patron": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+  },
+  "font-size": {
+    "label": "Tamaño de Fuente",
+    "type": "number",
+    "nameID": "font-size",
+    "placeholder": "Ejemplo: 16",
+    "patron": "^[0-9]+$"
+  },
+  "name": {
+    "label": "Nombre",
+    "type": "text",
+    "nameID": "name",
+    "placeholder": "Ingrese su nombre",
+    "patron": "^[a-zA-ZÀ-ÿ\\s]+$"
+  },
+  "password": {
+    "label": "Contraseña",
+    "type": "password",
+    "nameID": "password",
+    "placeholder": "Ingrese su contraseña",
+    "patron": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
+  },
+  "phonenumber": {
+    "label": "Número de Teléfono",
+    "type": "tel",
+    "nameID": "phonenumber",
+    "placeholder": "Ejemplo: +123456789",
+    "patron": "^\\+?[0-9]{7,15}$"
+  },
+  "repeat-password": {
+    "label": "Repetir Contraseña",
+    "type": "password",
+    "nameID": "repeat-password",
+    "placeholder": "Repita su contraseña",
+    "patron": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
+  },
+  "surname": {
+    "label": "Apellido",
+    "type": "text",
+    "nameID": "surname",
+    "placeholder": "Ingrese su apellido",
+    "patron": "^[a-zA-ZÀ-ÿ\\s]+$"
+  },
+  "language": {
+    "label": "Idioma",
+    "class": "select-language",
+    "name": "language",
+    "placeholder": "Seleccione un idioma",
+    "opciones": ["Español", "Inglés", "Francés", "Alemán"]
+  },
+  "theme": {
+    "label": "Tema",
+    "class": "select-theme",
+    "name": "theme",
+    "placeholder": "Seleccione un tema",
+    "opciones": ["Claro", "Oscuro"]
+  },
+  "NCT-email": {
+    "valor": "nct@example.com",
+    "placeholder": "Ingrese el correo NCT"
+  },
+  "NCT-phonenumber": {
+    "valor": "+123456789",
+    "placeholder": "Ingrese el teléfono NCT"
+  },
+  "NCT-state": {
+    "valor": "Activo",
+    "placeholder": "Estado del usuario"
+  }
+}

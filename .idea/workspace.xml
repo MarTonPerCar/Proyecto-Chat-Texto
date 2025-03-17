@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate">
-      <change afterPath="$PROJECT_DIR$/Templates/javascript/headerSignIn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/addContact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/addGroup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/editProfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Email).js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Password).js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Password_Sign_In).js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/javascript/start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json/templates.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_03_2025_15_40_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_03_2025_15_40__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/Header_Sign_In.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/Header_Sign_In.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/javascript/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/javascript/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/loadTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadTemplate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/requestSelector (Language).html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/requestSelector (Language).html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +22,7 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
@@ -143,7 +132,9 @@
       <workItem from="1740624127292" duration="3739000" />
       <workItem from="1740661623517" duration="18214000" />
       <workItem from="1740754586461" duration="5571000" />
-      <workItem from="1741965384098" duration="5425000" />
+      <workItem from="1741965384098" duration="6007000" />
+      <workItem from="1742010751882" duration="1091000" />
+      <workItem from="1742230540965" duration="432000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -257,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741721591500</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Still Working on loadTemplate">
+      <option name="closed" value="true" />
+      <created>1741989858843</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741989858843</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
