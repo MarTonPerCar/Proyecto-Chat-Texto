@@ -4,27 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Changes on &lt;a&gt; reference 2">
-      <change afterPath="$PROJECT_DIR$/Templates/javascript/signIn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate">
+      <change afterPath="$PROJECT_DIR$/Templates/html/notChangeableText.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/html/request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/html/requestSelector.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/colors.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/addContact.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/addContact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/addGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/addGroup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/editProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Email).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Email).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Password).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/addContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/addContact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/addGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/addGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/editProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/editProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/recoverPassword(Email).js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Email).js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/recoverPassword(Password).js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Password).js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/signIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/start.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/css/notChangeableText.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/notChangeableText.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/notChangeableText (Email).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/notChangeableText (Phonenumber).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/notChangeableText (State).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Email).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Font size).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Name).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Password).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (PhoneNumber).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (RepeatPassword).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Surname).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/requestSelector (Language).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/requestSelector (Theme).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/loadTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/templates.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/templates.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +36,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
+        <option value="tsconfig.json" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -59,47 +64,47 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2srJOulygy29TqGXSXQ4h4zp0hD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.Header_Sign_In.html.executor": "Run",
-    "JavaScript Debug.addButton.html.executor": "Run",
-    "JavaScript Debug.addContact.html.executor": "Run",
-    "JavaScript Debug.asdsad.html.executor": "Run",
-    "JavaScript Debug.avatar.html.executor": "Run",
-    "JavaScript Debug.button.html.executor": "Run",
-    "JavaScript Debug.footer.html.executor": "Run",
-    "JavaScript Debug.header.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.prueba.html.executor": "Run",
-    "JavaScript Debug.register.html.executor": "Run",
-    "JavaScript Debug.request.html.executor": "Run",
-    "JavaScript Debug.requestSelector.html.executor": "Run",
-    "JavaScript Debug.settings.html.executor": "Run",
-    "JavaScript Debug.sigIn.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Sprint-2",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mario/Downloads/new_example_templates_HTML5",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/Mario/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.Header_Sign_In.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.addButton.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.asdsad.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.avatar.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.button.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.footer.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.prueba.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.request.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.requestSelector.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.sigIn.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Sprint-2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mario/Downloads/new_example_templates_HTML5&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Mario/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\addGroup" />
@@ -145,6 +150,9 @@
       <workItem from="1740624127292" duration="3739000" />
       <workItem from="1740661623517" duration="18214000" />
       <workItem from="1740754586461" duration="5571000" />
+      <workItem from="1741965384098" duration="6007000" />
+      <workItem from="1742010751882" duration="1091000" />
+      <workItem from="1742230540965" duration="4591000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -250,7 +258,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740758594963</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Still Working on loadTemplate">
+      <option name="closed" value="true" />
+      <created>1741721591500</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741721591500</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Still Working on loadTemplate">
+      <option name="closed" value="true" />
+      <created>1741989858843</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741989858843</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Still Working on loadTemplate">
+      <option name="closed" value="true" />
+      <created>1742230994494</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742230994494</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +311,7 @@
     <MESSAGE value="Finish Login" />
     <MESSAGE value="Changes on &lt;a&gt; reference" />
     <MESSAGE value="Changes on &lt;a&gt; reference 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes on &lt;a&gt; reference 2" />
+    <MESSAGE value="Still Working on loadTemplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Still Working on loadTemplate" />
   </component>
 </project>

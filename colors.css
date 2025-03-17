@@ -1,0 +1,16 @@
+:root {
+  --blanco: #f2e8c4;       /* Color principal */
+  --verde-secundario: #98d9b6;     /* Color secundario */
+  --verde-primario: #3ec9a7;    /* Fondo */
+  --azul: #2b879e;    /* Color de texto */
+  --gray: #616668;     /* Resaltado */
+}
+
+/* Modo oscuro */
+.dark-mode {
+  --primary: #333533;
+  --secondary: #E8EDDF;
+  --background: #242423;
+  --text-color: #ffffff;
+  --highlight: #00ABCE;
+}

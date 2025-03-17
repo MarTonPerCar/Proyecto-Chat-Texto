@@ -31,47 +31,49 @@ export async function cargarEstructura() {
     await cargarTemplate('/Templates/html/menssages.html', 'mensajes');
   }
 
-  // NOT CHANGEABLE TEXT
+// NOT CHANGEABLE TEXT
   if (document.getElementById('not-changeable-text-email')) {
-    await cargarTemplate('/Templates/html/notChangeableText (Email).html', 'not-changeable-text-email');
+    await cargarElementoDinamico("notChangeableText", "NCT-email", "not-changeable-text-email");
   }
   if (document.getElementById('not-changeable-text-phonenumber')) {
-    await cargarTemplate('/Templates/html/notChangeableText (Phonenumber).html', 'not-changeable-text-phonenumber');
+    await cargarElementoDinamico("notChangeableText", "NCT-phonenumber", "not-changeable-text-phonenumber");
   }
   if (document.getElementById('not-changeable-text-state')) {
-    await cargarTemplate('/Templates/html/notChangeableText (State).html', 'not-changeable-text-state');
+    await cargarElementoDinamico("notChangeableText", "NCT-state", "not-changeable-text-state");
   }
 
-  // REQUEST
+// REQUEST
   if (document.getElementById('request-email')) {
-    await cargarTemplate('/Templates/html/request (Email).html', 'request-email');
+    await cargarElementoDinamico("request", "email", "request-email");
   }
   if (document.getElementById('request-font-size')) {
-    await cargarTemplate('/Templates/html/request (Font size).html', 'request-font-size');
+    await cargarElementoDinamico("request", "font-size", "request-font-size");
   }
   if (document.getElementById('request-name')) {
-    await cargarTemplate('/Templates/html/request (Name).html', 'request-name');
+    await cargarElementoDinamico("request", "name", "request-name");
   }
   if (document.getElementById('request-password')) {
-    await cargarTemplate('/Templates/html/request (Password).html', 'request-password');
+    await cargarElementoDinamico("request", "password", "request-password");
   }
   if (document.getElementById('request-phonenumber')) {
-    await cargarTemplate('/Templates/html/request (PhoneNumber).html', 'request-phonenumber');
+    await cargarElementoDinamico("request", "phonenumber", "request-phonenumber");
   }
   if (document.getElementById('request-repeat-password')) {
-    await cargarTemplate('/Templates/html/request (RepeatPassword).html', 'request-repeat-password');
+    await cargarElementoDinamico("request", "repeat-password", "request-repeat-password");
   }
   if (document.getElementById('request-surname')) {
-    await cargarTemplate('/Templates/html/request (Surname).html', 'request-surname');
+    await cargarElementoDinamico("request", "surname", "request-surname");
   }
 
-  // REQUEST SELECTOR
+// REQUEST SELECTOR
   if (document.getElementById('request-selector-language')) {
-    await cargarTemplate('/Templates/html/requestSelector (Language).html', 'request-selector-language');
+    await cargarElementoDinamico("requestSelector", "language", "request-selector-language");
   }
   if (document.getElementById('request-selector-theme')) {
-    await cargarTemplate('/Templates/html/requestSelector (Theme).html', 'request-selector-theme');
+    await cargarElementoDinamico("requestSelector", "theme", "request-selector-theme");
   }
+
+
 }
 
 // --------------------------------------------------------------------------
@@ -113,3 +115,81 @@ function cargarScript(scriptPath) {
   document.body.appendChild(script);
   console.log(`Ejecutando script: ${script.src}`);
 }
+
+//  --------------------------------------------------------------------------
+
+async function cargarElementoDinamico(tipo, clave, id) {
+  const jsonURL = getAbsolutePath("json/templates.json"); // Ruta del JSON
+  let jsonData = await fetch(jsonURL).then(res => res.json());
+
+  let data = jsonData[clave];
+  if (!data) {
+    console.error(`⚠ No se encontró información en el JSON para "${clave}"`);
+    return;
+  }
+
+  let templateURL = "";
+  switch (tipo) {
+    case "request":
+      templateURL = "/Templates/html/request.html";
+      break;
+    case "notChangeableText":
+      templateURL = "/Templates/html/notChangeableText.html";
+      break;
+    case "requestSelector":
+      templateURL = "/Templates/html/requestSelector.html";
+      break;
+    default:
+      console.error(`⚠ Tipo "${tipo}" no reconocido`);
+      return;
+  }
+
+  let response = await fetch(templateURL);
+  let templateHTML = await response.text();
+
+  // Reemplazar los valores en el template con los del JSON
+  templateHTML = reemplazarValores(templateHTML, tipo, data);
+
+  // Insertar en el HTML dentro del contenedor con id proporcionado
+  let container = document.getElementById(id);
+  if (!container) {
+    console.error(`⚠ No se encontró un contenedor con id="${id}"`);
+    return;
+  }
+  container.innerHTML = templateHTML;
+}
+
+
+// 🔄 Función que reemplaza TODOS los valores genéricos del template
+function reemplazarValores(templateHTML, tipo, data) {
+  switch (tipo) {
+    case "request":
+      return templateHTML
+        .replace(/Lorem Ipsum/g, data.label) // Label
+        .replace(/generic-input/g, data.name) // ID y name del input
+        .replace(/type="text"/g, `type="${data.type}"`) // Tipo del input
+        .replace(/placeholder="Lorem Ipsum"/g, `placeholder="${data.placeholder}"`) // Placeholder
+        .replace(/pattern=".{3,}"/g, `pattern="${data.patron}"`); // Patrón de validación
+
+    case "notChangeableText":
+      return templateHTML
+        .replace(/Lorem Ipsum/g, data.placeholder) // Placeholder
+        .replace(/Lorem Ipsum/g, data.valor); // Valor estático
+
+    case "requestSelector":
+      let optionsHTML = data.opciones
+        .map(option => `<option value="${option}">${option}</option>`)
+        .join("");
+
+      return templateHTML
+        .replace(/Lorem Ipsum Label/g, data.label) // Label
+        .replace(/select-class/g, data.class) // Clase del select
+        .replace(/generic-select/g, data.name) // ID y name del select
+        .replace(/placeholder="Lorem Ipsum"/g, `placeholder="${data.placeholder}"`) // Placeholder
+        .replace(/<option value="option1">Opción 1<\/option>\n<option value="option2">Opción 2<\/option>/g, optionsHTML);
+
+    default:
+      return templateHTML;
+  }
+}
+
