@@ -1,0 +1,59 @@
+Index: html/noLogin/signIn/signIn.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta name=\"keywords\" content=\"HTML5, CSS3, JavaScript\">\r\n\r\n    <title>Title</title>\r\n\r\n    <script src=\"/js/xlu-include-file.js\"></script>\r\n    <link rel=\"stylesheet\" href=\"../../noLogin/signIn/signIn.css\">\r\n  </head>\r\n  <body>\r\n\r\n    <header id=\"header\" xlu-include-file='/Templates/header/header.html'></header>\r\n\r\n    <main>\r\n      <div class=\"form-container\">\r\n        <form id=\"input-group\">\r\n          <div xlu-include-file=\"/Templates/request/request (Email).html\"></div>\r\n          <div xlu-include-file=\"/Templates/request/request (Password).html\"></div>\r\n        </form>\r\n      </div>\r\n\r\n      <div class=\"boton-container\">\r\n        <a href=\"../../../html/Login/MainPage/start.html\">\r\n          <button type=\"button\">Iniciar Sesión</button>\r\n        </a>\r\n      </div>\r\n\r\n      <div class=\"texto-container\">\r\n        <a href=\"../../../html/noLogin/recoverPassword(Email)/recoverPassword(Email).html\">Te has olvidado de la contraseña?</a>\r\n      </div>\r\n\r\n    </main>\r\n\r\n    <footer id=\"footer\" xlu-include-file=\"/Templates/footer/footer.html\"></footer>\r\n\r\n    <script>\r\n      xLuIncludeFile();\r\n    </script>\r\n\r\n  </body>\r\n</html>\r\n\r\n\r\n
+===================================================================
+diff --git a/html/noLogin/signIn/signIn.html b/html/noLogin/signIn/signIn.html
+--- a/html/noLogin/signIn/signIn.html	(revision dc35363e9a2974928f6f23713dd073b31d9fa6ad)
++++ b/html/noLogin/signIn/signIn.html	(date 1741631564853)
+@@ -8,6 +8,7 @@
+     <title>Title</title>
+ 
+     <script src="/js/xlu-include-file.js"></script>
++    <script defer src="/js/signIn.js"></script>
+     <link rel="stylesheet" href="../../noLogin/signIn/signIn.css">
+   </head>
+   <body>
+@@ -16,9 +17,10 @@
+ 
+     <main>
+       <div class="form-container">
+-        <form id="input-group">
++        <form id="login-form">
+           <div xlu-include-file="/Templates/request/request (Email).html"></div>
+           <div xlu-include-file="/Templates/request/request (Password).html"></div>
++
+         </form>
+       </div>
+ 
+Index: html/noLogin/signIn/signIn.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 100vh; /* Al menos la altura completa de la pantalla */\r\n  height: 100%;\r\n  margin: 0;\r\n  padding: 0;\r\n  background-color: #3ec9a7;\r\n}\r\n\r\n#header {\r\n  margin-bottom: 20px; /* Espaciado con el main */\r\n}\r\n\r\n#footer {\r\n  margin-top: 20px; /* Espaciado con el main */\r\n}\r\n\r\nmain {\r\n  flex: 1; /* Hace que el main crezca y empuje el footer abajo */\r\n  padding: 20px;\r\n}\r\n\r\n.form-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center; /* Centra todo dentro del formulario */\r\n  justify-content: center;\r\n  width: 100%;\r\n}\r\n\r\n#input-group {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center; /* Centra los elementos */\r\n  gap: 10px;\r\n  width: 50vw; /* Mismo ancho que los inputs */\r\n}\r\n\r\n.form-container form div {\r\n  width: 100%; /* Asegura que los elementos dentro del form ocupen todo */\r\n}\r\n\r\n.texto-container {\r\n  display: flex;\r\n  justify-content: center; /* Centrar el botón */\r\n  margin-top: 20px; /* Espaciado superior */\r\n}\r\n\r\n.boton-container {\r\n  display: flex;\r\n  justify-content: center; /* Centrar el botón */\r\n  margin-top: 20px; /* Espaciado superior */\r\n}\r\n\r\n.boton-container a {\r\n  text-decoration: none; /* Quita el subrayado del enlace */\r\n}\r\n\r\n.boton-container button {\r\n  height: 3vh; /* Misma altura que el input */\r\n  width: 50vw; /* Misma anchura que el input */\r\n  border: 1px solid #333333; /* Mismo borde que el input */\r\n  border-radius: 5px; /* Bordes redondeados */\r\n  background-color: #333333; /* Color de fondo similar al input */\r\n  color: white; /* Color del texto */\r\n  font-size: 16px; /* Tamaño de letra */\r\n  cursor: pointer;\r\n  transition: background 0.3s ease-in-out;\r\n}\r\n\r\n.boton-container button:hover {\r\n  background-color: #25D366; /* Cambio de color al pasar el mouse */\r\n}\r\n\r\n\r\n\r\n
+===================================================================
+diff --git a/html/noLogin/signIn/signIn.css b/html/noLogin/signIn/signIn.css
+--- a/html/noLogin/signIn/signIn.css	(revision dc35363e9a2974928f6f23713dd073b31d9fa6ad)
++++ b/html/noLogin/signIn/signIn.css	(date 1741631676670)
+@@ -35,7 +35,7 @@
+   width: 100%;
+ }
+ 
+-#input-group {
++#login-form {
+   display: flex;
+   flex-direction: column;
+   align-items: center; /* Centra los elementos */
+Index: html/noLogin/Main/index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>document.addEventListener('DOMContentLoaded', init);\r\n\r\nfunction loadTemplate(fileName, id, callback) {\r\n\r\n  fetch(fileName).then((res) => {\r\n    return res.text();\r\n  }).then((text) => {\r\n    document.getElementById(id).innerHTML = text;\r\n    //console.log(text)\r\n\r\n    if(callback){\r\n      callback();\r\n    }\r\n  })\r\n}\r\n\r\nfunction init() {\r\n\r\n  loadTemplate('../../../Templates/header/header.html', 'header');\r\n  loadTemplate('../../../Templates/footer/footer.html', 'footer');\r\n}\r\n
+===================================================================
+diff --git a/html/noLogin/Main/index.js b/html/noLogin/Main/index.js
+--- a/html/noLogin/Main/index.js	(revision dc35363e9a2974928f6f23713dd073b31d9fa6ad)
++++ b/html/noLogin/Main/index.js	(date 1741363760817)
+@@ -18,4 +18,5 @@
+ 
+   loadTemplate('../../../Templates/header/header.html', 'header');
+   loadTemplate('../../../Templates/footer/footer.html', 'footer');
++
+ }
