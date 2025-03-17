@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate">
-      <change afterPath="$PROJECT_DIR$/json/templates.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_03_2025_15_40_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_03_2025_15_40__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/html/notChangeableText.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/html/request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/html/requestSelector.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/colors.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/requestSelector (Language).html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/requestSelector (Language).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/css/notChangeableText.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/notChangeableText.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/notChangeableText (Email).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/notChangeableText (Phonenumber).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/notChangeableText (State).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Email).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Font size).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Name).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Password).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (PhoneNumber).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (RepeatPassword).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request (Surname).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/requestSelector (Language).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/requestSelector (Theme).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/loadTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/templates.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/templates.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +36,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="tsconfig.json" />
+        <option value="HTML File" />
+        <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -134,7 +152,7 @@
       <workItem from="1740754586461" duration="5571000" />
       <workItem from="1741965384098" duration="6007000" />
       <workItem from="1742010751882" duration="1091000" />
-      <workItem from="1742230540965" duration="432000" />
+      <workItem from="1742230540965" duration="4591000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -256,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741989858843</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Still Working on loadTemplate">
+      <option name="closed" value="true" />
+      <created>1742230994494</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742230994494</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

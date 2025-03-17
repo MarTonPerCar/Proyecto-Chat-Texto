@@ -2,6 +2,7 @@ import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
 
 async function init() {
   document.getElementById("cssLink").href = getAbsolutePath("main/css/index.css");
+  document.getElementById("cssLink").href = getAbsolutePath("css/colors.css");
   await cargarEstructura();
 }
 

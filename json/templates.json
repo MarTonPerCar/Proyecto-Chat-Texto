@@ -53,7 +53,7 @@
     "class": "select-language",
     "name": "language",
     "placeholder": "Seleccione un idioma",
-    "opciones": ["Español", "Inglés", "Francés", "Alemán"]
+    "opciones": ["Español", "Inglés"]
   },
   "theme": {
     "label": "Tema",
