@@ -1,0 +1,44 @@
+{
+  "images": [
+    {
+      "nombre": "addContact",
+      "url": "assets/addContact.png",
+      "alt": "Icono para añadir contacto"
+    },
+    {
+      "nombre": "addGroup",
+      "url": "assets/addGroup.png",
+      "alt": "Icono para añadir grupo"
+    },
+    {
+      "nombre": "avatarJpg",
+      "url": "assets/avatar.jpg",
+      "alt": "Imagen de avatar en formato JPG"
+    },
+    {
+      "nombre": "avatarPng",
+      "url": "assets/avatar.png",
+      "alt": "Imagen de avatar en formato PNG"
+    },
+    {
+      "nombre": "Configuracion",
+      "url": "assets/Configuración.png",
+      "alt": "Icono de configuración"
+    },
+    {
+      "nombre": "IndexIcon",
+      "url": "assets/Index_Icon.PNG",
+      "alt": "Icono de índice"
+    },
+    {
+      "nombre": "Inicio",
+      "url": "assets/Inicio.png",
+      "alt": "Icono de inicio"
+    },
+    {
+      "nombre": "Main_Icon",
+      "url": "assets/Main_Icon.PNG",
+      "alt": "Icono principal"
+    }
+  ]
+}
