@@ -165,16 +165,18 @@ function reemplazarValores(templateHTML, tipo, data) {
   switch (tipo) {
     case "request":
       return templateHTML
-        .replace(/Lorem Ipsum/g, data.label) // Label
-        .replace(/generic-input/g, data.name) // ID y name del input
-        .replace(/type="text"/g, `type="${data.type}"`) // Tipo del input
-        .replace(/placeholder="Lorem Ipsum"/g, `placeholder="${data.placeholder}"`) // Placeholder
-        .replace(/pattern=".{3,}"/g, `pattern="${data.patron}"`); // Patrón de validación
+        .replace(/Lorem Ipsum/g, data.label || "Texto genérico") // Label
+        .replace(/for="generic-input"/g, `for="${data.nameID || "default-id"}"`) // ID y name del input
+        .replace(/id="generic-input"/g, `id="${data.nameID || "default-id"}"`) // ID
+        .replace(/name="generic-input"/g, `name="${data.nameID || "default-id"}"`) // Name
+        .replace(/type="text"/g, `type="${data.type || "text"}"`) // Tipo del input
+        .replace(/placeholder="Lorem Ipsum"/g, `placeholder="${data.placeholder || ""}"`) // Placeholder
+        .replace(/pattern=".{3,}"/g, `pattern="${data.patron || ".*"}"`); // Patrón de validación
 
     case "notChangeableText":
       return templateHTML
-        .replace(/Lorem Ipsum/g, data.placeholder) // Placeholder
-        .replace(/Lorem Ipsum/g, data.valor); // Valor estático
+        .replace(/Lorem Ipsum/g, data.placeholder || "") // Placeholder
+        .replace(/Lorem Ipsum/g, data.valor || ""); // Valor estático
 
     case "requestSelector":
       let optionsHTML = data.opciones
@@ -182,10 +184,10 @@ function reemplazarValores(templateHTML, tipo, data) {
         .join("");
 
       return templateHTML
-        .replace(/Lorem Ipsum Label/g, data.label) // Label
-        .replace(/select-class/g, data.class) // Clase del select
-        .replace(/generic-select/g, data.name) // ID y name del select
-        .replace(/placeholder="Lorem Ipsum"/g, `placeholder="${data.placeholder}"`) // Placeholder
+        .replace(/Lorem Ipsum Label/g, data.label || "Seleccione una opción") // Label
+        .replace(/select-class/g, data.class || "default-class") // Clase del select
+        .replace(/generic-select/g, data.name || "default-select") // ID y name del select
+        .replace(/placeholder="Lorem Ipsum"/g, `placeholder="${data.placeholder || ""}"`) // Placeholder
         .replace(/<option value="option1">Opción 1<\/option>\n<option value="option2">Opción 2<\/option>/g, optionsHTML);
 
     default:
