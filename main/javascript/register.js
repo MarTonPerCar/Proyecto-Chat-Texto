@@ -6,11 +6,10 @@ async function init() {
 
   await cargarEstructura();
 
-  // Asignar listener al botón de registro
+  // Ahora que la estructura se ha cargado, asignamos el listener
   document.getElementById("btn-registrar").addEventListener("click", function(event) {
     event.preventDefault(); // Prevenir comportamiento por defecto
     if (validateRegistrationForm()) {
-      registrarUsuario();
       const urlDestino = getAbsolutePath("main/html/signIn.html");
       console.log("Redirigiendo a:", urlDestino);
       window.location.href = urlDestino;
@@ -25,72 +24,29 @@ if (document.readyState === "loading") {
   await init();
 }
 
-// Función para registrar usuario y actualizar JSON en LocalStorage
-function registrarUsuario() {
-  // Obtener valores de los inputs
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
-  const name = document.getElementById("name").value.trim();
-  const surname = document.getElementById("surname").value.trim();
-  const phone = document.getElementById("phonenumber").value.trim();
-
-  // Obtener datos existentes o crear un array vacío
-  let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-  // Verificar que el usuario no exista ya
-  if (usuarios.some(user => user.email === email)) {
-    alert("Este email ya está registrado.");
-    return;
-  }
-
-  // Crear el nuevo usuario
-  const nuevoUsuario = {
-    email,
-    password,
-    name,
-    surname,
-    phone,
-    agenda: "", // Se puede actualizar después
-    link: []
-  };
-
-  // Agregar usuario a la lista
-  usuarios.push(nuevoUsuario);
-
-  // Guardar en LocalStorage
-  localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-  console.log("Usuario registrado:", nuevoUsuario);
+// Funciones de validación (no se modifican)
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
 }
 
-// Función para descargar el JSON actualizado
-function descargarJSON() {
-  const usuarios = localStorage.getItem('usuarios') || "[]";
-  const blob = new Blob([usuarios], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-
-  const enlace = document.createElement('a');
-  enlace.href = url;
-  enlace.download = 'usuarios.json';
-  document.body.appendChild(enlace);
-  enlace.click();
-
-  document.body.removeChild(enlace);
-  URL.revokeObjectURL(url);
+function validatePhone(phone) {
+  const re = /^\+?\d{7,15}$/;
+  return re.test(phone);
 }
 
-// Función de validación del formulario
 function validateRegistrationForm() {
+  // Se asume que los inputs han sido creados dinámicamente por cargarEstructura()
   const email = document.getElementById("email");
   const password = document.getElementById("password");
   const repeatPassword = document.getElementById("repeat-password");
   const nameField = document.getElementById("name");
   const surname = document.getElementById("surname");
   const phone = document.getElementById("phonenumber");
-
   let isValid = true;
   let errors = [];
 
+  // Validar email: no vacío y formato correcto
   if (!email || email.value.trim() === "") {
     isValid = false;
     errors.push("El email es obligatorio.");
@@ -99,6 +55,7 @@ function validateRegistrationForm() {
     errors.push("El formato del email no es válido.");
   }
 
+  // Validar password: no vacío y mínimo 8 caracteres
   if (!password || password.value.trim() === "") {
     isValid = false;
     errors.push("La contraseña es obligatoria.");
@@ -107,6 +64,7 @@ function validateRegistrationForm() {
     errors.push("La contraseña debe tener al menos 8 caracteres.");
   }
 
+  // Validar que la repetición de la contraseña coincida
   if (!repeatPassword || repeatPassword.value.trim() === "") {
     isValid = false;
     errors.push("Debes repetir la contraseña.");
@@ -115,16 +73,19 @@ function validateRegistrationForm() {
     errors.push("Las contraseñas no coinciden.");
   }
 
+  // Validar nombre
   if (!nameField || nameField.value.trim() === "") {
     isValid = false;
     errors.push("El nombre es obligatorio.");
   }
 
+  // Validar apellido
   if (!surname || surname.value.trim() === "") {
     isValid = false;
     errors.push("El apellido es obligatorio.");
   }
 
+  // Validar número de teléfono
   if (!phone || phone.value.trim() === "") {
     isValid = false;
     errors.push("El número de teléfono es obligatorio.");
@@ -138,14 +99,4 @@ function validateRegistrationForm() {
     return false;
   }
   return true;
-}
-
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
-}
-
-function validatePhone(phone) {
-  const re = /^\+?\d{7,15}$/;
-  return re.test(phone);
 }

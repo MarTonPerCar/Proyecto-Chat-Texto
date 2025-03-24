@@ -1,10 +1,30 @@
 [
   {
     "email": "usuario1@example.com",
-    "password": "password123"
+    "password": "password123",
+    "name": "Rodolfo",
+    "surname": "Hernandez",
+    "phone": "666266390",
+    "agenda": "usuario2@example.com,usuario3@example.com",
+    "link": []
   },
   {
     "email": "usuario2@example.com",
-    "password": "securePassword456"
-  }
+    "password": "securePassword456",
+    "name": "Pepe",
+    "surname": "Viyuela",
+    "phone": "666266391",
+    "agenda": "usuario1@example.com,usuario3@example.com",
+    "link": []
+
+  },{
+  "email": "usuario3@example.com",
+  "password": "securePassword456",
+  "name": "Eustaquio",
+  "surname": "Habichuela",
+  "phone": "666266392",
+  "agenda": "usuario1@example.com,usuario2@example.com",
+  "link": []
+
+}
 ]
