@@ -4,17 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/Configuración.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/Inicio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Password_Sign_In).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Password_Sign_In).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/recoverPassword(Password_Sign_In).js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Password_Sign_In).js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/register.js" afterDir="false" />
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Changes on &lt;a&gt; reference 2">
+      <change beforePath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/Header Sign In/Header_Sign_In.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/button/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/conversations/conversations.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/conversations/conversations.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/mensajeGrupo/mensajeGrupo.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/mensajeGrupo/mensajeGrupo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/menssages/menssages.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/menssages/menssages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/MainPage/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/MainPage/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/addContact/addContact.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/addContact/addContact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/addContact/addContact.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/addContact/addContact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/editProfile/editProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/profile/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/profile/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).css" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/Main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/Main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Email)/recoverPassword(Email).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/html/noLogin/recoverPassword(Password)/recoverPassword(Password).html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="tsconfig.json" />
         <option value="HTML File" />
-        <option value="TypeScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -42,19 +46,17 @@
     &quot;assignee&quot;: &quot;enrique-eg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto&quot;,
-    &quot;accountId&quot;: &quot;6b7bb4c0-f567-4728-b3a6-ee00cedcd083&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MarTonPerCar/Proyecto-Chat-Texto.git",
+    "accountId": "62c00ac1-80fc-4440-963e-6c7c493d9d8d"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2srJOulygy29TqGXSXQ4h4zp0hD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,14 +74,13 @@
     "JavaScript Debug.header.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.prueba.html.executor": "Run",
-    "JavaScript Debug.recoverPassword(Password_Sign_In).html.executor": "Run",
     "JavaScript Debug.register.html.executor": "Run",
     "JavaScript Debug.request.html.executor": "Run",
     "JavaScript Debug.requestSelector.html.executor": "Run",
     "JavaScript Debug.sigIn.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Sprint-2",
+    "git-widget-placeholder": "Sprint-1",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Mario/Downloads/new_example_templates_HTML5",
     "list.type.of.created.stylesheet": "CSS",
@@ -139,10 +140,7 @@
       <workItem from="1740624127292" duration="3739000" />
       <workItem from="1740661623517" duration="18214000" />
       <workItem from="1740754586461" duration="5571000" />
-      <workItem from="1741965384098" duration="6007000" />
-      <workItem from="1742010751882" duration="1091000" />
-      <workItem from="1742230540965" duration="4591000" />
-      <workItem from="1742569891264" duration="1185000" />
+      <workItem from="1740938567099" duration="886000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -248,31 +246,7 @@
       <option name="project" value="LOCAL" />
       <updated>1740758594963</updated>
     </task>
-    <task id="LOCAL-00014" summary="Still Working on loadTemplate">
-      <option name="closed" value="true" />
-      <created>1741721591500</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1741721591500</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Still Working on loadTemplate">
-      <option name="closed" value="true" />
-      <created>1741989858843</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1741989858843</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Still Working on loadTemplate">
-      <option name="closed" value="true" />
-      <created>1742230994494</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1742230994494</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +275,6 @@
     <MESSAGE value="Finish Login" />
     <MESSAGE value="Changes on &lt;a&gt; reference" />
     <MESSAGE value="Changes on &lt;a&gt; reference 2" />
-    <MESSAGE value="Still Working on loadTemplate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Still Working on loadTemplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes on &lt;a&gt; reference 2" />
   </component>
 </project>

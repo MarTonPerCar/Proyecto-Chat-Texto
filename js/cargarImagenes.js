@@ -21,14 +21,16 @@ export function cargarImagenPorId(id, contenedorID) {
           return;
         }
 
+        const imagenURL = getAbsolutePath(imagen.url);
+
         if (contenedor.tagName === 'IMG') {
-          contenedor.src = imagen.url;
+          contenedor.src = imagenURL;
           contenedor.alt = imagen.alt;
           contenedor.classList.add('imagen-cargada');
         } else {
           contenedor.innerHTML = '';
           const imgElement = document.createElement('img');
-          imgElement.src = imagen.url;
+          imgElement.src = imagenURL;
           imgElement.alt = imagen.alt;
           imgElement.classList.add('imagen-cargada');
           contenedor.appendChild(imgElement);
