@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/Configuración.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/Inicio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2025_17_04_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2025_17_04__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Password_Sign_In).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Password_Sign_In).html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/recoverPassword(Password_Sign_In).js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Password_Sign_In).js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/html/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/start.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Sprint-1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -44,8 +45,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto&quot;,
-    &quot;accountId&quot;: &quot;6b7bb4c0-f567-4728-b3a6-ee00cedcd083&quot;
+    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto.git&quot;,
+    &quot;accountId&quot;: &quot;237b8548-e917-46c2-a7ac-870a5581944d&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -77,8 +78,10 @@
     "JavaScript Debug.request.html.executor": "Run",
     "JavaScript Debug.requestSelector.html.executor": "Run",
     "JavaScript Debug.sigIn.html.executor": "Run",
+    "JavaScript Debug.start.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "disable.download.node.interpreter.editor.notification": "true",
     "git-widget-placeholder": "Sprint-2",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Mario/Downloads/new_example_templates_HTML5",
@@ -89,7 +92,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -113,7 +116,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -143,6 +146,9 @@
       <workItem from="1742010751882" duration="1091000" />
       <workItem from="1742230540965" duration="4591000" />
       <workItem from="1742569891264" duration="1185000" />
+      <workItem from="1743017940935" duration="159000" />
+      <workItem from="1743018116610" duration="880000" />
+      <workItem from="1743074346856" duration="1945000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
