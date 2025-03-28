@@ -83,7 +83,7 @@ function getProjectBase() {
   if (pathParts.length > 1) {
     return window.location.origin + "/" + pathParts[0] + "/"; // Detecta la carpeta raíz
   } else {
-    return window.location.origin + "/"; // Si está en la raíz del servidor
+    return window.location.origin; // Si está en la raíz del servidor
   }
 }
 
@@ -167,7 +167,7 @@ function reemplazarValores(templateHTML, tipo, data) {
         .replace(/Label/g, data.label || "Texto genérico") // Label
         .replace(/id="formInput"/g, `id="${data.nameID || "default-id"}"`) // ID
         .replace(/type="text"/g, `type="${data.type || "text"}"`) // Tipo del input
-        .replace(/placeholder="PlaceHolder"/g, `placeholder="${data.placeholder || ""}"`) // Placeholder
+        .replace(/placeholder="Placeholder"/g, `placeholder="${data.placeholder || ""}"`) // Placeholder
         .replace(/pattern=""/g, `pattern="${data.patron || ".*"}"`); // Patrón de validación
 
     case "notChangeableText":

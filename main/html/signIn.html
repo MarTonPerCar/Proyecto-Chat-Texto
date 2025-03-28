@@ -3,36 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Iniciar Sesión</title>
+
   <script type="module" src="../javascript/signIn.js"></script>
+  <link id="cssColorsLink" rel="stylesheet">
   <link id="cssLink" rel="stylesheet">
 </head>
-<body>
-<header id="header"></header>
 
-<main>
-  <div class="form-container">
-    <form id="input-group">
-      <div id="request-email">
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
+  <body>
+    <header id="header"></header>
+
+    <main>
+      <div class="form-container">
+        <form id="input-group">
+          <div id="request-email">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+          </div>
+          <div id="request-password">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+          </div>
+        </form>
       </div>
-      <div id="request-password">
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" required>
+
+      <div class="boton-container">
+        <button id="startLink" type="button">Iniciar Sesión</button>
       </div>
-    </form>
-  </div>
 
-  <div class="boton-container">
-    <button id="startLink" type="button">Iniciar Sesión</button>
-  </div>
+      <div class="texto-container">
+        <a id="recoverPasswordEmail" href="#">¿Olvidaste tu contraseña?</a>
+      </div>
+    </main>
 
-  <div class="texto-container">
-    <a id="recoverPasswordEmail" href="#">¿Olvidaste tu contraseña?</a>
-  </div>
-</main>
-
-<footer id="footer"></footer>
-</body>
+    <footer id="footer"></footer>
+  </body>
 </html>

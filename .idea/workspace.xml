@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Problem Solution">
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Problem Solution 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/css/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/colors.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/css/headerSignIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/headerSignIn.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/html/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/request.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/javascript/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/javascript/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/loadTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/css/signIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/signIn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/css/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/start.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/html/signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/signIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/signIn.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,18 +112,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\AppData\Local\Temp\Rar$DIa18736.23027.rartemp" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\addGroup" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\requestSelector" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\notChangeableText" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\MainPage" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\avatarNombre" />
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\avatar" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -284,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743181542029</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Problem Solution 2">
+      <option name="closed" value="true" />
+      <created>1743181693327</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743181693327</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +335,18 @@
     <MESSAGE value="Changes on &lt;a&gt; reference 2" />
     <MESSAGE value="Still Working on loadTemplate" />
     <MESSAGE value="Problem Solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problem Solution" />
+    <MESSAGE value="Problem Solution 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problem Solution 2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/main/javascript/signIn.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

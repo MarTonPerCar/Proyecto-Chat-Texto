@@ -1,7 +1,13 @@
 import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
 
 async function init() {
+
+  console.log(getAbsolutePath("main/css/signIn.css"));
+  console.log(getAbsolutePath("colors.css"));
+
   document.getElementById("cssLink").href = getAbsolutePath("main/css/signIn.css");
+  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
+
   document.getElementById("startLink").href = getAbsolutePath("main/html/start.html");
   document.getElementById("recoverPasswordEmail").href = getAbsolutePath("main/html/recoverPassword(Email).html");
   await cargarEstructura();
