@@ -1,0 +1,69 @@
+Index: Templates/html/header.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Header Template</title>\r\n  <script type=\"module\" src=\"../javascript/header.js\"></script>\r\n  <link id=\"cssHeaderLink\" rel=\"stylesheet\">\r\n</head>\r\n<body>\r\n<header class=\"hw-header\" role=\"banner\">\r\n  <div class=\"hw-logo\">\r\n    <a id=\"indexLink\" href=\"#\" class=\"hw-logo__link\">\r\n      <img src=\"../../img/SoloLogo.png\" alt=\"Company Logo\" class=\"hw-logo__img\">\r\n    </a>\r\n  </div>\r\n\r\n  <nav class=\"hw-nav\" aria-label=\"Main navigation\">\r\n    <a id=\"signInLink\">\r\n    <button class=\"hw-button hw-button--sign-in\" id=\"signInBtn\">Sign in</button>\r\n    </a>\r\n    <a id=\"registerLink\"class=\"hw-nav__link\">\r\n    <button class=\"hw-button hw-button--register\" id=\"registerBtn\">Register</button>\r\n    </a>\r\n  </nav>\r\n</header>\r\n\r\n<script src=\"../javascript/header.js\" type=\"module\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/html/header.html b/Templates/html/header.html
+--- a/Templates/html/header.html	(revision db9ad7c636f266b3db3ada65a9ce2bdf072d26d9)
++++ b/Templates/html/header.html	(date 1743177011722)
+@@ -19,7 +19,7 @@
+     <a id="signInLink">
+     <button class="hw-button hw-button--sign-in" id="signInBtn">Sign in</button>
+     </a>
+-    <a id="registerLink"class="hw-nav__link">
++    <a id="registerLink" class="hw-nav__link">
+     <button class="hw-button hw-button--register" id="registerBtn">Register</button>
+     </a>
+   </nav>
+Index: main/html/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Proyecto X</title>\r\n  <!-- Tus enlaces a CSS existentes -->\r\n  <link id=\"ccsColors\" rel=\"stylesheet\" href=\"css/colors.css\">\r\n  <link id=\"cssLink\" rel=\"stylesheet\" href=\"css/styles.css\">\r\n</head>\r\n<body>\r\n<header id=\"header\"></header>\r\n\r\n<main class=\"main-content\">\r\n  <section class=\"hero\">\r\n    <div class=\"hero-container\">\r\n      <div class=\"hero-icon\"></div>\r\n      <div class=\"hero-text\">\r\n        <h1>Proyecto X</h1>\r\n        <p>Ejemplo de texto que escribir</p>\r\n      </div>\r\n    </div>\r\n  </section>\r\n</main>\r\n\r\n<footer id=\"footer\"></footer>\r\n\r\n<script type=\"module\" src=\"../javascript/index.js\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/html/index.html b/main/html/index.html
+--- a/main/html/index.html	(revision db9ad7c636f266b3db3ada65a9ce2bdf072d26d9)
++++ b/main/html/index.html	(date 1743177047910)
+@@ -5,7 +5,7 @@
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Proyecto X</title>
+   <!-- Tus enlaces a CSS existentes -->
+-  <link id="ccsColors" rel="stylesheet" href="css/colors.css">
++  <link id="ccsColors" rel="stylesheet" href="/main/css/colors.css">
+   <link id="cssLink" rel="stylesheet" href="css/styles.css">
+ </head>
+ <body>
+Index: main/css/colors.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/css/colors.css b/main/css/colors.css
+new file mode 100644
+--- /dev/null	(date 1742836159307)
++++ b/main/css/colors.css	(date 1742836159307)
+@@ -0,0 +1,21 @@
++:root {
++  --white: #ffffff;
++  --blanco: #f2e8c4;       /* Color principal */
++  --verde-secundario: #98d9b6;     /* Color secundario */
++  --verde-primario: #3ec9a7;    /* Fondo */
++  --azul: #2b879e;    /* Color de texto */
++  --gray: #333333;     /* Resaltado */
++  --grayh: #616668;
++  --green: #25D366;
++  --coral: #FF7FAA;
++  --black: #000000;
++}
++
++/* Modo oscuro */
++.dark-mode {
++  --primary: #333533;
++  --secondary: #E8EDDF;
++  --background: #242423;
++  --text-color: #ffffff;
++  --highlight: #00ABCE;
++}

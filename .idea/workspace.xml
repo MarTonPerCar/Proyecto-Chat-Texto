@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/Configuración.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/Inicio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Password_Sign_In).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Password_Sign_In).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/recoverPassword(Password_Sign_In).js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Password_Sign_In).js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/register.js" afterDir="false" />
-    </list>
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +76,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
+    "nodejs_interpreter_path": "C:/Users/enriq/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.13.1/node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.nodejs",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
