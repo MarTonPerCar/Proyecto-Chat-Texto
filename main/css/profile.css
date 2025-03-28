@@ -1,3 +1,5 @@
+@import url("colors.css");
+
 /* Reset y configuración global */
 * {
   margin: 0;
@@ -7,7 +9,7 @@
 }
 
 body {
-  background-color: #3ec9a7;
+  background-color: var(--white);
 }
 
 #profile-main {

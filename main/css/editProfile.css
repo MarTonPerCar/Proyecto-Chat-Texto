@@ -1,8 +1,10 @@
+@import url("colors.css");
+
 /* Centrar el contenido en la pantalla */
 
 body{
   min-height: 100vh;
-  background-color: #3ec9a7;
+  background-color: var(--white);
 }
 
 main {

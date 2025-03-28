@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Header Template</title>
-
   <script type="module" src="../javascript/header.js"></script>
   <link id="cssHeaderLink" rel="stylesheet">
 </head>
 <body>
-
-<header class="header">
-  <div class="logo">
-    <a id="indexLink" target="_self">
-      <img id="Main_Icon" src="" alt="logo"/>
+<header class="hw-header" role="banner">
+  <div class="hw-logo">
+    <a id="indexLink" href="#" class="hw-logo__link">
+      <img src="../../img/SoloLogo.png" alt="Company Logo" class="hw-logo__img">
     </a>
-    <span>Instant Message</span>
   </div>
 
-  <nav class="nav">
-    <a id="signInLink" class="nav-link">
-      <button class="button sign-in">Sign in</button>
+  <nav class="hw-nav" aria-label="Main navigation">
+    <a id="signInLink">
+    <button class="hw-button hw-button--sign-in" id="signInBtn">Sign in</button>
     </a>
-    <a id="registerLink" class="nav-link">
-      <button class="button register">Register</button>
+    <a id="registerLink"class="hw-nav__link">
+    <button class="hw-button hw-button--register" id="registerBtn">Register</button>
     </a>
   </nav>
 </header>
 
+<script src="../javascript/header.js" type="module"></script>
 </body>
 </html>

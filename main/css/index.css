@@ -1,56 +1,94 @@
-.body {
-  background-color: #3ec9a7;
+@import url("../../Templates/css/colors.css");
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--white);
+  margin: 0;
 }
 
+.main-content {
+  flex: 1;
+  display: flex;
+}
+
+/* Hero section - Centrado perfecto */
 .hero {
-  background-color: #c7b7f5; /* Color morado */
-  padding: 50px 20px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 65vh;
+  padding: 2rem;
 }
 
-.hero-content {
+.hero-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero-image {
+.hero-icon {
   width: 150px;
   height: 150px;
-  border: 2px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid var(--black);
   position: relative;
 }
 
-.hero-image::before,
-.hero-image::after {
+.hero-icon::before,
+.hero-icon::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 2px;
-  background: black;
+  background: var(--black);
   top: 50%;
   left: 0;
+}
+
+.hero-icon::before {
   transform: rotate(45deg);
 }
 
-.hero-image::after {
+.hero-icon::after {
   transform: rotate(-45deg);
+}
+
+.hero-text {
+  text-align: center;
 }
 
 .hero-text h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: black;
+  color: var(--black);
+  margin-bottom: 1rem;
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: black;
+  color: var(--black);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .hero-icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
 }
