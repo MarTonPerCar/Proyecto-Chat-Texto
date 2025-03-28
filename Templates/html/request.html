@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template de Formulario</title>
-  <link rel="stylesheet" href="/Templates/css/request.css">
-</head>
-<body>
-<div class="form-template" id="formTemplate">
-  <div class="form-group">
-    <label class="form-label" id="formLabel">Label</label>
-    <input type="text" class="form-input" id="formInput"
-           placeholder="Placeholder" required>
-    <small class="form-help" id="formHelp">Help text</small>
-  </div>
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Genérico</title>
+    <link rel="stylesheet" href="/Templates/css/request.css">
+  </head>
+  <body>
+    <form>
+      <label for="generic-input">Lorem Ipsum</label>
+      <input type="text" id="generic-input" name="generic-input" placeholder="Lorem Ipsum" pattern=".{3,}" required>
+    </form>
+  </body>
 </html>

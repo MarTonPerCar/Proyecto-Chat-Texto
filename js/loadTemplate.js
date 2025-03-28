@@ -4,7 +4,7 @@ export async function cargarEstructura() {
     await cargarTemplate('/Templates/html/header.html', 'header', 'Templates/javascript/header.js');
   }
   if (document.getElementById('header-sign-in')) {
-    await cargarTemplate('/Templates/html/headerSignIn.html', 'header-sign-in');
+    await cargarTemplate('/Templates/html/Header_Sign_In.html', 'header-sign-in');
   }
 
   // FOOTER

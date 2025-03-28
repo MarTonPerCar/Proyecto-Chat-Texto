@@ -4,7 +4,7 @@ console.log("Header Sign In cargado correctamente");
 
 async function init() {
   // Asignar rutas absolutas a los enlaces y estilos
-  document.getElementById("cssHeaderSignInLink").href = getAbsolutePath("Templates/css/headerSignIn.css");
+  document.getElementById("cssHeaderSignInLink").href = getAbsolutePath("Templates/css/Header_Sign_In.css");
 
   document.getElementById("indexLink").href = getAbsolutePath("main/html/index.html");
   document.getElementById("startLink").href = getAbsolutePath("main/html/start.html");

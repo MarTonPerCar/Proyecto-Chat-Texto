@@ -1,5 +1,10 @@
-@import url("../../Templates/css/colors.css");
-
+/* Reset y configuración global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
 /* Ajustar el body para que el footer no esté pegado */
 body {
@@ -27,6 +32,11 @@ body {
   min-height: 75vh; /* Aumentamos la altura del chat */
 }
 
+/* Hacer que el footer siempre esté en la parte inferior */
+footer {
+  margin-top: auto;
+  padding: 20px;
+}
 
 html:has(#content-special) footer {
   position: relative !important;

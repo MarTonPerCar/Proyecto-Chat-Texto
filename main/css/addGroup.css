@@ -1,5 +1,4 @@
-@import url("colors.css");
-
+/* Reset general */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,7 @@
 }
 
 body{
-  background-color: var(--white);
+  background-color: #3ec9a7;
 }
 
 /* Contenedor principal sin afectar body */
