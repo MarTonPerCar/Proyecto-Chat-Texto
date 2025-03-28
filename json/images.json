@@ -27,7 +27,7 @@
     },
     {
       "nombre": "IndexIcon",
-      "url": "assets/Index_Icon.PNG",
+      "url": "assets/Index_Icon.png",
       "alt": "Icono de índice"
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "nombre": "Main_Icon",
-      "url": "assets/Main_Icon.PNG",
+      "url": "assets/Main_Icon.png",
       "alt": "Icono principal"
     }
   ]
