@@ -1,0 +1,158 @@
+@import url("colors.css");
+
+/* ===== RESET Y ESTILOS BASE ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Mejor jerarquía de fuentes */
+}
+
+/* ===== HEADER PRINCIPAL ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verde-primario);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--black);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* ===== LOGO ===== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease; /* Efecto hover */
+}
+
+.logo-container:hover {
+  transform: scale(1.02); /* Efecto sutil al pasar el mouse */
+}
+
+.logo-img {
+  width: 160px; /* Ligeramente más grande */
+  height: auto; /* Mantiene proporción */
+  max-height: 50px;
+}
+
+/* ===== SECCIÓN DE USUARIO ===== */
+.user-section-header {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Más espacio entre elementos */
+}
+
+/* ===== BOTONES ===== */
+.button-header-login {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.button-header-login:hover {
+  background-color: rgba(255,255,255,0.1); /* Efecto hover sutil */
+}
+
+.btn-img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0.9); /* Mejor contraste */
+  transition: transform 0.2s ease;
+}
+
+.button-header-login:hover .btn-img {
+  transform: scale(1.1); /* Efecto hover */
+  filter: brightness(1.1);
+}
+
+/* ===== NOMBRE DE USUARIO ===== */
+.username {
+  font-size: 0.875rem; /* 14px */
+  color: var(--black);
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: 0.3px;
+  text-transform: capitalize; /* Primera letra mayúscula */
+  transition: color 0.3s ease;
+}
+
+.username:hover {
+  color: var(--coral); /* Usa tu color destacado */
+}
+
+/* ===== AVATAR ===== */
+.avatar-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.circular-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.1); /* Borde sutil */
+  transition: all 0.3s ease;
+}
+
+.avatar-container:hover .circular-img {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0,0,0,0.2); /* Efecto hover */
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo-img {
+    width: 130px;
+  }
+
+  .user-section-header {
+    gap: 12px;
+  }
+
+  .btn-img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .circular-img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .username {
+    display: none;
+  }
+
+  .user-section-header {
+    gap: 10px;
+  }
+
+  .logo-img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 8px 10px;
+  }
+
+  .logo-img {
+    width: 100px;
+  }
+
+  .btn-img {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,17 +1,55 @@
-.body {
-  font-family: "Times New Roman", sans-serif;
+:root {
+  --primary-color: #3ec9a7;
+  --border-color: #ddd;
+  --error-color: #e74c3c;
+  --text-color: #333;
+  --transition: all 0.2s ease;
 }
 
-label {
-  font-weight: bold;
+.form-template {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-label {
   display: block;
-  margin-bottom: 5px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
 }
 
-input {
-  height: 2vh;
+.form-input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(62, 201, 167, 0.2);
+}
+
+.form-help {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Estados de validación */
+.form-input:invalid {
+  border-left: 3px solid var(--error-color);
+}
+
+.form-input:valid {
+  border-left: 3px solid var(--primary-color);
 }

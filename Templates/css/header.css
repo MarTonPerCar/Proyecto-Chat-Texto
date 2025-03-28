@@ -1,57 +1,80 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url("colors.css");
 
-body {
-  font-family: Arial, sans-serif;
-}
-
-.header {
+.hw-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background-color: white;
-  border-bottom: 4px solid #c8c0ff;
+  background-color: var(--verde-primario);
+  padding: 10px 20px;
+  color: var(--blanco);
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
+/* Logo */
+.hw-logo {
+  display: flex;
+  align-items: center;
 }
 
-.nav {
+.hw-logo__img {
+  width: 150px;
+  height: 50px;
+  margin-right: 1vw;
+}
+
+/* Navegación */
+.hw-nav {
   display: flex;
   gap: 10px;
 }
 
-.button {
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.sign-in {
-  border: 1px solid #555;
-  background-color: white;
-  color: black;
-}
-
-.register {
-  background-color: black;
-  color: white;
+.hw-nav__link {
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
   border: none;
 }
 
-.sign-in:hover {
-  background-color: #f0f0f0;
+/* Botones específicos del header */
+.hw-button {
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  color: var(--blanco);
+  text-decoration: none;
+  font-family: inherit;
 }
 
-.register:hover {
-  background-color: #333;
+.hw-button--sign-in {
+  background-color: var(--grayh);
+  color: var(--blanco);
+  border: 1px solid var(--blanco);
+}
+
+.hw-button--register {
+  background-color: var(--grayh);
+  color: var(--blanco);
+  border: 1px solid var(--blanco);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hw-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hw-logo__text {
+    display: none;
+  }
+
+  .hw-nav {
+    gap: 5px;
+  }
+
+  .hw-button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
 }

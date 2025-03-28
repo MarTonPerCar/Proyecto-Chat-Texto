@@ -1,3 +1,5 @@
+@import url("../../Templates/css/colors.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #3ec9a7;
+  background-color: var(--white);
 }
 
 #header {
@@ -64,11 +66,11 @@ main {
 }
 
 .boton-container button {
-  height: 3vh; /* Misma altura que el input */
+  height: 20px; /* Misma altura que el input */
   width: 50vw; /* Misma anchura que el input */
-  border: 1px solid #333333; /* Mismo borde que el input */
+  border: 1px solid var(--gray); /* Mismo borde que el input */
   border-radius: 5px; /* Bordes redondeados */
-  background-color: #333333; /* Color de fondo similar al input */
+  background-color: var(--gray); /* Color de fondo similar al input */
   color: white; /* Color del texto */
   font-size: 16px; /* Tamaño de letra */
   cursor: pointer;
@@ -76,7 +78,7 @@ main {
 }
 
 .boton-container button:hover {
-  background-color: #25D366; /* Cambio de color al pasar el mouse */
+  background-color: var(--green); /* Cambio de color al pasar el mouse */
 }
 
 
