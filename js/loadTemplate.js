@@ -164,13 +164,11 @@ function reemplazarValores(templateHTML, tipo, data) {
   switch (tipo) {
     case "request":
       return templateHTML
-        .replace(/Lorem Ipsum/g, data.label || "Texto genérico") // Label
-        .replace(/for="generic-input"/g, `for="${data.nameID || "default-id"}"`) // ID y name del input
-        .replace(/id="generic-input"/g, `id="${data.nameID || "default-id"}"`) // ID
-        .replace(/name="generic-input"/g, `name="${data.nameID || "default-id"}"`) // Name
+        .replace(/Label/g, data.label || "Texto genérico") // Label
+        .replace(/id="formInput"/g, `id="${data.nameID || "default-id"}"`) // ID
         .replace(/type="text"/g, `type="${data.type || "text"}"`) // Tipo del input
-        .replace(/placeholder="Lorem Ipsum"/g, `placeholder="${data.placeholder || ""}"`) // Placeholder
-        .replace(/pattern=".{3,}"/g, `pattern="${data.patron || ".*"}"`); // Patrón de validación
+        .replace(/placeholder="PlaceHolder"/g, `placeholder="${data.placeholder || ""}"`) // Placeholder
+        .replace(/pattern=""/g, `pattern="${data.patron || ".*"}"`); // Patrón de validación
 
     case "notChangeableText":
       return templateHTML

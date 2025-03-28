@@ -1,0 +1,22 @@
+Index: Templates/html/Header_Sign_In.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"es\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\r\n    <title>Header Template</title>\r\n\r\n    <script type=\"module\" src=\"../javascript/headerSignIn.js\"></script>\r\n    <link id=\"cssHeaderSignInLink\" rel=\"stylesheet\">\r\n  </head>\r\n\r\n  <body>\r\n\r\n  <header class=\"header\">\r\n    <div class=\"logo-container\">\r\n      <a id=\"indexLink\" target=\"_self\">\r\n        <img src=\"icon.png\" alt=\"Logo\" class=\"logo-img\">\r\n      </a>\r\n      <span class=\"logo-text\">Instant Message</span>\r\n    </div>\r\n\r\n    <div class=\"user-section-header\">\r\n      <button class=\"button-header-login\">\r\n        <a id=\"startLink\"><img id=\"startImg\" alt=\"Inicio\" class=\"btn-img\"></a>\r\n      </button>\r\n\r\n      <button class=\"button-header-login\">\r\n        <a id=\"settingsLink\"><img id=\"configImg\" alt=\"Configuración\" class=\"btn-img\"></a>\r\n      </button>\r\n\r\n      <span class=\"username\">Usuario</span>\r\n\r\n      <div class=\"avatar-container\">\r\n        <a id=\"profileLink\"><img id=\"avatarImg\" alt=\"Foto de perfil\" class=\"circular-img\"></a>\r\n      </div>\r\n    </div>\r\n\r\n  </header>\r\n\r\n  </body>\r\n</html>\r\n
+===================================================================
+diff --git a/Templates/html/Header_Sign_In.html b/Templates/html/Header_Sign_In.html
+--- a/Templates/html/Header_Sign_In.html	(revision 8e4fbc8b2b1623e9c5d83a6f90cf0b3ad9c4dc32)
++++ b/Templates/html/Header_Sign_In.html	(date 1743175764890)
+@@ -22,11 +22,11 @@
+ 
+     <div class="user-section-header">
+       <button class="button-header-login">
+-        <a id="startLink"><img id="startImg" alt="Inicio" class="btn-img"></a>
++        <a id="startLink"><img id="startImg" src="" alt="Inicio" class="btn-img"></a>
+       </button>
+ 
+       <button class="button-header-login">
+-        <a id="settingsLink"><img id="configImg" alt="Configuración" class="btn-img"></a>
++        <a id="settingsLink"><img id="configImg" src="" alt="Configuración" class="btn-img"></a>
+       </button>
+ 
+       <span class="username">Usuario</span>
