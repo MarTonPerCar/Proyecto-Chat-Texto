@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2025_17_04_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2025_17_04__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/usuarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/usuarios.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +28,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Sprint-1" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -45,8 +39,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto.git&quot;,
-    &quot;accountId&quot;: &quot;237b8548-e917-46c2-a7ac-870a5581944d&quot;
+    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto&quot;,
+    &quot;accountId&quot;: &quot;6b7bb4c0-f567-4728-b3a6-ee00cedcd083&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -60,43 +54,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.Header_Sign_In.html.executor": "Run",
-    "JavaScript Debug.addButton.html.executor": "Run",
-    "JavaScript Debug.asdsad.html.executor": "Run",
-    "JavaScript Debug.avatar.html.executor": "Run",
-    "JavaScript Debug.button.html.executor": "Run",
-    "JavaScript Debug.footer.html.executor": "Run",
-    "JavaScript Debug.header.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.prueba.html.executor": "Run",
-    "JavaScript Debug.recoverPassword(Password_Sign_In).html.executor": "Run",
-    "JavaScript Debug.register.html.executor": "Run",
-    "JavaScript Debug.request.html.executor": "Run",
-    "JavaScript Debug.requestSelector.html.executor": "Run",
-    "JavaScript Debug.sigIn.html.executor": "Run",
-    "JavaScript Debug.start.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "disable.download.node.interpreter.editor.notification": "true",
-    "git-widget-placeholder": "Sprint-2",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mario/Downloads/new_example_templates_HTML5",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.Header_Sign_In.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.addButton.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.asdsad.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.avatar.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.button.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.footer.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.prueba.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.recoverPassword(Password_Sign_In).html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.request.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.requestSelector.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.sigIn.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.register.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Sprint-2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mario/Downloads/new_example_templates_HTML5&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\addGroup" />
@@ -116,7 +109,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
       </set>
     </attachedChunks>
   </component>
@@ -145,10 +138,8 @@
       <workItem from="1741965384098" duration="6007000" />
       <workItem from="1742010751882" duration="1091000" />
       <workItem from="1742230540965" duration="4591000" />
-      <workItem from="1742569891264" duration="1185000" />
-      <workItem from="1743017940935" duration="159000" />
-      <workItem from="1743018116610" duration="880000" />
-      <workItem from="1743074346856" duration="1945000" />
+      <workItem from="1742569891264" duration="5883000" />
+      <workItem from="1742829293228" duration="8061000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -278,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742230994494</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Still Working on loadTemplate">
+      <option name="closed" value="true" />
+      <created>1742571094725</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1742571094725</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
