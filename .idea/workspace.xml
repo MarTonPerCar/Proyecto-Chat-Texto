@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Still Working on loadTemplate">
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Problem Solution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/conversations.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/conversations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/javascript/signIn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/loadTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadTemplate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/html/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/request.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../Proyecto-Chat-Texto\exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,7 +85,7 @@
     "disable.download.node.interpreter.editor.notification": "true",
     "git-widget-placeholder": "Sprint-2",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mario/Downloads/new_example_templates_HTML5",
+    "last_opened_file_path": "C:/Users/Mario/AppData/Local/Temp/Rar$DIa18736.23027.rartemp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -278,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742230994494</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Problem Solution">
+      <option name="closed" value="true" />
+      <created>1743181542029</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743181542029</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +314,7 @@
     <MESSAGE value="Changes on &lt;a&gt; reference" />
     <MESSAGE value="Changes on &lt;a&gt; reference 2" />
     <MESSAGE value="Still Working on loadTemplate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Still Working on loadTemplate" />
+    <MESSAGE value="Problem Solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problem Solution" />
   </component>
 </project>
