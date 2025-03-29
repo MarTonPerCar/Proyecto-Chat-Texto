@@ -37,8 +37,18 @@
     },
     {
       "nombre": "Main_Icon",
-      "url": "assets/Main_Icon.png",
+      "url": "assets/SoloLogo.png",
       "alt": "Icono principal"
+    },
+    {
+      "nombre": "Instagram",
+      "url": "assets/Instagram.png",
+      "alt": "Icono Instagram"
+    },
+    {
+      "nombre": "Logo",
+      "url": "assets/LogoImagen.png",
+      "alt": "Logo"
     }
   ]
 }

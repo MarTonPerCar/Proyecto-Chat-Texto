@@ -2,12 +2,13 @@ import { getAbsolutePath } from '../../js/loadTemplate.js';
 import { cargarImagenPorId } from '../../js/cargarImagenes.js';
 
 async function init() {
-  document.getElementById("cssHeaderLink").href = getAbsolutePath("Templates/css/header.css");
+  cargarImagenPorId('Logo', 'Logo');
+  cargarImagenPorId('Instagram', 'Instagram');
+  document.getElementById("cssFooterLink").href = getAbsolutePath("Templates/css/footer.css");
   document.getElementById("indexLink").href = getAbsolutePath("main/html/index.html");
-  document.getElementById("signInLink").href = getAbsolutePath("main/html/signIn.html");
-  document.getElementById("registerLink").href = getAbsolutePath("main/html/register.html");
 
-  cargarImagenPorId('Main_Icon', 'Main_Icon');
+
+
 }
 
 // Ejecutar init() dependiendo del estado del DOM

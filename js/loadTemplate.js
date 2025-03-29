@@ -9,7 +9,7 @@ export async function cargarEstructura() {
 
   // FOOTER
   if (document.getElementById('footer')) {
-    await cargarTemplate('/Templates/html/footer.html', 'footer');
+    await cargarTemplate('/Templates/html/footer.html', 'footer', 'Templates/javascript/footer.js');
   }
   if (document.getElementById('footer-mainpage')) {
     await cargarTemplate('/Templates/html/footer_main_page.html', 'footer-mainpage');
