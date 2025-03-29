@@ -4,7 +4,7 @@
     "type": "email",
     "nameID": "email",
     "placeholder": "Ingrese su correo",
-    "patron": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    "patron": ""
   },
   "font-size": {
     "label": "Tamaño de Fuente",

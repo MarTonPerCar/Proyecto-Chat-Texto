@@ -1,19 +1,66 @@
-.body {
-  font-family: "Times New Roman", sans-serif;
+:root {
+  --primary-color: #3ec9a7;
+  --border-color: #ddd;
+  --text-color: #333;
+  --transition: all 0.2s ease;
+  --focus-shadow: 0 0 0 3px rgba(62, 201, 167, 0.2);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .label-selector {
-  font-weight: bold;
   display: block;
-  margin-bottom: 5px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
 }
 
-.select {
-  height: 45px;
-  width: 51.5%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.selector {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: var(--transition);
   background-color: white;
   cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+}
+
+.selector:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: var(--focus-shadow);
+}
+
+.selector option {
+  padding: 0.5rem;
+}
+
+.selector option:disabled {
+  color: #999;
+}
+
+/* Estilo para cuando hay una opción seleccionada válida */
+.selector:valid {
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Estilo para cuando es requerido y no hay selección */
+.selector:invalid {
+  border-left: 3px solid #e74c3c;
 }
