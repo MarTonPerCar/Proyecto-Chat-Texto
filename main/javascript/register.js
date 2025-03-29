@@ -3,6 +3,7 @@ import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
 async function init() {
   document.getElementById("cssRegisterLink").href = getAbsolutePath("main/css/register.css");
   document.getElementById("signIn").href = getAbsolutePath("main/html/signIn.html");
+  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
 
   await cargarEstructura();
 

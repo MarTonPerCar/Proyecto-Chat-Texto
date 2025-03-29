@@ -3,7 +3,7 @@ import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
 async function init() {
   document.getElementById("cssRecoverPasswordLink").href = getAbsolutePath("main/css/recoverPassword(Email).css");
   document.getElementById("changePassword").href = getAbsolutePath("main/html/recoverPassword(Password).html");
-
+  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
 
 
   await cargarEstructura();
