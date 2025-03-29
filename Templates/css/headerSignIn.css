@@ -1,10 +1,22 @@
 @import url("../../colors.css");
 
+/* ===== VARIABLES CSS ===== */
+:root {
+  --header-height: 70px;
+  --transition-speed: 0.3s;
+  --border-radius: 10px;
+  --hover-brightness: 1.2;
+  --element-spacing: 1.5rem;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --border-light: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 /* ===== RESET Y ESTILOS BASE ===== */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Arial, sans-serif; /* Mejor jerarquía de fuentes */
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 /* ===== HEADER PRINCIPAL ===== */
@@ -13,33 +25,48 @@ body, html {
   justify-content: space-between;
   align-items: center;
   background-color: var(--verde-primario);
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--black);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+  padding: 0 5%;
+  height: var(--header-height);
+  border-bottom: var(--border-light);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 /* ===== LOGO ===== */
 .logo-container {
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease; /* Efecto hover */
+  transition: all var(--transition-speed) cubic-bezier(0.25, 0.1, 0.25, 1);
+  height: 100%;
 }
 
 .logo-container:hover {
-  transform: scale(1.02); /* Efecto sutil al pasar el mouse */
+  transform: translateY(-2px);
 }
 
-.logo-img {
-  width: 160px; /* Ligeramente más grande */
-  height: auto; /* Mantiene proporción */
-  max-height: 50px;
+#Main_Icon {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: all var(--transition-speed) ease;
+  filter: drop-shadow(var(--shadow-sm));
+}
+
+.logo-container:hover #Main_Icon {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
 /* ===== SECCIÓN DE USUARIO ===== */
 .user-section-header {
   display: flex;
   align-items: center;
-  gap: 20px; /* Más espacio entre elementos */
+  gap: var(--element-spacing);
+  height: 100%;
 }
 
 /* ===== BOTONES ===== */
@@ -47,112 +74,170 @@ body, html {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  padding: 8px 10px;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .button-header-login:hover {
-  background-color: rgba(255,255,255,0.1); /* Efecto hover sutil */
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.btn-img {
+.button-header-login::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--coral);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-speed) ease;
+}
+
+.button-header-login:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#Inicio, #Configuracion {
   width: 24px;
   height: 24px;
-  filter: brightness(0.9); /* Mejor contraste */
-  transition: transform 0.2s ease;
+  filter: brightness(0.9);
+  transition: all var(--transition-speed) ease;
+  object-fit: contain;
 }
 
-.button-header-login:hover .btn-img {
-  transform: scale(1.1); /* Efecto hover */
-  filter: brightness(1.1);
+.button-header-login:hover #Inicio,
+.button-header-login:hover #Configuracion {
+  transform: scale(1.15) rotate(5deg);
+  filter: brightness(var(--hover-brightness));
 }
 
 /* ===== NOMBRE DE USUARIO ===== */
 .username {
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.95rem;
   color: var(--black);
-  font-weight: 600; /* Semi-bold */
+  font-weight: 600;
   letter-spacing: 0.3px;
-  text-transform: capitalize; /* Primera letra mayúscula */
-  transition: color 0.3s ease;
+  text-transform: capitalize;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .username:hover {
-  color: var(--coral); /* Usa tu color destacado */
+  color: var(--coral);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
 /* ===== AVATAR ===== */
 .avatar-container {
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: all var(--transition-speed) ease;
 }
 
-.circular-img {
-  width: 32px;
-  height: 32px;
+#avatarPng {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid rgba(0,0,0,0.1); /* Borde sutil */
-  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all var(--transition-speed) ease;
+  box-shadow: var(--shadow-sm);
 }
 
-.avatar-container:hover .circular-img {
+.avatar-container:hover #avatarPng {
   transform: scale(1.1);
-  box-shadow: 0 0 8px rgba(0,0,0,0.2); /* Efecto hover */
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== EFECTOS DE INTERACCIÓN ===== */
+.button-header-login:active,
+.avatar-container:active {
+  transform: scale(0.95);
 }
 
 /* ===== DISEÑO RESPONSIVE ===== */
+@media (max-width: 992px) {
+  :root {
+    --element-spacing: 1.2rem;
+    --header-height: 65px;
+  }
+
+  #Main_Icon {
+    height: 36px;
+  }
+
+  #avatarPng {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 @media (max-width: 768px) {
+  :root {
+    --element-spacing: 1rem;
+    --header-height: 60px;
+  }
+
   .header {
-    padding: 10px 15px;
+    padding: 0 4%;
   }
 
-  .logo-img {
-    width: 130px;
-  }
-
-  .user-section-header {
-    gap: 12px;
-  }
-
-  .btn-img {
+  #Inicio, #Configuracion {
     width: 22px;
     height: 22px;
   }
 
-  .circular-img {
-    width: 28px;
-    height: 28px;
+  .username {
+    font-size: 0.9rem;
+    padding: 5px 10px;
   }
 }
 
 @media (max-width: 600px) {
+  :root {
+    --element-spacing: 0.8rem;
+  }
+
   .username {
     display: none;
   }
 
-  .user-section-header {
-    gap: 10px;
+  #Main_Icon {
+    height: 32px;
   }
 
-  .logo-img {
-    width: 120px;
+  #avatarPng {
+    width: 34px;
+    height: 34px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .header {
-    padding: 8px 10px;
+    padding: 0 3%;
   }
 
-  .logo-img {
-    width: 100px;
-  }
-
-  .btn-img {
+  #Inicio, #Configuracion {
     width: 20px;
     height: 20px;
+  }
+
+  #avatarPng {
+    width: 32px;
+    height: 32px;
   }
 }

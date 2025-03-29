@@ -1,4 +1,5 @@
 import { getAbsolutePath } from '../../js/loadTemplate.js';
+import { cargarImagenPorId } from '../../js/cargarImagenes.js';
 
 console.log("Header Sign In cargado correctamente");
 
@@ -11,9 +12,10 @@ async function init() {
   document.getElementById("settingsLink").href = getAbsolutePath("main/html/settings.html");
   document.getElementById("profileLink").href = getAbsolutePath("main/html/profile.html");
 
-  document.getElementById("avatarImg").src = getAbsolutePath("Templates/externalSources/avatar.jpg");
-  document.getElementById("configImg").src = getAbsolutePath("Templates/externalSources/Configuración.png");
-  document.getElementById("startImg").src = getAbsolutePath("Templates/externalSources/Inicio.png");
+  cargarImagenPorId('Main_Icon', 'Main_Icon');
+  cargarImagenPorId('Inicio', 'Inicio');
+  cargarImagenPorId('Configuracion', 'Configuracion');
+  cargarImagenPorId('avatarPng', 'avatarPng');
 }
 
 // Ejecutar init() dependiendo del estado del DOM
