@@ -16,6 +16,11 @@
       "alt": "Imagen de avatar en formato JPG"
     },
     {
+      "nombre": "fullLogo",
+      "url": "assets/fullLogo.png",
+      "alt": "Full Logo"
+    },
+    {
       "nombre": "avatarPng",
       "url": "assets/avatar.png",
       "alt": "Imagen de avatar en formato PNG"

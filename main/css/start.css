@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Ajustar el body para que el footer no esté pegado */
 body.body-start {
   display: flex;
@@ -70,7 +76,7 @@ html:has(#content-special) footer {
   align-items: center;
   justify-content: space-between; /* Alinear a la izquierda */
   padding: 15px;
-  background: black;
+  background: var(--grayh);
   color: white;
   font-weight: bold;
 }
@@ -104,14 +110,14 @@ html:has(#content-special) footer {
 }
 
 /* Contenedor de la lista de chats */
-.chat-list {
+.chat-list-Start {
   flex-grow: 1;
-  overflow-y: auto;
   width: 100%; /* Ocupar todo el ancho */
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+  background-color: var(--verde-secundario);
 }
 
 /* Cada conversación ocupará **TODO** el espacio disponible */
@@ -164,22 +170,22 @@ html:has(#content-special) footer {
   width: 70%;
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
-/* Espacio para el avatar y el nombre */
 .user-info-template {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  height: 60px; /* Espacio adecuado */
-  background: black;
-  padding: 10px;
-  color: white;
+  height: 60px;
+  background: var(--grayh);
+  padding: 10px 15px;
 }
 
 #avatar {
   display: flex;
-  align-items: center; /* Alinea en una misma línea */
-  gap: 8px; /* Espaciado entre imagen y texto */
+  align-items: center;
+  gap: 8px;
 }
 
 #avatar img {
@@ -195,7 +201,6 @@ html:has(#content-special) footer {
   padding: 0;
   white-space: nowrap;
 }
-
 
 .chat-messages {
   flex-grow: 1;
@@ -228,21 +233,8 @@ html:has(#content-special) footer {
   overflow: hidden;
 }
 
-/* Forzar que los mensajes respeten su propio diseño */
-.message.received {
-  background: white;
-  align-self: flex-start;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.message.received time {
-  align-self: flex-end;
-}
-
 .message.sent {
-  background: lawngreen;
   align-self: flex-end;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* ------------------- */
@@ -254,6 +246,8 @@ html:has(#content-special) footer {
   background: black;
   gap: 10px;
   align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .chat-input input {

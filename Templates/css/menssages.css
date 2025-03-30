@@ -9,7 +9,7 @@
   --transition: all 0.2s ease;
 }
 
-body.body-menssages {
+body.message-body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background-color: #f5f7fa;
   margin: 0;

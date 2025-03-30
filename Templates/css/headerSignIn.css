@@ -6,7 +6,7 @@
   --transition-speed: 0.3s;
   --border-radius: 10px;
   --hover-brightness: 1.2;
-  --element-spacing: 1.5rem;
+  --element-spacing: 0.8rem;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
   --border-light: 1px solid rgba(255, 255, 255, 0.2);
@@ -25,7 +25,7 @@ body.body-headerSignIn, html {
   justify-content: space-between;
   align-items: center;
   background-color: var(--verde-primario);
-  padding: 0 5%;
+  padding: 0 1.5rem;
   height: var(--header-height);
   border-bottom: var(--border-light);
   box-shadow: var(--shadow-sm);

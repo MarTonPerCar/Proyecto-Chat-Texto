@@ -12,6 +12,17 @@ body.body-profile {
   background-color: var(--white);
 }
 
+#avatar, .notChan {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
 #profile-main {
   display: flex;
   flex-direction: column;

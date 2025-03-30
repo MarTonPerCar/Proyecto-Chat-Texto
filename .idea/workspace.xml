@@ -4,56 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Resolve some problems and add README.md">
+    <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Problem Solution 2">
+      <change afterPath="$PROJECT_DIR$/assets/fullLogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/css/avatarNombre.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/avatarNombre.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/css/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/css/conversations.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/conversations.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/css/headerSignIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/headerSignIn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/css/mensajeGrupo.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/mensajeGrupo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/css/menssages.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/menssages.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/css/notChangeableText.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/notChangeableText.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/css/request.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/request.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/css/requestSelector.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/requestSelector.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/html/avatarNombre.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/avatarNombre.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/button.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/button.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/html/conversations.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/conversations.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/html/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/html/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/headerSignIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/headerSignIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/mensajeGrupo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/mensajeGrupo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/html/menssages.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/menssages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/notChangeableText.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/notChangeableText.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/request.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/request.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/html/requestSelector.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/requestSelector.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/cargarImagenes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cargarImagenes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/addContact.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/addContact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/addGroup.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/addGroup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/editProfile.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/editProfile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/javascript/avatarNombre.js" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/javascript/avatarNombre.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/images.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/images.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/recoverPassword(Email).css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/recoverPassword(Email).css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/recoverPassword(Password).css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/recoverPassword(Password).css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/recoverPassword(Password_Sign_In).css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/recoverPassword(Password_Sign_In).css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/settings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/signIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/signIn.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/css/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/start.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/addContact.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/addContact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/addGroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/addGroup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/editProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/editProfile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/html/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Email).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Email).html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Password).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Password_Sign_In).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Password_Sign_In).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/html/signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/signIn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/html/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/start.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/javascript/addGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/addGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/javascript/recoverPassword(Password).js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Password).js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/javascript/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/start.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,17 +45,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="tsconfig.json" />
         <option value="HTML File" />
         <option value="TypeScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -88,12 +67,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="66636233e82a82660c2a2c0d20a472977efc9efc" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MarTonPerCar/Proyecto-Chat-Texto.git",
-    "accountId": "62c00ac1-80fc-4440-963e-6c7c493d9d8d"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto.git&quot;,
+    &quot;accountId&quot;: &quot;43512161-2170-46e8-9282-ad4f025b5972&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -111,19 +90,21 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JavaScript Debug.Header_Sign_In.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.addButton.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.addContact.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.asdsad.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.avatar.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.button.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.footer.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.prueba.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.recoverPassword(Password_Sign_In).html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.register.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.request.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.requestSelector.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.sigIn.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.signIn.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.footer.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
@@ -156,17 +137,17 @@
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\enriq\WebstormProjects\Proyecto-Chat-Texto7\assets" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\notChangeableText" />
       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\MainPage" />
-      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\avatarNombre" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -196,7 +177,7 @@
       <workItem from="1742010751882" duration="1091000" />
       <workItem from="1742230540965" duration="4591000" />
       <workItem from="1742569891264" duration="1185000" />
-      <workItem from="1743346641289" duration="3223000" />
+      <workItem from="1743284026024" duration="4951000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <option name="closed" value="true" />
@@ -342,15 +323,7 @@
       <option name="project" value="LOCAL" />
       <updated>1743181693327</updated>
     </task>
-    <task id="LOCAL-00019" summary="Resolve some problems and add README.md">
-      <option name="closed" value="true" />
-      <created>1743345387179</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1743345387179</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +355,16 @@
     <MESSAGE value="Still Working on loadTemplate" />
     <MESSAGE value="Problem Solution" />
     <MESSAGE value="Problem Solution 2" />
-    <MESSAGE value="Resolve some problems and add README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolve some problems and add README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problem Solution 2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/main/javascript/signIn.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

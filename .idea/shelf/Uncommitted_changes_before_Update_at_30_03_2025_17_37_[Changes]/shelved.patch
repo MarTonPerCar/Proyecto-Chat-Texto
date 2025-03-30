@@ -1,0 +1,1221 @@
+Index: main/html/recoverPassword(Email).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta name=\"keywords\" content=\"HTML5, CSS3, JavaScript\">\r\n\r\n    <title>Title</title>\r\n\r\n    <script type=\"module\" src=\"../javascript/recoverPassword(Email).js\"></script>\r\n    <link id=\"cssColorsLink\" rel=\"stylesheet\">\r\n    <link id=\"cssRecoverPasswordLink\" rel=\"stylesheet\">\r\n  </head>\r\n  <body>\r\n\r\n    <header id=\"header\" ></header>\r\n\r\n    <main>\r\n      <div class=\"form-container\">\r\n        <form id=\"input-group\">\r\n          <div id = 'request-name'></div>\r\n        </form>\r\n      </div>\r\n\r\n      <!-- Botón para enviar el formulario -->\r\n      <div class=\"boton-container\">\r\n        <a id = \"changePassword\" target=\"_self\">\r\n          <button id=\"btn-registrar\">Mandar Correo</button>\r\n        </a>\r\n      </div>\r\n\r\n    </main>\r\n\r\n    <footer id=\"footer\"></footer>\r\n\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/html/recoverPassword(Email).html b/main/html/recoverPassword(Email).html
+--- a/main/html/recoverPassword(Email).html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/html/recoverPassword(Email).html	(date 1743340850955)
+@@ -18,7 +18,7 @@
+     <main>
+       <div class="form-container">
+         <form id="input-group">
+-          <div id = 'request-name'></div>
++          <div id ='request-email'></div>
+         </form>
+       </div>
+ 
+Index: main/html/start.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\r\n    <title>Chat Estilo WhatsApp Web</title>\r\n\r\n    <script type=\"module\" src=\"../javascript/start.js\"></script>\r\n    <link id=\"cssColorsLink\" rel=\"stylesheet\">\r\n    <link id=\"cssStartLink\" rel=\"stylesheet\">\r\n  </head>\r\n  <body>\r\n\r\n    <header id=\"header-sign-in\" ></header>\r\n\r\n    <div class=\"container\">\r\n      <aside id=\"sidebar\">\r\n        <div id=\"chat-header\">\r\n          <span>Mis Chats</span>\r\n          <div class=\"chat-buttons\">\r\n            <button class=\"icon-button\" id=\"add-contact\">\r\n              <a id = \"addContact\"><img src=\"/main/externalSource/addContact.png\" alt=\"Añadir Contacto\"></a>\r\n            </button>\r\n            <button class=\"icon-button\" id=\"create-group\">\r\n              <a id = \"addGroup\"><img src=\"/main/externalSource/addGroup.png\" alt=\"Crear Grupo\"></a>\r\n            </button>\r\n          </div>\r\n        </div>\r\n        <div class=\"chat-list\" id=\"conversation\">\r\n          <!-- Aquí se cargarán los templates de los chats -->\r\n          <div id = \"conversations\" class = \"conversation\"></div>\r\n          <div class = \"conversation\"></div>\r\n        </div>\r\n      </aside>\r\n\r\n      <!-- Área de chat principal -->\r\n      <main class=\"chat-container\">\r\n        <div class=\"user-info-template\" id=\"userInfo\">\r\n          <!-- Aquí irá el template del avatar + nombre -->\r\n          <a id = 'avatar-nombre'><div id=\"avatar\" ></div></a>\r\n        </div>\r\n        <div class=\"chat-messages\" id=\"messageContainer\">\r\n          <!-- Aquí se generarán los mensajes dinámicamente -->\r\n          <div class=\"messages\">\r\n            <div id =\"mensajes\" class = \"message sent\"></div>\r\n            <div class=\"mensajes\" ></div>\r\n          </div>\r\n        </div>\r\n\r\n        <!-- Barra de entrada de mensajes -->\r\n        <div class=\"chat-input\">\r\n          <button class=\"emoji-btn\">\uD83D\uDE0A</button>\r\n          <button class=\"attach-btn\">\uD83D\uDCCE</button>\r\n          <input type=\"text\" placeholder=\"Escribe un mensaje...\">\r\n          <button class=\"send-btn\">Enviar</button>\r\n        </div>\r\n      </main>\r\n    </div>\r\n\r\n    <footer id=\"footer\"></footer>\r\n\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/html/start.html b/main/html/start.html
+--- a/main/html/start.html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/html/start.html	(date 1743352388122)
+@@ -20,17 +20,16 @@
+           <span>Mis Chats</span>
+           <div class="chat-buttons">
+             <button class="icon-button" id="add-contact">
+-              <a id = "addContact"><img src="/main/externalSource/addContact.png" alt="Añadir Contacto"></a>
++              <a id = "addContactLink"><img id="addContact" src="" alt="Añadir Contacto"></a>
+             </button>
+             <button class="icon-button" id="create-group">
+-              <a id = "addGroup"><img src="/main/externalSource/addGroup.png" alt="Crear Grupo"></a>
++              <a id = "addGroupLink"><img id="addGroup" src="" alt="Crear Grupo"></a>
+             </button>
+           </div>
+         </div>
+-        <div class="chat-list" id="conversation">
++        <div class="chat-list-Start">
+           <!-- Aquí se cargarán los templates de los chats -->
+-          <div id = "conversations" class = "conversation"></div>
+-          <div class = "conversation"></div>
++          <div id ="conversations"></div>
+         </div>
+       </aside>
+ 
+@@ -43,7 +42,7 @@
+         <div class="chat-messages" id="messageContainer">
+           <!-- Aquí se generarán los mensajes dinámicamente -->
+           <div class="messages">
+-            <div id ="mensajes" class = "message sent"></div>
++            <div id ="mensajes" class = "message"></div>
+             <div class="mensajes" ></div>
+           </div>
+         </div>
+Index: Templates/css/avatarNombre.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>:root {\r\n  --primary-color: #4361ee;\r\n  --secondary-color: #3a0ca3;\r\n  --text-color: #2b2d42;\r\n  --light-color: #f8f9fa;\r\n  --border-radius: 12px;\r\n  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\r\n  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);\r\n  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);\r\n}\r\n\r\n/* Contenedor específico para evitar colisiones */\r\n#avatarPerfil {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 1rem;\r\n  padding: 1rem 1.5rem;\r\n  background-color: white;\r\n  border-radius: var(--border-radius);\r\n  box-shadow: var(--shadow);\r\n  transition: var(--transition);\r\n  max-width: 300px;\r\n  width: 100%;\r\n  margin: 1rem auto; /* Centrado con margen */\r\n  position: relative;\r\n  z-index: 10; /* Nivel por encima del contenido normal */\r\n}\r\n\r\n#avatarPerfil:hover {\r\n  transform: translateY(-3px);\r\n  box-shadow: var(--shadow-hover);\r\n}\r\n\r\n/* Avatar circular - selector más específico */\r\n#avatarPerfil .circular-img {\r\n  width: 60px;\r\n  height: 60px;\r\n  border-radius: 50%;\r\n  object-fit: cover;\r\n  border: 2px solid white;\r\n  box-shadow: var(--shadow);\r\n  transition: var(--transition);\r\n  flex-shrink: 0;\r\n}\r\n\r\n#avatarPerfil:hover .circular-img {\r\n  transform: scale(1.05);\r\n  border-color: var(--primary-color);\r\n}\r\n\r\n/* Nombre de usuario - selector específico */\r\n#avatarPerfil #username {\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  color: var(--text-color);\r\n  transition: var(--transition);\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n  max-width: 180px;\r\n}\r\n\r\n#avatarPerfil:hover #username {\r\n  color: var(--primary-color);\r\n}\r\n\r\n/* Estado activo */\r\n#avatarPerfil.active .circular-img {\r\n  border-color: var(--primary-color);\r\n  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);\r\n}\r\n\r\n/* Efecto de carga */\r\n.circular-img.loading {\r\n  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);\r\n  background-size: 200% 100%;\r\n  animation: loading 1.5s infinite;\r\n}\r\n\r\n@keyframes loading {\r\n  0% { background-position: 200% 0; }\r\n  100% { background-position: -200% 0; }\r\n}\r\n\r\n/* Responsive */\r\n@media (max-width: 480px) {\r\n  #avatarPerfil {\r\n    padding: 0.75rem 1rem;\r\n    gap: 0.75rem;\r\n  }\r\n\r\n  #avatarPerfil .circular-img {\r\n    width: 50px;\r\n    height: 50px;\r\n  }\r\n\r\n  #avatarPerfil #username {\r\n    font-size: 0.9rem;\r\n    max-width: 150px;\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/css/avatarNombre.css b/Templates/css/avatarNombre.css
+--- a/Templates/css/avatarNombre.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/css/avatarNombre.css	(date 1743351740079)
+@@ -4,37 +4,40 @@
+   --text-color: #2b2d42;
+   --light-color: #f8f9fa;
+   --border-radius: 12px;
+-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+-  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
++  --shadow: 0 6px 20px rgba(0, 0, 0, 0.70);
++  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.70);
+   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+ }
+ 
+-/* Contenedor específico para evitar colisiones */
+ #avatarPerfil {
+   display: flex;
+   align-items: center;
+-  gap: 1rem;
+-  padding: 1rem 1.5rem;
+-  background-color: white;
++  gap: 0.5rem;
++  padding: 0.5rem 1rem;
++  background-color: var(--verde-secundario); /* ✅ Nuevo fondo */
+   border-radius: var(--border-radius);
+   box-shadow: var(--shadow);
+   transition: var(--transition);
+-  max-width: 300px;
++  max-width: 280px;
+   width: 100%;
+-  margin: 1rem auto; /* Centrado con margen */
++  margin: 0.5rem auto;
+   position: relative;
+-  z-index: 10; /* Nivel por encima del contenido normal */
++  z-index: 10;
++  max-height: 60px; /* ✅ Más compacto */
++}
++
++#avatarPerfil * {
++  line-height: 1.1;
+ }
+ 
+ #avatarPerfil:hover {
+-  transform: translateY(-3px);
++  transform: translateY(-2px);
+   box-shadow: var(--shadow-hover);
+ }
+ 
+-/* Avatar circular - selector más específico */
+ #avatarPerfil .circular-img {
+-  width: 60px;
+-  height: 60px;
++  width: 40px; /* ✅ Más pequeño */
++  height: 40px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px solid white;
+@@ -48,29 +51,26 @@
+   border-color: var(--primary-color);
+ }
+ 
+-/* Nombre de usuario - selector específico */
+ #avatarPerfil #username {
+-  font-size: 1rem;
++  font-size: 0.9rem; /* ✅ Más pequeño */
+   font-weight: 600;
+   color: var(--text-color);
+   transition: var(--transition);
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+-  max-width: 180px;
++  max-width: 160px;
+ }
+ 
+ #avatarPerfil:hover #username {
+   color: var(--primary-color);
+ }
+ 
+-/* Estado activo */
+ #avatarPerfil.active .circular-img {
+   border-color: var(--primary-color);
+   box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+ }
+ 
+-/* Efecto de carga */
+ .circular-img.loading {
+   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+   background-size: 200% 100%;
+@@ -82,16 +82,16 @@
+   100% { background-position: -200% 0; }
+ }
+ 
+-/* Responsive */
+ @media (max-width: 480px) {
+   #avatarPerfil {
+-    padding: 0.75rem 1rem;
+-    gap: 0.75rem;
++    padding: 0.6rem 0.9rem;
++    gap: 0.6rem;
++    max-height: 72px;
+   }
+ 
+   #avatarPerfil .circular-img {
+-    width: 50px;
+-    height: 50px;
++    width: 48px;
++    height: 48px;
+   }
+ 
+   #avatarPerfil #username {
+Index: main/javascript/addGroup.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';\r\nimport {cargarImagenPorId} from \"/js/cargarImagenes\";\r\n\r\nasync function init() {\r\n  cargarImagenPorId('avatarPng', 'avatarPng');\r\n  cargarImagenPorId('avatarPng1', 'avatarPng');\r\n  cargarImagenPorId('avatarPng2', 'avatarPng');\r\n  cargarImagenPorId('avatarPng3', 'avatarPng');\r\n  document.getElementById(\"cssAddGroup\").href = getAbsolutePath(\"main/css/addGroup.css\");\r\n  document.getElementById(\"startLink\").href = getAbsolutePath(\"main/html/start.html\");\r\n  document.getElementById(\"startLink2\").href = getAbsolutePath(\"main/html/start.html\");\r\n  document.getElementById(\"cssColorsLink\").href = getAbsolutePath(\"colors.css\");\r\n\r\n\r\n\r\n  await cargarEstructura();\r\n}\r\n\r\n// Ejecutar init() dependiendo del estado del DOM\r\nif (document.readyState === \"loading\") {\r\n  document.addEventListener(\"DOMContentLoaded\", init);\r\n} else {\r\n  await init(); // Si el DOM ya está cargado, ejecutarlo inmediatamente\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/javascript/addGroup.js b/main/javascript/addGroup.js
+--- a/main/javascript/addGroup.js	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/javascript/addGroup.js	(date 1743341050181)
+@@ -1,5 +1,5 @@
+ import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
+-import {cargarImagenPorId} from "/js/cargarImagenes";
++import { cargarImagenPorId } from '../../js/cargarImagenes.js';
+ 
+ async function init() {
+   cargarImagenPorId('avatarPng', 'avatarPng');
+Index: Templates/css/conversations.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>:root {\r\n  --primary-color: #25D366;\r\n  --secondary-color: #128C7E;\r\n  --text-dark: #2b2d42;\r\n  --text-light: #555;\r\n  --hover-bg: #f5f5f5;\r\n  --border-radius: 12px;\r\n  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\r\n  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);\r\n}\r\n\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  font-family: 'Inter', system-ui, -apple-system, sans-serif;\r\n  background-color: #f8f9fa;\r\n  display: flex;\r\n  justify-content: center;\r\n  padding: 1rem;\r\n}\r\n\r\n/* Contenedor principal del chat */\r\n.chat-list {\r\n  width: 100%;\r\n  max-width: 420px;\r\n  max-height: 80vh;\r\n  background: white;\r\n  border-radius: var(--border-radius);\r\n  border: 2px solid var(--primary-color);\r\n  box-shadow: var(--shadow);\r\n  overflow-y: auto;\r\n  padding: 0.75rem;\r\n}\r\n\r\n/* Cada chat individual */\r\n.chat-item {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 0.75rem;\r\n  cursor: pointer;\r\n  transition: var(--transition);\r\n  border-radius: var(--border-radius);\r\n  margin-bottom: 0.5rem;\r\n}\r\n\r\n.chat-item:last-child {\r\n  margin-bottom: 0;\r\n}\r\n\r\n.chat-item:hover {\r\n  background: var(--hover-bg);\r\n  transform: translateX(4px);\r\n}\r\n\r\n/* Avatar */\r\n.chat-item img {\r\n  width: 48px;\r\n  height: 48px;\r\n  border-radius: 50%;\r\n  object-fit: cover;\r\n  margin-right: 1rem;\r\n  border: 2px solid white;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n  transition: var(--transition);\r\n}\r\n\r\n.chat-item:hover img {\r\n  transform: scale(1.05);\r\n}\r\n\r\n/* Información del chat */\r\n.chat-info {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  flex-grow: 1;\r\n  min-width: 0; /* Para elipsis */\r\n}\r\n\r\n/* Estilos del nombre de usuario */\r\n.username {\r\n  font-size: 0.95rem;\r\n  font-weight: 600;\r\n  color: var(--text-dark);\r\n  margin-bottom: 0.25rem;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n/* Estilos del mensaje */\r\n.message {\r\n  font-size: 0.85rem;\r\n  color: var(--text-light);\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n/* Indicador de estado (opcional) */\r\n.chat-item::after {\r\n  content: \"\";\r\n  width: 8px;\r\n  height: 8px;\r\n  background-color: var(--primary-color);\r\n  border-radius: 50%;\r\n  margin-left: auto;\r\n  opacity: 0;\r\n  transition: var(--transition);\r\n}\r\n\r\n.chat-item:hover::after {\r\n  opacity: 1;\r\n}\r\n\r\n/* Efecto de selección */\r\n.chat-item.active {\r\n  background-color: rgba(37, 211, 102, 0.1);\r\n}\r\n\r\n/* Scrollbar personalizada */\r\n.chat-list::-webkit-scrollbar {\r\n  width: 6px;\r\n}\r\n\r\n.chat-list::-webkit-scrollbar-track {\r\n  background: #f1f1f1;\r\n  border-radius: 10px;\r\n}\r\n\r\n.chat-list::-webkit-scrollbar-thumb {\r\n  background: var(--primary-color);\r\n  border-radius: 10px;\r\n}\r\n\r\n/* Responsive */\r\n@media (max-width: 480px) {\r\n  .chat-list {\r\n    max-height: 85vh;\r\n    border: 1px solid var(--primary-color);\r\n  }\r\n\r\n  .chat-item {\r\n    padding: 0.6rem;\r\n  }\r\n\r\n  .chat-item img {\r\n    width: 42px;\r\n    height: 42px;\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/css/conversations.css b/Templates/css/conversations.css
+--- a/Templates/css/conversations.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/css/conversations.css	(date 1743348725855)
+@@ -1,5 +1,5 @@
+ :root {
+-  --primary-color: #25D366;
++  --primary-color-message: #25D366;
+   --secondary-color: #128C7E;
+   --text-dark: #2b2d42;
+   --text-light: #555;
+@@ -15,7 +15,7 @@
+   box-sizing: border-box;
+ }
+ 
+-body {
++body.conversations-body {
+   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+   background-color: #f8f9fa;
+   display: flex;
+@@ -26,11 +26,9 @@
+ /* Contenedor principal del chat */
+ .chat-list {
+   width: 100%;
+-  max-width: 420px;
+-  max-height: 80vh;
+   background: white;
+   border-radius: var(--border-radius);
+-  border: 2px solid var(--primary-color);
++  border: 2px solid var(--primary-color-message);
+   box-shadow: var(--shadow);
+   overflow-y: auto;
+   padding: 0.75rem;
+Index: Templates/css/footer.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* ===== ESTILOS BASE ===== */\r\nbody {\r\n  margin: 0;\r\n  min-height: 100vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  font-family: Arial, sans-serif;\r\n}\r\n\r\nmain {\r\n  flex: 1;\r\n  padding-bottom: 120px; /* Espacio para el footer */\r\n}\r\n\r\n.fw-footer {\r\n  background-color: var(--verde-primario);\r\n  color: var(--black);\r\n  width: 100%;\r\n  margin-top: auto; /* Sticky footer */\r\n  padding: 20px 0;\r\n  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);\r\n}\r\n\r\n/* ===== CONTENEDOR PRINCIPAL ===== */\r\n.fw-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  max-width: 1200px;\r\n  margin: 0 auto;\r\n  padding: 0 20px;\r\n  gap: 20px;\r\n}\r\n\r\n/* ===== LOGO ===== */\r\n.fw-logo img {\r\n  width: 80px;\r\n  height: auto;\r\n  transition: transform 0.3s;\r\n}\r\n\r\n.fw-logo img:hover {\r\n  transform: scale(1.05);\r\n}\r\n\r\n/* ===== COLUMNAS ===== */\r\n.fw-columns {\r\n  display: flex;\r\n  justify-content: space-around;\r\n  width: 100%;\r\n  gap: 20px;\r\n}\r\n\r\n.fw-column {\r\n  flex: 1;\r\n  min-width: 120px;\r\n  text-align: center;\r\n}\r\n\r\n.fw-column__title {\r\n  font-size: 0.9rem;\r\n  font-weight: bold;\r\n  margin-bottom: 12px;\r\n  color: var(--black);\r\n  position: relative;\r\n}\r\n\r\n.fw-column__title::after {\r\n  content: '';\r\n  display: block;\r\n  width: 30px;\r\n  height: 2px;\r\n  background: var(--coral);\r\n  margin: 8px auto 0;\r\n}\r\n\r\n.fw-column__list {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\n.fw-column__item {\r\n  margin: 8px 0;\r\n}\r\n\r\n.fw-column__link {\r\n  color: inherit;\r\n  text-decoration: none;\r\n  font-size: 0.8rem;\r\n  transition: color 0.2s;\r\n}\r\n\r\n.fw-column__link:hover {\r\n  color: var(--coral);\r\n}\r\n\r\n/* ===== REDES SOCIALES ===== */\r\n.fw-social {\r\n  display: flex;\r\n  justify-content: center;\r\n  gap: 15px;\r\n  margin-top: 10px;\r\n}\r\n\r\n.fw-social img{\r\n  width: 24px;\r\n  height: 24px;\r\n  transition: all 0.3s;\r\n  opacity: 0.8;\r\n}\r\n\r\n.fw-social img:hover {\r\n  opacity: 1;\r\n  transform: translateY(-2px);\r\n}\r\n\r\n/* ===== RESPONSIVE: TABLET (768px) ===== */\r\n@media (max-width: 768px) {\r\n  main {\r\n    padding-bottom: 100px;\r\n  }\r\n\r\n  .fw-footer {\r\n    padding: 15px 0;\r\n  }\r\n\r\n  .fw-container {\r\n    gap: 15px;\r\n  }\r\n\r\n  .fw-columns {\r\n    flex-wrap: wrap;\r\n    gap: 15px;\r\n  }\r\n\r\n  .fw-column {\r\n    flex: 0 0 calc(50% - 20px);\r\n    min-width: auto;\r\n  }\r\n\r\n  .fw-column__title {\r\n    font-size: 0.85rem;\r\n  }\r\n\r\n  .fw-column__link {\r\n    font-size: 0.75rem;\r\n  }\r\n}\r\n\r\n/* ===== RESPONSIVE: MÓVIL (480px) ===== */\r\n@media (max-width: 480px) {\r\n  main {\r\n    padding-bottom: 80px;\r\n  }\r\n\r\n  .fw-footer {\r\n    padding: 12px 0;\r\n  }\r\n\r\n  .fw-logo img {\r\n    width: 70px;\r\n  }\r\n\r\n  .fw-columns {\r\n    flex-direction: column;\r\n    gap: 20px;\r\n  }\r\n\r\n  .fw-column {\r\n    flex: 1;\r\n  }\r\n\r\n  .fw-column__title {\r\n    font-size: 0.8rem;\r\n    margin-bottom: 8px;\r\n  }\r\n\r\n  .fw-column__title::after {\r\n    width: 25px;\r\n  }\r\n\r\n  .fw-social img{\r\n    width: 22px;\r\n    height: 22px;\r\n  }\r\n}\r\n\r\n/* ===== EXTRA PEQUEÑO (360px) ===== */\r\n@media (max-width: 360px) {\r\n  .fw-container {\r\n    padding: 0 10px;\r\n  }\r\n\r\n  .fw-column__link {\r\n    font-size: 0.7rem;\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/css/footer.css b/Templates/css/footer.css
+--- a/Templates/css/footer.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/css/footer.css	(date 1743344956002)
+@@ -1,5 +1,5 @@
+ /* ===== ESTILOS BASE ===== */
+-body {
++body.footer-body {
+   margin: 0;
+   min-height: 100vh;
+   display: flex;
+Index: main/javascript/recoverPassword(Password).js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';\r\n\r\nasync function init() {\r\n  document.getElementById(\"cssRecoverPasswordLink\").href = getAbsolutePath(\"main/css/recoverPassword(Email).css\");\r\n  document.getElementById(\"changePassword\").href = getAbsolutePath(\"main/html/recoverPassword(Password).html\");\r\n  document.getElementById(\"cssColorsLink\").href = getAbsolutePath(\"colors.css\");\r\n\r\n\r\n  await cargarEstructura();\r\n}\r\n\r\n// Ejecutar init() dependiendo del estado del DOM\r\nif (document.readyState === \"loading\") {\r\n  document.addEventListener(\"DOMContentLoaded\", init);\r\n} else {\r\n  await init(); // Si el DOM ya está cargado, ejecutarlo inmediatamente\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/javascript/recoverPassword(Password).js b/main/javascript/recoverPassword(Password).js
+--- a/main/javascript/recoverPassword(Password).js	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/javascript/recoverPassword(Password).js	(date 1743343933950)
+@@ -1,10 +1,10 @@
+-import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
++import {cargarEstructura, getAbsolutePath} from '../../js/loadTemplate.js';
+ 
+ async function init() {
+-  document.getElementById("cssRecoverPasswordLink").href = getAbsolutePath("main/css/recoverPassword(Email).css");
+-  document.getElementById("changePassword").href = getAbsolutePath("main/html/recoverPassword(Password).html");
++
++  document.getElementById("cssStartLink").href = getAbsolutePath("main/css/recoverPassword(Password).css");
+   document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
+-
++  document.getElementById("signInLink").href = getAbsolutePath("main/html/signIn.html");
+ 
+   await cargarEstructura();
+ }
+Index: Templates/css/menssages.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>:root {\r\n  --primary-color: #4361ee;\r\n  --secondary-color: #3a0ca3;\r\n  --message-bg: #e3f2fd;\r\n  --text-color: #2b2d42;\r\n  --time-color: #757575;\r\n  --border-radius: 12px;\r\n  --shadow: 0 1px 2px rgba(0,0,0,0.1);\r\n  --transition: all 0.2s ease;\r\n}\r\n\r\nbody {\r\n  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;\r\n  background-color: #f5f7fa;\r\n  margin: 0;\r\n  padding: 1rem;\r\n  display: flex;\r\n  justify-content: flex-start;\r\n}\r\n\r\n.message {\r\n  max-width: 70%;\r\n  margin-bottom: 1rem;\r\n  animation: fadeIn 0.3s ease-out;\r\n}\r\n\r\n@keyframes fadeIn {\r\n  from { opacity: 0; transform: translateY(5px); }\r\n  to { opacity: 1; transform: translateY(0); }\r\n}\r\n\r\n.text {\r\n  display: inline-flex;\r\n  flex-direction: column;\r\n  background-color: var(--message-bg);\r\n  padding: 0.75rem 1rem;\r\n  border-radius: var(--border-radius);\r\n  box-shadow: var(--shadow);\r\n  position: relative;\r\n}\r\n\r\n.text p {\r\n  margin: 0;\r\n  color: var(--text-color);\r\n  font-size: 0.95rem;\r\n  line-height: 1.4;\r\n}\r\n\r\n.text time {\r\n  font-size: 0.75rem;\r\n  color: var(--time-color);\r\n  margin-top: 0.25rem;\r\n  align-self: flex-end;\r\n  display: inline-block;\r\n}\r\n\r\n/* Burbuja de chat con puntero */\r\n.text::after {\r\n  content: '';\r\n  position: absolute;\r\n  left: -8px;\r\n  top: 12px;\r\n  width: 0;\r\n  height: 0;\r\n  border: 8px solid transparent;\r\n  border-right-color: var(--message-bg);\r\n  border-left: 0;\r\n}\r\n\r\n/* Efectos de hover */\r\n.message:hover .text {\r\n  transform: translateX(2px);\r\n  box-shadow: 0 2px 4px rgba(0,0,0,0.15);\r\n}\r\n\r\n/* Versión para mensajes del usuario actual (opcional) */\r\n.message.user {\r\n  align-self: flex-end;\r\n}\r\n\r\n.message.user .text {\r\n  background-color: var(--primary-color);\r\n  color: white;\r\n}\r\n\r\n.message.user .text p {\r\n  color: white;\r\n}\r\n\r\n.message.user .text time {\r\n  color: rgba(255,255,255,0.7);\r\n}\r\n\r\n.message.user .text::after {\r\n  left: auto;\r\n  right: -8px;\r\n  border-left-color: var(--primary-color);\r\n  border-right: 0;\r\n}\r\n\r\n/* Responsive */\r\n@media (max-width: 768px) {\r\n  .message {\r\n    max-width: 85%;\r\n  }\r\n\r\n  .text {\r\n    padding: 0.6rem 0.9rem;\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/css/menssages.css b/Templates/css/menssages.css
+--- a/Templates/css/menssages.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/css/menssages.css	(date 1743345051850)
+@@ -9,7 +9,7 @@
+   --transition: all 0.2s ease;
+ }
+ 
+-body {
++body.message-body {
+   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+   background-color: #f5f7fa;
+   margin: 0;
+Index: Templates/css/notChangeableText.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>:root {\r\n  --primary-color: #4361ee;\r\n  --text-dark: #2b2d42;\r\n  --text-muted: #6c757d;\r\n  --light-gray: #f8f9fa;\r\n  --border-radius: 12px;\r\n  --transition: all 0.3s ease;\r\n}\r\n\r\n.text-container {\r\n  display: flex;\r\n  align-items: center;\r\n  background-color: white;\r\n  width: 100%;\r\n  max-width: 600px;\r\n  padding: 1rem 1.5rem;\r\n  border-radius: var(--border-radius);\r\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\r\n  margin: 0.5rem 0;\r\n  transition: var(--transition);\r\n  border: 1px solid #e9ecef;\r\n}\r\n\r\n.text-container:hover {\r\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\r\n  transform: translateY(-2px);\r\n}\r\n\r\n.text-label {\r\n  font-weight: 600;\r\n  color: var(--primary-color);\r\n  margin-right: 1.5rem;\r\n  font-size: 0.95rem;\r\n  min-width: 120px;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.text-value {\r\n  flex-grow: 1;\r\n  text-align: left;\r\n  color: var(--text-dark);\r\n  font-size: 0.95rem;\r\n  user-select: none;\r\n  cursor: default;\r\n  padding: 0.5rem 0;\r\n  border-left: 1px solid #e9ecef;\r\n  padding-left: 1.5rem;\r\n}\r\n\r\n\r\n/* Versión responsive */\r\n@media (max-width: 768px) {\r\n  .text-container {\r\n    flex-direction: column;\r\n    align-items: flex-start;\r\n    padding: 1rem;\r\n  }\r\n\r\n  .text-label {\r\n    margin-right: 0;\r\n    margin-bottom: 0.5rem;\r\n    min-width: auto;\r\n  }\r\n\r\n  .text-value {\r\n    border-left: none;\r\n    padding-left: 0;\r\n    width: 100%;\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/css/notChangeableText.css b/Templates/css/notChangeableText.css
+--- a/Templates/css/notChangeableText.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/css/notChangeableText.css	(date 1743350963399)
+@@ -12,7 +12,7 @@
+   align-items: center;
+   background-color: white;
+   width: 100%;
+-  max-width: 600px;
++  max-width: 1600px;
+   padding: 1rem 1.5rem;
+   border-radius: var(--border-radius);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+Index: main/javascript/start.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';\r\n\r\nasync function init() {\r\n  document.getElementById(\"cssStartLink\").href = getAbsolutePath(\"main/css/start.css\");\r\n  document.getElementById(\"addContact\").href = getAbsolutePath(\"main/html/addContact.html\");\r\n  document.getElementById(\"addGroup\").href = getAbsolutePath(\"main/html/addGroup.html\");\r\n  document.getElementById(\"cssColorsLink\").href = getAbsolutePath(\"colors.css\");\r\n\r\n\r\n  await cargarEstructura();\r\n}\r\n\r\n// Ejecutar init() dependiendo del estado del DOM\r\nif (document.readyState === \"loading\") {\r\n  document.addEventListener(\"DOMContentLoaded\", init);\r\n} else {\r\n  await init(); // Si el DOM ya está cargado, ejecutarlo inmediatamente\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/javascript/start.js b/main/javascript/start.js
+--- a/main/javascript/start.js	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/javascript/start.js	(date 1743344092466)
+@@ -1,13 +1,17 @@
+ import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
++import { cargarImagenPorId } from '../../js/cargarImagenes.js';
+ 
+ async function init() {
++
+   document.getElementById("cssStartLink").href = getAbsolutePath("main/css/start.css");
+-  document.getElementById("addContact").href = getAbsolutePath("main/html/addContact.html");
+-  document.getElementById("addGroup").href = getAbsolutePath("main/html/addGroup.html");
++  document.getElementById("addContactLink").href = getAbsolutePath("main/html/addContact.html");
++  document.getElementById("addGroupLink").href = getAbsolutePath("main/html/addGroup.html");
+   document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
+ 
+-
+   await cargarEstructura();
++
++  cargarImagenPorId("addContact", "addContact");
++  cargarImagenPorId("addGroup", "addGroup");
+ }
+ 
+ // Ejecutar init() dependiendo del estado del DOM
+Index: Templates/html/avatarNombre.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"es\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Formulario de Email</title>\r\n  <script type=\"module\" src=\"../javascript/avatarNombre.js\"></script>\r\n  <link id=\"cssAvatarNombreLink\" rel=\"stylesheet\">\r\n</head>\r\n  <body>\r\n    <div id=\"avatarPerfil\">\r\n      <img id=\"avatarPng\" src=\"\" alt=\"logo\"/>\r\n      <p id=\"username\">Usuario</p>\r\n    </div>\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/html/avatarNombre.html b/Templates/html/avatarNombre.html
+--- a/Templates/html/avatarNombre.html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/html/avatarNombre.html	(date 1743350152846)
+@@ -1,15 +1,18 @@
+ <!DOCTYPE html>
+ <html lang="es">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Formulario de Email</title>
+-  <script type="module" src="../javascript/avatarNombre.js"></script>
+-  <link id="cssAvatarNombreLink" rel="stylesheet">
+-</head>
++  <head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Formulario de Email</title>
++
++    <script type="module" src="../javascript/avatarNombre.js"></script>
++
++    <link id="cssAvatarNombreLink" rel="stylesheet">
++    <link id="cssColorsLink" rel="stylesheet">
++  </head>
+   <body>
+     <div id="avatarPerfil">
+-      <img id="avatarPng" src="" alt="logo"/>
++      <img id="avatarPng" class="circular-img" src="" alt="logo"/>
+       <p id="username">Usuario</p>
+     </div>
+   </body>
+Index: Templates/html/conversations.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"es\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Chat Genérico</title>\r\n    <script type=\"module\" src=\"../javascript/conversations.js\"></script>\r\n    <link id=\"cssConversationsLink\" rel=\"stylesheet\">\r\n  </head>\r\n  <body>\r\n    <div class=\"chat-list\">\r\n      <div class=\"chat-item\">\r\n        <img id=\"avatarPng\" src=\"\" alt=\"logo\"/>\r\n        <div class=\"chat-info\">\r\n          <p class=\"username\"><strong>Lorem Ipsum Username</strong></p>\r\n          <p class=\"message\">Lorem Ipsum Mensaje</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/html/conversations.html b/Templates/html/conversations.html
+--- a/Templates/html/conversations.html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/html/conversations.html	(date 1743345123994)
+@@ -7,7 +7,7 @@
+     <script type="module" src="../javascript/conversations.js"></script>
+     <link id="cssConversationsLink" rel="stylesheet">
+   </head>
+-  <body>
++  <body class="conversations-body">
+     <div class="chat-list">
+       <div class="chat-item">
+         <img id="avatarPng" src="" alt="logo"/>
+Index: Templates/html/header.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"es\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\r\n  <title>Header Template</title>\r\n\r\n  <script type=\"module\" src=\"../javascript/header.js\"></script>\r\n  <link id=\"cssHeaderLink\" rel=\"stylesheet\">\r\n</head>\r\n<body>\r\n\r\n<header class=\"header\">\r\n  <div class=\"logo\">\r\n    <a id=\"indexLink\" target=\"_self\">\r\n      <img id=\"Main_Icon\" src=\"\" alt=\"logo\"/>\r\n    </a>\r\n  </div>\r\n\r\n  <nav class=\"nav\">\r\n    <a id=\"signInLink\" class=\"nav-link\">\r\n      <button class=\"button sign-in\">Sign in</button>\r\n    </a>\r\n    <a id=\"registerLink\" class=\"nav-link\">\r\n      <button class=\"button register\">Register</button>\r\n    </a>\r\n  </nav>\r\n</header>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/html/header.html b/Templates/html/header.html
+--- a/Templates/html/header.html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/html/header.html	(date 1743344956007)
+@@ -9,7 +9,7 @@
+   <script type="module" src="../javascript/header.js"></script>
+   <link id="cssHeaderLink" rel="stylesheet">
+ </head>
+-<body>
++<body class="header-body">
+ 
+ <header class="header">
+   <div class="logo">
+Index: json/images.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"images\": [\r\n    {\r\n      \"nombre\": \"addContact\",\r\n      \"url\": \"assets/addContact.png\",\r\n      \"alt\": \"Icono para añadir contacto\"\r\n    },\r\n    {\r\n      \"nombre\": \"addGroup\",\r\n      \"url\": \"assets/addGroup.png\",\r\n      \"alt\": \"Icono para añadir grupo\"\r\n    },\r\n    {\r\n      \"nombre\": \"avatarJpg\",\r\n      \"url\": \"assets/avatar.jpg\",\r\n      \"alt\": \"Imagen de avatar en formato JPG\"\r\n    },\r\n    {\r\n      \"nombre\": \"avatarPng\",\r\n      \"url\": \"assets/avatar.png\",\r\n      \"alt\": \"Imagen de avatar en formato PNG\"\r\n    },\r\n    {\r\n      \"nombre\": \"Configuracion\",\r\n      \"url\": \"assets/Configuración.png\",\r\n      \"alt\": \"Icono de configuración\"\r\n    },\r\n    {\r\n      \"nombre\": \"IndexIcon\",\r\n      \"url\": \"assets/Index_Icon.png\",\r\n      \"alt\": \"Icono de índice\"\r\n    },\r\n    {\r\n      \"nombre\": \"Inicio\",\r\n      \"url\": \"assets/Inicio.png\",\r\n      \"alt\": \"Icono de inicio\"\r\n    },\r\n    {\r\n      \"nombre\": \"Main_Icon\",\r\n      \"url\": \"assets/SoloLogo.png\",\r\n      \"alt\": \"Icono principal\"\r\n    },\r\n    {\r\n      \"nombre\": \"Instagram\",\r\n      \"url\": \"assets/Instagram.png\",\r\n      \"alt\": \"Icono Instagram\"\r\n    },\r\n    {\r\n      \"nombre\": \"Logo\",\r\n      \"url\": \"assets/LogoImagen.png\",\r\n      \"alt\": \"Logo\"\r\n    }\r\n  ]\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/json/images.json b/json/images.json
+--- a/json/images.json	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/json/images.json	(date 1743346601850)
+@@ -16,6 +16,11 @@
+       "alt": "Imagen de avatar en formato JPG"
+     },
+     {
++      "nombre": "fullLogo",
++      "url": "assets/fullLogo.png",
++      "alt": "Full Logo"
++    },
++    {
+       "nombre": "avatarPng",
+       "url": "assets/avatar.png",
+       "alt": "Imagen de avatar en formato PNG"
+Index: Templates/html/menssages.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"es\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <link rel=\"stylesheet\" href=\"/Templates/css/menssages.css\">\r\n    <title></title>\r\n  </head>\r\n  <body>\r\n\r\n  <div class=\"message\">\r\n    <div class=\"text\">\r\n      <p>¡Hola! ¿Cómo estás?</p>\r\n      <time datetime=\"10:00\">10:00 AM</time>\r\n    </div>\r\n  </div>\r\n\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/html/menssages.html b/Templates/html/menssages.html
+--- a/Templates/html/menssages.html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/html/menssages.html	(date 1743345051859)
+@@ -6,7 +6,7 @@
+     <link rel="stylesheet" href="/Templates/css/menssages.css">
+     <title></title>
+   </head>
+-  <body>
++  <body class="message-body">
+ 
+   <div class="message">
+     <div class="text">
+Index: Templates/javascript/avatarNombre.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { getAbsolutePath } from '../../js/loadTemplate.js';\r\nimport { cargarImagenPorId } from '../../js/cargarImagenes.js';\r\n\r\nasync function init() {\r\n\r\n  document.getElementById(\"cssAvatarNombreLink\").href = getAbsolutePath(\"Templates/css/avatarNombre.css\");\r\n  document.getElementById(\"indexLink\").href = getAbsolutePath(\"main/html/index.html\");\r\n  cargarImagenPorId('avatarPng', 'avatarPng');\r\n}\r\n\r\n// Ejecutar init() dependiendo del estado del DOM\r\nif (document.readyState === \"loading\") {\r\n  document.addEventListener(\"DOMContentLoaded\", init);\r\n} else {\r\n  await init(); // Si el DOM ya está cargado, ejecutarlo inmediatamente\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/javascript/avatarNombre.js b/Templates/javascript/avatarNombre.js
+--- a/Templates/javascript/avatarNombre.js	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/javascript/avatarNombre.js	(date 1743350152834)
+@@ -4,7 +4,7 @@
+ async function init() {
+ 
+   document.getElementById("cssAvatarNombreLink").href = getAbsolutePath("Templates/css/avatarNombre.css");
+-  document.getElementById("indexLink").href = getAbsolutePath("main/html/index.html");
++  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
+   cargarImagenPorId('avatarPng', 'avatarPng');
+ }
+ 
+Index: main/css/profile.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@import url(\"colors.css\");\r\n\r\n/* Reset y configuración global */\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: Arial, sans-serif;\r\n}\r\n\r\nbody {\r\n  background-color: var(--white);\r\n}\r\n\r\n#profile-main {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n/* Ajustar los div internos */\r\n#avatar, .notChan {\r\n  width: 60%;\r\n  padding: 15px;\r\n\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/css/profile.css b/main/css/profile.css
+--- a/main/css/profile.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/css/profile.css	(date 1743351349027)
+@@ -12,6 +12,17 @@
+   background-color: var(--white);
+ }
+ 
++#avatar, .notChan {
++  width: 100%;
++  max-width: 800px;
++  padding: 15px;
++
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  margin: 0 auto;
++}
++
+ #profile-main {
+   display: flex;
+   flex-direction: column;
+Index: main/css/start.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* Ajustar el body para que el footer no esté pegado */\r\nbody {\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 100vh;\r\n  background-color: #3ec9a7;\r\n}\r\n\r\n/* Permitir que el contenedor principal crezca */\r\n.container {\r\n  display: flex;\r\n  flex: 1;\r\n  width: 100%;\r\n  min-height: 85vh; /* Aumentamos la altura para hacer espacio */\r\n  background: gray;\r\n  overflow: hidden;\r\n}\r\n\r\n/* Ajustar la altura del chat para que ocupe más */\r\n.chat-container {\r\n  width: 60%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 75vh; /* Aumentamos la altura del chat */\r\n}\r\n\r\n\r\nhtml:has(#content-special) footer {\r\n  position: relative !important;\r\n}\r\n\r\n/* ------------------- */\r\n/* BARRA LATERAL */\r\n/* ------------------- */\r\n#sidebar {\r\n  width: 30%;\r\n  background: white;\r\n  border-right: 1px solid #ddd;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n#chat-header {\r\n  display: flex;\r\n  justify-content: center; /* Centra el texto horizontalmente */\r\n  align-items: center; /* Centra verticalmente */\r\n  text-align: center;\r\n  font-weight: bold;\r\n  padding: 15px;\r\n  background: black;\r\n  color: white;\r\n}\r\n\r\n/* ------------------- */\r\n/* LISTA DE CONVERSACIONES */\r\n/* ------------------- */\r\n/* Estilo de la barra lateral */\r\n#sidebar {\r\n  width: 30%;\r\n  background: white;\r\n  border-right: 1px solid #ddd;\r\n  display: flex;\r\n  flex-direction: column;\r\n  padding: 0;\r\n}\r\n\r\n/* Cabecera de la barra lateral */\r\n#chat-header {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between; /* Alinear a la izquierda */\r\n  padding: 15px;\r\n  background: black;\r\n  color: white;\r\n  font-weight: bold;\r\n}\r\n\r\n/* Contenedor de los botones */\r\n.chat-buttons {\r\n  display: flex;\r\n  justify-content: right;\r\n  gap: 8px; /* Espacio entre botones */\r\n}\r\n\r\n/* Estilos de los botones */\r\n.icon-button {\r\n  background: white;\r\n\r\n  border: none;\r\n  cursor: pointer;\r\n  padding: 5px;\r\n  border-radius: 5px;\r\n  transition: background 0.2s ease-in-out;\r\n}\r\n\r\n.icon-button img {\r\n  width: 24px; /* Ajusta el tamaño del icono */\r\n  height: 24px;\r\n}\r\n\r\n/* Efecto hover */\r\n.icon-button:hover {\r\n  background: rgba(255, 255, 255, 0.2);\r\n}\r\n\r\n/* Contenedor de la lista de chats */\r\n.chat-list {\r\n  flex-grow: 1;\r\n  overflow-y: auto;\r\n  width: 100%; /* Ocupar todo el ancho */\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 10px;\r\n  padding: 10px;\r\n}\r\n\r\n/* Cada conversación ocupará **TODO** el espacio disponible */\r\n.conversation {\r\n  width: 100%; /* Ocupar todo el ancho */\r\n  background: white;\r\n  transition: background 0.2s ease-in-out;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n/* Avatar dentro de cada chat */\r\n.conversation img {\r\n  width: 50px;\r\n  height: 50px;\r\n  border-radius: 50%;\r\n  object-fit: cover;\r\n  margin-right: 15px;\r\n}\r\n\r\n/* Ajuste del contenido del chat */\r\n.chat-info {\r\n  display: flex;\r\n  flex-direction: column;\r\n  flex-grow: 1; /* Permite que el texto ocupe todo el espacio disponible */\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n/* Estilos de texto en el chat */\r\n.chat-info p {\r\n  margin: 0;\r\n  font-size: 14px;\r\n}\r\n\r\n.chat-info p strong {\r\n  font-size: 16px;\r\n}\r\n\r\n/* Efecto hover */\r\n.conversation:hover {\r\n  background: #f0f0f0;\r\n}\r\n\r\n/* ------------------- */\r\n/* ÁREA DEL CHAT */\r\n/* ------------------- */\r\n.chat-container {\r\n  width: 70%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n/* Espacio para el avatar y el nombre */\r\n.user-info-template {\r\n  display: flex;\r\n  align-items: center;\r\n  height: 60px; /* Espacio adecuado */\r\n  background: black;\r\n  padding: 10px;\r\n  color: white;\r\n}\r\n\r\n#avatar {\r\n  display: flex;\r\n  align-items: center; /* Alinea en una misma línea */\r\n  gap: 8px; /* Espaciado entre imagen y texto */\r\n}\r\n\r\n#avatar img {\r\n  width: 50px;\r\n  height: 50px;\r\n  border-radius: 50%;\r\n}\r\n\r\n#avatar p {\r\n  font-size: 14px;\r\n  color: white;\r\n  margin: 0;\r\n  padding: 0;\r\n  white-space: nowrap;\r\n}\r\n\r\n\r\n.chat-messages {\r\n  flex-grow: 1;\r\n  padding: 15px;\r\n  background: gray;\r\n  overflow-y: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-height: calc(100vh - 200px);\r\n}\r\n\r\n/* Ajustar mensajes dentro del chat */\r\n.messages {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  max-height: 100%;\r\n  overflow-y: auto;\r\n  padding: 10px;\r\n}\r\n\r\n/* Cada mensaje ocupa su espacio correctamente */\r\n.message {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 6px;\r\n  margin-bottom: 10px;\r\n  border-radius: 8px;\r\n  word-wrap: break-word;\r\n  overflow: hidden;\r\n}\r\n\r\n/* Forzar que los mensajes respeten su propio diseño */\r\n.message.received {\r\n  background: white;\r\n  align-self: flex-start;\r\n  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.message.received time {\r\n  align-self: flex-end;\r\n}\r\n\r\n.message.sent {\r\n  background: lawngreen;\r\n  align-self: flex-end;\r\n  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n/* ------------------- */\r\n/* BARRA DE MENSAJES */\r\n/* ------------------- */\r\n.chat-input {\r\n  display: flex;\r\n  padding: 10px;\r\n  background: black;\r\n  gap: 10px;\r\n  align-items: center;\r\n}\r\n\r\n.chat-input input {\r\n  flex: 1;\r\n  padding: 10px;\r\n  font-size: 14px;\r\n  border: none;\r\n  border-radius: 5px;\r\n}\r\n\r\n.chat-input button {\r\n  background: lightslategrey;\r\n  color: black;\r\n  border: none;\r\n  padding: 10px 15px;\r\n  cursor: pointer;\r\n  border-radius: 5px;\r\n}\r\n\r\n.chat-input button:hover {\r\n  background: darkgrey;\r\n}\r\n\r\n.emoji-btn, .attach-btn {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 50%;\r\n  font-size: 20px;\r\n  cursor: pointer;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  transition: background 0.3s ease, transform 0.1s ease;\r\n}\r\n\r\n.emoji-btn:hover, .attach-btn:hover {\r\n  transform: scale(1.1);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/css/start.css b/main/css/start.css
+--- a/main/css/start.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/css/start.css	(date 1743352388129)
+@@ -1,3 +1,9 @@
++* {
++  margin: 0;
++  padding: 0;
++  box-sizing: border-box;
++}
++
+ /* Ajustar el body para que el footer no esté pegado */
+ body {
+   display: flex;
+@@ -70,7 +76,7 @@
+   align-items: center;
+   justify-content: space-between; /* Alinear a la izquierda */
+   padding: 15px;
+-  background: black;
++  background: var(--grayh);
+   color: white;
+   font-weight: bold;
+ }
+@@ -104,14 +110,14 @@
+ }
+ 
+ /* Contenedor de la lista de chats */
+-.chat-list {
++.chat-list-Start {
+   flex-grow: 1;
+-  overflow-y: auto;
+   width: 100%; /* Ocupar todo el ancho */
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 10px;
++  background-color: var(--verde-secundario);
+ }
+ 
+ /* Cada conversación ocupará **TODO** el espacio disponible */
+@@ -164,22 +170,22 @@
+   width: 70%;
+   display: flex;
+   flex-direction: column;
++  padding: 0;
+ }
+ 
+-/* Espacio para el avatar y el nombre */
+ .user-info-template {
+   display: flex;
++  justify-content: flex-end;
+   align-items: center;
+-  height: 60px; /* Espacio adecuado */
+-  background: black;
+-  padding: 10px;
+-  color: white;
++  height: 60px;
++  background: var(--grayh);
++  padding: 10px 15px;
+ }
+ 
+ #avatar {
+   display: flex;
+-  align-items: center; /* Alinea en una misma línea */
+-  gap: 8px; /* Espaciado entre imagen y texto */
++  align-items: center;
++  gap: 8px;
+ }
+ 
+ #avatar img {
+@@ -196,7 +202,6 @@
+   white-space: nowrap;
+ }
+ 
+-
+ .chat-messages {
+   flex-grow: 1;
+   padding: 15px;
+@@ -228,21 +233,8 @@
+   overflow: hidden;
+ }
+ 
+-/* Forzar que los mensajes respeten su propio diseño */
+-.message.received {
+-  background: white;
+-  align-self: flex-start;
+-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+-}
+-
+-.message.received time {
+-  align-self: flex-end;
+-}
+-
+ .message.sent {
+-  background: lawngreen;
+   align-self: flex-end;
+-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* ------------------- */
+@@ -254,6 +246,8 @@
+   background: black;
+   gap: 10px;
+   align-items: center;
++  border-radius: 8px;
++  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .chat-input input {
+Index: main/html/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta name=\"keywords\" content=\"HTML5, CSS3, JavaScript\">\r\n\r\n    <title>Title</title>\r\n\r\n    <script type=\"module\" src=\"../javascript/index.js\"></script>\r\n    <link id=\"cssColorsLink\" rel=\"stylesheet\">\r\n    <link id=\"cssLink\" rel=\"stylesheet\">\r\n\r\n  </head>\r\n  <body>\r\n\r\n  <header id=\"header\"></header>\r\n\r\n  <section class=\"hero\">\r\n    <div class=\"hero-content\">\r\n      <div class=\"hero-image\"></div>\r\n      <div class=\"hero-text\">\r\n        <h1>Proyecto X</h1>\r\n        <p>Ejemplo de texto que escribir</p>\r\n      </div>\r\n    </div>\r\n  </section>\r\n\r\n  <footer id=\"footer\"></footer>\r\n\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/html/index.html b/main/html/index.html
+--- a/main/html/index.html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/html/index.html	(date 1743347142975)
+@@ -18,10 +18,15 @@
+ 
+   <section class="hero">
+     <div class="hero-content">
+-      <div class="hero-image"></div>
+-      <div class="hero-text">
+-        <h1>Proyecto X</h1>
+-        <p>Ejemplo de texto que escribir</p>
++      <div class="hero-logo">
++        <img id="fullLogo" src="" alt="Logo Principal">
++      </div>
++      <div class="hero-description">
++        <h1>Instant Message</h1>
++        <p>
++          Instant Message es una plataforma de mensajería moderna, sencilla y eficaz diseñada para ofrecer una experiencia fluida y directa entre usuarios.
++          Ideal para entornos personales o profesionales, permite comunicarte al instante sin complicaciones, con una interfaz intuitiva y clara que se adapta a tus necesidades.
++        </p>
+       </div>
+     </div>
+   </section>
+Index: main/html/profile.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"es\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <meta name=\"keywords\" content=\"HTML5, CSS3, JavaScript\">\r\n\r\n  <title>Profile Page</title>\r\n\r\n  <script type=\"module\" src=\"../javascript/profile.js\"></script>\r\n  <link id=\"cssColorsLink\" rel=\"stylesheet\">\r\n  <link id=\"cssProfileLink\" rel=\"stylesheet\">\r\n</head>\r\n\r\n<body>\r\n<header id=\"header-sign-in\"></header>\r\n\r\n<main id=\"profile-main\">\r\n  <div id=\"avatar-nombre\"></div>\r\n  <div id=\"not-changeable-text-state\"></div>\r\n  <div id=\"not-changeable-text-email\"></div>\r\n  <div id=\"not-changeable-text-phonenumber\"></div>\r\n</main>\r\n\r\n<footer id=\"footer\"></footer>\r\n</body>\r\n</html>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/html/profile.html b/main/html/profile.html
+--- a/main/html/profile.html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/html/profile.html	(date 1743351238766)
+@@ -1,28 +1,28 @@
+ <!DOCTYPE html>
+ <html lang="es">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <meta name="keywords" content="HTML5, CSS3, JavaScript">
++  <head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+ 
+-  <title>Profile Page</title>
++    <title>Profile Page</title>
+ 
+-  <script type="module" src="../javascript/profile.js"></script>
+-  <link id="cssColorsLink" rel="stylesheet">
+-  <link id="cssProfileLink" rel="stylesheet">
+-</head>
++    <script type="module" src="../javascript/profile.js"></script>
++    <link id="cssColorsLink" rel="stylesheet">
++    <link id="cssProfileLink" rel="stylesheet">
++  </head>
+ 
+-<body>
+-<header id="header-sign-in"></header>
++  <body>
++    <header id="header-sign-in"></header>
+ 
+-<main id="profile-main">
+-  <div id="avatar-nombre"></div>
+-  <div id="not-changeable-text-state"></div>
+-  <div id="not-changeable-text-email"></div>
+-  <div id="not-changeable-text-phonenumber"></div>
+-</main>
++    <main id="profile-main">
++      <div id="avatar-nombre"></div>
++
++      <div id="not-changeable-text-state" class="notChan">Estado</div>
++      <div id="not-changeable-text-email" class="notChan">Correo</div>
++      <div id="not-changeable-text-phonenumber" class="notChan">Teléfono</div>
++    </main>
+ 
+-<footer id="footer"></footer>
+-</body>
++    <footer id="footer"></footer>
++  </body>
+ </html>
+-
+Index: main/html/recoverPassword(Password).html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta name=\"keywords\" content=\"HTML5, CSS3, JavaScript\">\r\n\r\n    <title>Title</title>\r\n\r\n    <script type=\"module\" src=\"../javascript/start.js\"></script>\r\n    <link id=\"cssColorsLink\" rel=\"stylesheet\">\r\n    <link id=\"cssStartLink\" rel=\"stylesheet\">\r\n  </head>\r\n  <body>\r\n\r\n  <header id=\"header\"></header>\r\n\r\n    <main>\r\n      <div class=\"form-container\">\r\n        <form id=\"input-group\">\r\n          <div id = 'request-password'></div>\r\n          <div id = 'request-repeat-password'></div>\r\n        </form>\r\n      </div>\r\n\r\n      <!-- Botón para enviar el formulario -->\r\n      <div class=\"boton-container\">\r\n        <a href=\"editProfile.html\" target=\"_self\">\r\n          <button id=\"btn-registrar\">Cambiar Contraseña</button>\r\n        </a>\r\n      </div>\r\n\r\n    </main>\r\n\r\n    <footer id=\"footer\" xlu-include-file=\"/Templates/footer/footer.html\"></footer>\r\n  </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/html/recoverPassword(Password).html b/main/html/recoverPassword(Password).html
+--- a/main/html/recoverPassword(Password).html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/html/recoverPassword(Password).html	(date 1743343933943)
+@@ -7,7 +7,6 @@
+ 
+     <title>Title</title>
+ 
+-    <script type="module" src="../javascript/start.js"></script>
+     <link id="cssColorsLink" rel="stylesheet">
+     <link id="cssStartLink" rel="stylesheet">
+   </head>
+@@ -25,13 +24,16 @@
+ 
+       <!-- Botón para enviar el formulario -->
+       <div class="boton-container">
+-        <a href="editProfile.html" target="_self">
++        <a id="signInLink" target="_self">
+           <button id="btn-registrar">Cambiar Contraseña</button>
+         </a>
+       </div>
+ 
+     </main>
+ 
+-    <footer id="footer" xlu-include-file="/Templates/footer/footer.html"></footer>
++    <footer id="footer"></footer>
++
++    <script type="module" src="../javascript/recoverPassword(Password).js"></script>
++
+   </body>
+ </html>
+Index: main/javascript/index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';\r\n\r\nasync function init() {\r\n  document.getElementById(\"cssLink\").href = getAbsolutePath(\"main/css/index.css\");\r\n  document.getElementById(\"cssColorsLink\").href = getAbsolutePath(\"colors.css\");\r\n  await cargarEstructura();\r\n}\r\n\r\n// Ejecutar init() dependiendo del estado del DOM\r\nif (document.readyState === \"loading\") {\r\n  document.addEventListener(\"DOMContentLoaded\", init);\r\n} else {\r\n  await init(); // Si el DOM ya está cargado, ejecutarlo inmediatamente\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/javascript/index.js b/main/javascript/index.js
+--- a/main/javascript/index.js	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/javascript/index.js	(date 1743346764957)
+@@ -1,9 +1,12 @@
+ import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
++import { cargarImagenPorId } from '../../js/cargarImagenes.js';
+ 
+ async function init() {
+   document.getElementById("cssLink").href = getAbsolutePath("main/css/index.css");
+   document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
+   await cargarEstructura();
++
++  cargarImagenPorId("fullLogo", "fullLogo");
+ }
+ 
+ // Ejecutar init() dependiendo del estado del DOM
+Index: Templates/css/header.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\r\n  background-color: var(--white);\r\n}\r\n\r\n.header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 15px 5%;\r\n  background-color: #3ec9a7;\r\n  border-bottom: 1px solid #e0e0e0;\r\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 100;\r\n}\r\n\r\n.logo {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 10px;\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: #333;\r\n  cursor: pointer;\r\n  transition: transform 0.2s;\r\n}\r\n\r\n.logo:hover {\r\n  transform: scale(1.02);\r\n}\r\n\r\n.logo img {\r\n  height: 40px;\r\n  width: auto;\r\n}\r\n\r\n.nav {\r\n  display: flex;\r\n  gap: 15px;\r\n}\r\n\r\n.button {\r\n  padding: 10px 20px;\r\n  border-radius: 8px;\r\n  cursor: pointer;\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  transition: all 0.3s ease;\r\n}\r\n\r\n.sign-in {\r\n  border: 2px solid #6c63ff;\r\n  background-color: var(--white);\r\n  color: #6c63ff;\r\n}\r\n\r\n.register {\r\n  background-color: #6c63ff;\r\n  color: white;\r\n  border: 2px solid #6c63ff;\r\n}\r\n\r\n.sign-in:hover {\r\n  background-color: #6c63ff;\r\n  color: white;\r\n  transform: translateY(-2px);\r\n}\r\n\r\n.register:hover {\r\n  background-color: #5a52e0;\r\n  border-color: #5a52e0;\r\n  transform: translateY(-2px);\r\n}\r\n\r\n/* Efecto al hacer clic */\r\n.button:active {\r\n  transform: translateY(0);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/css/header.css b/Templates/css/header.css
+--- a/Templates/css/header.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/css/header.css	(date 1743344955998)
+@@ -4,7 +4,7 @@
+   box-sizing: border-box;
+ }
+ 
+-body {
++body.header-body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: var(--white);
+ }
+Index: Templates/html/footer.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Página con Footer</title>\r\n  <script type=\"module\" src=\"../javascript/footer.js\"></script>\r\n  <link id=\"cssFooterLink\" rel=\"stylesheet\">\r\n</head>\r\n<body>\r\n<footer class=\"fw-footer\" role=\"contentinfo\">\r\n  <div class=\"fw-container\">\r\n    <div class=\"fw-logo\">\r\n      <img id=\"Logo\" src=\"\" alt=\"logo\"/>\r\n    </div>\r\n\r\n    <div class=\"fw-columns\">\r\n      <section class=\"fw-column\" aria-labelledby=\"usecases-heading\">\r\n        <h3 id=\"usecases-heading\" class=\"fw-column__title\">Use cases</h3>\r\n        <ul class=\"fw-column__list\">\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">UI design</a></li>\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">UX design</a></li>\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">Wireframing</a></li>\r\n        </ul>\r\n      </section>\r\n\r\n      <section class=\"fw-column\" aria-labelledby=\"explore-heading\">\r\n        <h3 id=\"explore-heading\" class=\"fw-column__title\">Explore</h3>\r\n        <ul class=\"fw-column__list\">\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">Design</a></li>\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">Prototyping</a></li>\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">Development features</a></li>\r\n        </ul>\r\n      </section>\r\n\r\n      <section class=\"fw-column\" aria-labelledby=\"resources-heading\">\r\n        <h3 id=\"resources-heading\" class=\"fw-column__title\">Resources</h3>\r\n        <ul class=\"fw-column__list\">\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">Blog</a></li>\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">Best practices</a></li>\r\n          <li class=\"fw-column__item\"><a href=\"#\" class=\"fw-column__link\">Colors</a></li>\r\n        </ul>\r\n      </section>\r\n    </div>\r\n\r\n    <div class=\"fw-social\">\r\n      <a href=\"#\" class=\"fw-social__link\" aria-label=\"Instagram\">\r\n        <img id=\"Instagram\" src=\"\" alt=\"Instagram\"/>\r\n      </a>\r\n    </div>\r\n  </div>\r\n</footer>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/html/footer.html b/Templates/html/footer.html
+--- a/Templates/html/footer.html	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/html/footer.html	(date 1743344793308)
+@@ -7,48 +7,48 @@
+   <script type="module" src="../javascript/footer.js"></script>
+   <link id="cssFooterLink" rel="stylesheet">
+ </head>
+-<body>
+-<footer class="fw-footer" role="contentinfo">
+-  <div class="fw-container">
+-    <div class="fw-logo">
+-      <img id="Logo" src="" alt="logo"/>
+-    </div>
++  <body class="footer-body">
++    <footer class="fw-footer" role="contentinfo">
++      <div class="fw-container">
++        <div class="fw-logo">
++          <img id="Logo" src="" alt="logo"/>
++        </div>
+ 
+-    <div class="fw-columns">
+-      <section class="fw-column" aria-labelledby="usecases-heading">
+-        <h3 id="usecases-heading" class="fw-column__title">Use cases</h3>
+-        <ul class="fw-column__list">
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">UI design</a></li>
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">UX design</a></li>
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">Wireframing</a></li>
+-        </ul>
+-      </section>
++        <div class="fw-columns">
++          <section class="fw-column" aria-labelledby="usecases-heading">
++            <h3 id="usecases-heading" class="fw-column__title">Use cases</h3>
++            <ul class="fw-column__list">
++              <li class="fw-column__item"><a href="#" class="fw-column__link">UI design</a></li>
++              <li class="fw-column__item"><a href="#" class="fw-column__link">UX design</a></li>
++              <li class="fw-column__item"><a href="#" class="fw-column__link">Wireframing</a></li>
++            </ul>
++          </section>
+ 
+-      <section class="fw-column" aria-labelledby="explore-heading">
+-        <h3 id="explore-heading" class="fw-column__title">Explore</h3>
+-        <ul class="fw-column__list">
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">Design</a></li>
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">Prototyping</a></li>
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">Development features</a></li>
+-        </ul>
+-      </section>
++          <section class="fw-column" aria-labelledby="explore-heading">
++            <h3 id="explore-heading" class="fw-column__title">Explore</h3>
++            <ul class="fw-column__list">
++              <li class="fw-column__item"><a href="#" class="fw-column__link">Design</a></li>
++              <li class="fw-column__item"><a href="#" class="fw-column__link">Prototyping</a></li>
++              <li class="fw-column__item"><a href="#" class="fw-column__link">Development features</a></li>
++            </ul>
++          </section>
+ 
+-      <section class="fw-column" aria-labelledby="resources-heading">
+-        <h3 id="resources-heading" class="fw-column__title">Resources</h3>
+-        <ul class="fw-column__list">
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">Blog</a></li>
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">Best practices</a></li>
+-          <li class="fw-column__item"><a href="#" class="fw-column__link">Colors</a></li>
+-        </ul>
+-      </section>
+-    </div>
++          <section class="fw-column" aria-labelledby="resources-heading">
++            <h3 id="resources-heading" class="fw-column__title">Resources</h3>
++            <ul class="fw-column__list">
++              <li class="fw-column__item"><a href="#" class="fw-column__link">Blog</a></li>
++              <li class="fw-column__item"><a href="#" class="fw-column__link">Best practices</a></li>
++              <li class="fw-column__item"><a href="#" class="fw-column__link">Colors</a></li>
++            </ul>
++          </section>
++        </div>
+ 
+-    <div class="fw-social">
+-      <a href="#" class="fw-social__link" aria-label="Instagram">
+-        <img id="Instagram" src="" alt="Instagram"/>
+-      </a>
+-    </div>
+-  </div>
+-</footer>
+-</body>
++        <div class="fw-social">
++          <a href="#" class="fw-social__link" aria-label="Instagram">
++            <img id="Instagram" src="" alt="Instagram"/>
++          </a>
++        </div>
++      </div>
++    </footer>
++  </body>
+ </html>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d972bbb6-8365-46e8-9726-0fd9e73ab20f\" name=\"Changes\" comment=\"Problem Solution 2\">\r\n      <change afterPath=\"$PROJECT_DIR$/Templates/javascript/footer.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08__Changes_1.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2025_17_04_[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2025_17_04__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Templates/css/footer.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Templates/css/footer.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Templates/css/header.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Templates/css/header.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Templates/html/footer.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Templates/html/footer.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Templates/html/header.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Templates/html/header.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Templates/javascript/header.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Templates/javascript/header.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/img/Instagram.png\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/assets/Instagram.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/img/LogoImagen.png\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/assets/LogoImagen.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/js/loadTemplate.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/js/loadTemplate.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/json/images.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/json/images.json\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExportToHTMLSettings\">\r\n    <option name=\"OUTPUT_DIRECTORY\" value=\"$PROJECT_DIR$/../Proyecto-Chat-Texto\\exportToHTML\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"tsconfig.json\" />\r\n        <option value=\"HTML File\" />\r\n        <option value=\"TypeScript File\" />\r\n        <option value=\"CSS File\" />\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;enrique-eg&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GitRewordedCommitMessages\">\r\n    <option name=\"onto\" value=\"66636233e82a82660c2a2c0d20a472977efc9efc\" />\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto.git&quot;,\r\n    &quot;accountId&quot;: &quot;43512161-2170-46e8-9282-ad4f025b5972&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2srJOulygy29TqGXSXQ4h4zp0hD\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"JavaScript Debug.Header_Sign_In.html.executor\": \"Run\",\r\n    \"JavaScript Debug.addButton.html.executor\": \"Run\",\r\n    \"JavaScript Debug.asdsad.html.executor\": \"Run\",\r\n    \"JavaScript Debug.avatar.html.executor\": \"Run\",\r\n    \"JavaScript Debug.button.html.executor\": \"Run\",\r\n    \"JavaScript Debug.footer.html.executor\": \"Run\",\r\n    \"JavaScript Debug.header.html.executor\": \"Run\",\r\n    \"JavaScript Debug.index.html.executor\": \"Run\",\r\n    \"JavaScript Debug.profile.html.executor\": \"Run\",\r\n    \"JavaScript Debug.prueba.html.executor\": \"Run\",\r\n    \"JavaScript Debug.recoverPassword(Password_Sign_In).html.executor\": \"Run\",\r\n    \"JavaScript Debug.register.html.executor\": \"Run\",\r\n    \"JavaScript Debug.request.html.executor\": \"Run\",\r\n    \"JavaScript Debug.requestSelector.html.executor\": \"Run\",\r\n    \"JavaScript Debug.sigIn.html.executor\": \"Run\",\r\n    \"JavaScript Debug.signIn.html.executor\": \"Run\",\r\n    \"Node.js.footer.js.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"WebServerToolWindowPanel.toolwindow.highlight.mappings\": \"true\",\r\n    \"WebServerToolWindowPanel.toolwindow.highlight.symlinks\": \"true\",\r\n    \"WebServerToolWindowPanel.toolwindow.show.date\": \"false\",\r\n    \"WebServerToolWindowPanel.toolwindow.show.permissions\": \"false\",\r\n    \"WebServerToolWindowPanel.toolwindow.show.size\": \"false\",\r\n    \"disable.download.node.interpreter.editor.notification\": \"true\",\r\n    \"git-widget-placeholder\": \"Sprint-2\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Mario/AppData/Local/Temp/Rar$DIa18736.23027.rartemp\",\r\n    \"list.type.of.created.stylesheet\": \"CSS\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_interpreter_path\": \"node\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"settings.nodejs\",\r\n    \"ts.external.directory.path\": \"C:\\\\Program Files\\\\JetBrains\\\\WebStorm 2024.3.2.1\\\\plugins\\\\javascript-plugin\\\\jsLanguageServicesImpl\\\\external\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Mario\\AppData\\Local\\Temp\\Rar$DIa18736.23027.rartemp\" />\r\n      <recent name=\"C:\\Users\\Mario\\WebstormProjects\\Proyecto-Chat-Texto\\html\\Login\\addGroup\" />\r\n      <recent name=\"C:\\Users\\Mario\\WebstormProjects\\Proyecto-Chat-Texto\\html\\Login\" />\r\n      <recent name=\"C:\\Users\\Mario\\WebstormProjects\\Proyecto-Chat-Texto\\Templates\" />\r\n      <recent name=\"C:\\Users\\Mario\\WebstormProjects\\Proyecto-Chat-Texto\\Templates\\request\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\enriq\\WebstormProjects\\Proyecto-Chat-Texto7\\assets\" />\r\n      <recent name=\"C:\\Users\\Mario\\WebstormProjects\\Proyecto-Chat-Texto\" />\r\n      <recent name=\"C:\\Users\\Mario\\WebstormProjects\\Proyecto-Chat-Texto\\Templates\\request\" />\r\n      <recent name=\"C:\\Users\\Mario\\WebstormProjects\\Proyecto-Chat-Texto\\Templates\\notChangeableText\" />\r\n      <recent name=\"C:\\Users\\Mario\\WebstormProjects\\Proyecto-Chat-Texto\\html\\Login\\MainPage\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"footer.js\" type=\"NodeJSConfigurationType\" path-to-node=\"$APPLICATION_CONFIG_DIR$/node/versions/22.13.1/node\" nameIsGenerated=\"true\" path-to-js-file=\"footer.js\" working-dir=\"$PROJECT_DIR$/Templates/javascript\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d972bbb6-8365-46e8-9726-0fd9e73ab20f\" name=\"Changes\" comment=\"\" />\r\n      <created>1736874790572</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1736874790572</updated>\r\n      <workItem from=\"1739207733969\" duration=\"1334000\" />\r\n      <workItem from=\"1739209971354\" duration=\"3627000\" />\r\n      <workItem from=\"1739545201733\" duration=\"3406000\" />\r\n      <workItem from=\"1739549118851\" duration=\"1227000\" />\r\n      <workItem from=\"1739812119558\" duration=\"41000\" />\r\n      <workItem from=\"1739812195482\" duration=\"4450000\" />\r\n      <workItem from=\"1740416552276\" duration=\"1558000\" />\r\n      <workItem from=\"1740438672246\" duration=\"2314000\" />\r\n      <workItem from=\"1740441010316\" duration=\"891000\" />\r\n      <workItem from=\"1740600937349\" duration=\"13328000\" />\r\n      <workItem from=\"1740620662148\" duration=\"639000\" />\r\n      <workItem from=\"1740624127292\" duration=\"3739000\" />\r\n      <workItem from=\"1740661623517\" duration=\"18214000\" />\r\n      <workItem from=\"1740754586461\" duration=\"5571000\" />\r\n      <workItem from=\"1741965384098\" duration=\"6007000\" />\r\n      <workItem from=\"1742010751882\" duration=\"1091000\" />\r\n      <workItem from=\"1742230540965\" duration=\"4591000\" />\r\n      <workItem from=\"1742569891264\" duration=\"1185000\" />\r\n      <workItem from=\"1743284026024\" duration=\"4951000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"First Commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739213425461</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739213425461</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Added header, request, requestSelector, button and addButton templates\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739546997033</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739546997033</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Added footer and changed avatar\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739815693397</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739815693397</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Added button template\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1739816080469</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1739816080469</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Working on noLogin\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740603780207</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740603780207</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Working on noLogin\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740616241158</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740616241158</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Finish Main Page\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740629061132</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740629061132</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Working on Logon\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740667455721</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740667455721</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Working on Login\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740679212363</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740679212363</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Finish Login\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740697580186</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740697580186</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Finish Login\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740697695401</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740697695401</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Changes on &lt;a&gt; reference\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740758326842</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740758326842</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Changes on &lt;a&gt; reference 2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1740758594963</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1740758594963</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Still Working on loadTemplate\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1741721591500</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1741721591500</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Still Working on loadTemplate\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1741989858843</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1741989858843</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Still Working on loadTemplate\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742230994494</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742230994494</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Problem Solution\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743181542029</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743181542029</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Problem Solution 2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743181693327</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743181693327</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"19\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"First Commit\" />\r\n    <MESSAGE value=\"Added header, request, requestSelector, button and addButton templates\" />\r\n    <MESSAGE value=\"Added footer and changed avatar\" />\r\n    <MESSAGE value=\"Added button template\" />\r\n    <MESSAGE value=\"Working on noLogin\" />\r\n    <MESSAGE value=\"Finish Main Page\" />\r\n    <MESSAGE value=\"Working on Logon\" />\r\n    <MESSAGE value=\"Working on Login\" />\r\n    <MESSAGE value=\"Finish Login\" />\r\n    <MESSAGE value=\"Changes on &lt;a&gt; reference\" />\r\n    <MESSAGE value=\"Changes on &lt;a&gt; reference 2\" />\r\n    <MESSAGE value=\"Still Working on loadTemplate\" />\r\n    <MESSAGE value=\"Problem Solution\" />\r\n    <MESSAGE value=\"Problem Solution 2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Problem Solution 2\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"javascript\">\r\n          <url>file://$PROJECT_DIR$/main/javascript/signIn.js</url>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/.idea/workspace.xml	(date 1743352635039)
+@@ -5,20 +5,34 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="d972bbb6-8365-46e8-9726-0fd9e73ab20f" name="Changes" comment="Problem Solution 2">
+-      <change afterPath="$PROJECT_DIR$/Templates/javascript/footer.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_03_2025_18_08__Changes_1.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2025_17_04_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_03_2025_17_04__Changes_.xml" beforeDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/fullLogo.png" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/css/avatarNombre.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/avatarNombre.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/css/conversations.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/conversations.css" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Templates/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/footer.css" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Templates/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/header.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/css/headerSignIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/headerSignIn.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/css/menssages.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/menssages.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/css/notChangeableText.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/css/notChangeableText.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/html/avatarNombre.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/avatarNombre.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/html/conversations.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/conversations.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Templates/html/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/footer.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Templates/html/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/header.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Templates/javascript/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/javascript/header.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/img/Instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Instagram.png" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/img/LogoImagen.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/LogoImagen.png" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/js/loadTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loadTemplate.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/html/menssages.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/html/menssages.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Templates/javascript/avatarNombre.js" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/javascript/avatarNombre.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/json/images.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/images.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/index.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/profile.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/css/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/start.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/html/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/profile.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Email).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Email).html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/html/recoverPassword(Password).html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/recoverPassword(Password).html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/html/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/html/start.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/javascript/addGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/addGroup.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/javascript/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/index.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/javascript/recoverPassword(Password).js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/recoverPassword(Password).js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main/javascript/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/javascript/start.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -26,23 +40,23 @@
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="ExportToHTMLSettings">
+-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../Proyecto-Chat-Texto\exportToHTML" />
++    <option name="printScope" value="4" />
++    <option name="OUTPUT_DIRECTORY" value="E:/Escritorio/Universidad" />
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
++        <option value="JavaScript File" />
+         <option value="tsconfig.json" />
+         <option value="HTML File" />
+         <option value="TypeScript File" />
+         <option value="CSS File" />
+-        <option value="JavaScript File" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="RESET_MODE" value="HARD" />
+-    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+   &quot;lastFilter&quot;: {
+@@ -55,8 +69,8 @@
+   </component>
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto.git&quot;,
+-    &quot;accountId&quot;: &quot;43512161-2170-46e8-9282-ad4f025b5972&quot;
++    &quot;url&quot;: &quot;https://github.com/MarTonPerCar/Proyecto-Chat-Texto&quot;,
++    &quot;accountId&quot;: &quot;6b7bb4c0-f567-4728-b3a6-ee00cedcd083&quot;
+   }
+ }</component>
+   <component name="ProjectColorInfo">{
+@@ -82,15 +96,13 @@
+     "JavaScript Debug.footer.html.executor": "Run",
+     "JavaScript Debug.header.html.executor": "Run",
+     "JavaScript Debug.index.html.executor": "Run",
+-    "JavaScript Debug.profile.html.executor": "Run",
+     "JavaScript Debug.prueba.html.executor": "Run",
+     "JavaScript Debug.recoverPassword(Password_Sign_In).html.executor": "Run",
+     "JavaScript Debug.register.html.executor": "Run",
+     "JavaScript Debug.request.html.executor": "Run",
+     "JavaScript Debug.requestSelector.html.executor": "Run",
+     "JavaScript Debug.sigIn.html.executor": "Run",
+-    "JavaScript Debug.signIn.html.executor": "Run",
+-    "Node.js.footer.js.executor": "Run",
++    "JavaScript Debug.start.html.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.git.unshallow": "true",
+     "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+@@ -101,7 +113,7 @@
+     "disable.download.node.interpreter.editor.notification": "true",
+     "git-widget-placeholder": "Sprint-2",
+     "ignore.virus.scanning.warn.message": "true",
+-    "last_opened_file_path": "C:/Users/Mario/AppData/Local/Temp/Rar$DIa18736.23027.rartemp",
++    "last_opened_file_path": "E:/Escritorio/Universidad",
+     "list.type.of.created.stylesheet": "CSS",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+@@ -123,22 +135,17 @@
+       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\enriq\WebstormProjects\Proyecto-Chat-Texto7\assets" />
+       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto" />
+       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\request" />
+       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\notChangeableText" />
+       <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\html\Login\MainPage" />
++      <recent name="C:\Users\Mario\WebstormProjects\Proyecto-Chat-Texto\Templates\avatarNombre" />
+     </key>
+-  </component>
+-  <component name="RunManager">
+-    <configuration name="footer.js" type="NodeJSConfigurationType" path-to-node="$APPLICATION_CONFIG_DIR$/node/versions/22.13.1/node" nameIsGenerated="true" path-to-js-file="footer.js" working-dir="$PROJECT_DIR$/Templates/javascript">
+-      <method v="2" />
+-    </configuration>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
++        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -168,7 +175,6 @@
+       <workItem from="1742010751882" duration="1091000" />
+       <workItem from="1742230540965" duration="4591000" />
+       <workItem from="1742569891264" duration="1185000" />
+-      <workItem from="1743284026024" duration="4951000" />
+     </task>
+     <task id="LOCAL-00001" summary="First Commit">
+       <option name="closed" value="true" />
+@@ -348,14 +354,4 @@
+     <MESSAGE value="Problem Solution 2" />
+     <option name="LAST_COMMIT_MESSAGE" value="Problem Solution 2" />
+   </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" type="javascript">
+-          <url>file://$PROJECT_DIR$/main/javascript/signIn.js</url>
+-          <option name="timeStamp" value="1" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+-  </component>
+ </project>
+\ No newline at end of file
+Index: main/css/index.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>body {\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 100vh;\r\n  background-color: var(--white);\r\n  margin: 0;\r\n}\r\n\r\n.main-content {\r\n  flex: 1;\r\n  display: flex;\r\n}\r\n\r\n/* Hero section - Centrado perfecto */\r\n.hero {\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 2rem;\r\n}\r\n\r\n.hero-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  gap: 2rem;\r\n  max-width: 800px;\r\n  margin: 0 auto;\r\n}\r\n\r\n.hero-icon {\r\n  width: 150px;\r\n  height: 150px;\r\n  border: 2px solid var(--black);\r\n  position: relative;\r\n}\r\n\r\n.hero-icon::before,\r\n.hero-icon::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 2px;\r\n  background: var(--black);\r\n  top: 50%;\r\n  left: 0;\r\n}\r\n\r\n.hero-icon::before {\r\n  transform: rotate(45deg);\r\n}\r\n\r\n.hero-icon::after {\r\n  transform: rotate(-45deg);\r\n}\r\n\r\n.hero-text {\r\n  text-align: center;\r\n}\r\n\r\n.hero-text h1 {\r\n  font-size: 2rem;\r\n  font-weight: bold;\r\n  color: var(--black);\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.hero-text p {\r\n  font-size: 1.2rem;\r\n  color: var(--black);\r\n}\r\n\r\n/* Responsive */\r\n@media (max-width: 768px) {\r\n  .hero {\r\n    padding: 1.5rem;\r\n  }\r\n\r\n  .hero-icon {\r\n    width: 120px;\r\n    height: 120px;\r\n  }\r\n\r\n  .hero-text h1 {\r\n    font-size: 1.8rem;\r\n  }\r\n\r\n  .hero-text p {\r\n    font-size: 1.1rem;\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main/css/index.css b/main/css/index.css
+--- a/main/css/index.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/main/css/index.css	(date 1743347429957)
+@@ -1,92 +1,67 @@
+-body {
+-  display: flex;
+-  flex-direction: column;
+-  min-height: 100vh;
+-  background-color: var(--white);
+-  margin: 0;
+-}
+-
+-.main-content {
+-  flex: 1;
+-  display: flex;
+-}
+-
+-/* Hero section - Centrado perfecto */
+ .hero {
+   width: 100%;
++  flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+-  padding: 2rem;
++  padding: 5rem 2rem;
++  background-color: #2b879e;
+ }
+ 
+-.hero-container {
++.hero-content {
+   display: flex;
+-  flex-direction: column;
+   align-items: center;
+-  gap: 2rem;
+-  max-width: 800px;
+-  margin: 0 auto;
+-}
+-
+-.hero-icon {
+-  width: 150px;
+-  height: 150px;
+-  border: 2px solid var(--black);
+-  position: relative;
+-}
+-
+-.hero-icon::before,
+-.hero-icon::after {
+-  content: "";
+-  position: absolute;
++  gap: 5rem;
++  max-width: 1100px;
+   width: 100%;
+-  height: 2px;
+-  background: var(--black);
+-  top: 50%;
+-  left: 0;
+-}
+-
+-.hero-icon::before {
+-  transform: rotate(45deg);
+ }
+ 
+-.hero-icon::after {
+-  transform: rotate(-45deg);
++.hero-logo {
++  flex-shrink: 0;
++  margin-left: -2rem; /* 🔁 Mueve un poco más a la izquierda */
+ }
+ 
+-.hero-text {
+-  text-align: center;
++.hero-logo img {
++  width: 300px; /* 📈 Mucho más grande */
++  height: auto;
+ }
+ 
+-.hero-text h1 {
+-  font-size: 2rem;
++.hero-description h1 {
++  font-size: 2.8rem;
+   font-weight: bold;
+-  color: var(--black);
++  color: black; /* 🔲 Negro */
++  text-align: center;
+   margin-bottom: 1rem;
+ }
+ 
+-.hero-text p {
+-  font-size: 1.2rem;
+-  color: var(--black);
++.hero-description p {
++  font-size: 1.25rem;
++  color: black; /* 🔲 Negro */
++  max-width: 600px;
++  line-height: 1.8;
+ }
+ 
+ /* Responsive */
+ @media (max-width: 768px) {
+-  .hero {
+-    padding: 1.5rem;
++  .hero-content {
++    flex-direction: column;
++    text-align: center;
++    gap: 2.5rem;
++  }
++
++  .hero-logo {
++    margin-left: 0;
+   }
+ 
+-  .hero-icon {
+-    width: 120px;
+-    height: 120px;
++  .hero-logo img {
++    width: 200px;
+   }
+ 
+-  .hero-text h1 {
+-    font-size: 1.8rem;
++  .hero-description h1 {
++    font-size: 2.2rem;
+   }
+ 
+-  .hero-text p {
++  .hero-description p {
+     font-size: 1.1rem;
+   }
+ }
+Index: Templates/css/headerSignIn.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@import url(\"../../colors.css\");\r\n\r\n/* ===== VARIABLES CSS ===== */\r\n:root {\r\n  --header-height: 70px;\r\n  --transition-speed: 0.3s;\r\n  --border-radius: 10px;\r\n  --hover-brightness: 1.2;\r\n  --element-spacing: 1.5rem;\r\n  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);\r\n  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);\r\n  --border-light: 1px solid rgba(255, 255, 255, 0.2);\r\n}\r\n\r\n/* ===== RESET Y ESTILOS BASE ===== */\r\nbody, html {\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;\r\n}\r\n\r\n/* ===== HEADER PRINCIPAL ===== */\r\n.header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  background-color: var(--verde-primario);\r\n  padding: 0 5%;\r\n  height: var(--header-height);\r\n  border-bottom: var(--border-light);\r\n  box-shadow: var(--shadow-sm);\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 1000;\r\n  backdrop-filter: blur(5px);\r\n  -webkit-backdrop-filter: blur(5px);\r\n}\r\n\r\n/* ===== LOGO ===== */\r\n.logo-container {\r\n  display: flex;\r\n  align-items: center;\r\n  transition: all var(--transition-speed) cubic-bezier(0.25, 0.1, 0.25, 1);\r\n  height: 100%;\r\n}\r\n\r\n.logo-container:hover {\r\n  transform: translateY(-2px);\r\n}\r\n\r\n#Main_Icon {\r\n  height: 40px;\r\n  width: auto;\r\n  object-fit: contain;\r\n  transition: all var(--transition-speed) ease;\r\n  filter: drop-shadow(var(--shadow-sm));\r\n}\r\n\r\n.logo-container:hover #Main_Icon {\r\n  transform: scale(1.05);\r\n  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));\r\n}\r\n\r\n/* ===== SECCIÓN DE USUARIO ===== */\r\n.user-section-header {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: var(--element-spacing);\r\n  height: 100%;\r\n}\r\n\r\n/* ===== BOTONES ===== */\r\n.button-header-login {\r\n  background: none;\r\n  border: none;\r\n  cursor: pointer;\r\n  padding: 8px 10px;\r\n  border-radius: var(--border-radius);\r\n  transition: all var(--transition-speed) ease;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.button-header-login:hover {\r\n  background-color: rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.button-header-login::before {\r\n  content: '';\r\n  position: absolute;\r\n  bottom: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 2px;\r\n  background-color: var(--coral);\r\n  transform: scaleX(0);\r\n  transform-origin: right;\r\n  transition: transform var(--transition-speed) ease;\r\n}\r\n\r\n.button-header-login:hover::before {\r\n  transform: scaleX(1);\r\n  transform-origin: left;\r\n}\r\n\r\n#Inicio, #Configuracion {\r\n  width: 24px;\r\n  height: 24px;\r\n  filter: brightness(0.9);\r\n  transition: all var(--transition-speed) ease;\r\n  object-fit: contain;\r\n}\r\n\r\n.button-header-login:hover #Inicio,\r\n.button-header-login:hover #Configuracion {\r\n  transform: scale(1.15) rotate(5deg);\r\n  filter: brightness(var(--hover-brightness));\r\n}\r\n\r\n/* ===== NOMBRE DE USUARIO ===== */\r\n.username {\r\n  font-size: 0.95rem;\r\n  color: var(--black);\r\n  font-weight: 600;\r\n  letter-spacing: 0.3px;\r\n  text-transform: capitalize;\r\n  transition: all var(--transition-speed) ease;\r\n  position: relative;\r\n  padding: 6px 12px;\r\n  border-radius: var(--border-radius);\r\n  background: rgba(255, 255, 255, 0.05);\r\n}\r\n\r\n.username:hover {\r\n  color: var(--coral);\r\n  background: rgba(255, 255, 255, 0.15);\r\n  transform: translateY(-2px);\r\n}\r\n\r\n/* ===== AVATAR ===== */\r\n.avatar-container {\r\n  display: flex;\r\n  align-items: center;\r\n  transition: all var(--transition-speed) ease;\r\n}\r\n\r\n#avatarPng {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 50%;\r\n  object-fit: cover;\r\n  border: 2px solid rgba(255, 255, 255, 0.4);\r\n  transition: all var(--transition-speed) ease;\r\n  box-shadow: var(--shadow-sm);\r\n}\r\n\r\n.avatar-container:hover #avatarPng {\r\n  transform: scale(1.1);\r\n  border-color: rgba(255, 255, 255, 0.8);\r\n  box-shadow: var(--shadow-md);\r\n}\r\n\r\n/* ===== EFECTOS DE INTERACCIÓN ===== */\r\n.button-header-login:active,\r\n.avatar-container:active {\r\n  transform: scale(0.95);\r\n}\r\n\r\n/* ===== DISEÑO RESPONSIVE ===== */\r\n@media (max-width: 992px) {\r\n  :root {\r\n    --element-spacing: 1.2rem;\r\n    --header-height: 65px;\r\n  }\r\n\r\n  #Main_Icon {\r\n    height: 36px;\r\n  }\r\n\r\n  #avatarPng {\r\n    width: 36px;\r\n    height: 36px;\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  :root {\r\n    --element-spacing: 1rem;\r\n    --header-height: 60px;\r\n  }\r\n\r\n  .header {\r\n    padding: 0 4%;\r\n  }\r\n\r\n  #Inicio, #Configuracion {\r\n    width: 22px;\r\n    height: 22px;\r\n  }\r\n\r\n  .username {\r\n    font-size: 0.9rem;\r\n    padding: 5px 10px;\r\n  }\r\n}\r\n\r\n@media (max-width: 600px) {\r\n  :root {\r\n    --element-spacing: 0.8rem;\r\n  }\r\n\r\n  .username {\r\n    display: none;\r\n  }\r\n\r\n  #Main_Icon {\r\n    height: 32px;\r\n  }\r\n\r\n  #avatarPng {\r\n    width: 34px;\r\n    height: 34px;\r\n  }\r\n}\r\n\r\n@media (max-width: 480px) {\r\n  .header {\r\n    padding: 0 3%;\r\n  }\r\n\r\n  #Inicio, #Configuracion {\r\n    width: 20px;\r\n    height: 20px;\r\n  }\r\n\r\n  #avatarPng {\r\n    width: 32px;\r\n    height: 32px;\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Templates/css/headerSignIn.css b/Templates/css/headerSignIn.css
+--- a/Templates/css/headerSignIn.css	(revision 1e2c1393d45d1f778d45cff3182623b6d61e4afa)
++++ b/Templates/css/headerSignIn.css	(date 1743345702948)
+@@ -6,7 +6,7 @@
+   --transition-speed: 0.3s;
+   --border-radius: 10px;
+   --hover-brightness: 1.2;
+-  --element-spacing: 1.5rem;
++  --element-spacing: 0.8rem;
+   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+   --border-light: 1px solid rgba(255, 255, 255, 0.2);
+@@ -25,7 +25,7 @@
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--verde-primario);
+-  padding: 0 5%;
++  padding: 0 1.5rem;
+   height: var(--header-height);
+   border-bottom: var(--border-light);
+   box-shadow: var(--shadow-sm);

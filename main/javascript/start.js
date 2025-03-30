@@ -1,13 +1,17 @@
 import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
+import { cargarImagenPorId } from '../../js/cargarImagenes.js';
 
 async function init() {
+
   document.getElementById("cssStartLink").href = getAbsolutePath("main/css/start.css");
-  document.getElementById("addContact").href = getAbsolutePath("main/html/addContact.html");
-  document.getElementById("addGroup").href = getAbsolutePath("main/html/addGroup.html");
-
-
+  document.getElementById("addContactLink").href = getAbsolutePath("main/html/addContact.html");
+  document.getElementById("addGroupLink").href = getAbsolutePath("main/html/addGroup.html");
+  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
 
   await cargarEstructura();
+
+  cargarImagenPorId("addContact", "addContact");
+  cargarImagenPorId("addGroup", "addGroup");
 }
 
 // Ejecutar init() dependiendo del estado del DOM
@@ -16,7 +20,3 @@ if (document.readyState === "loading") {
 } else {
   await init(); // Si el DOM ya está cargado, ejecutarlo inmediatamente
 }
-
-
-
-

@@ -4,7 +4,7 @@ import { cargarImagenPorId } from '../../js/cargarImagenes.js';
 async function init() {
 
   document.getElementById("cssAvatarNombreLink").href = getAbsolutePath("Templates/css/avatarNombre.css");
-  document.getElementById("indexLink").href = getAbsolutePath("main/html/index.html");
+  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
   cargarImagenPorId('avatarPng', 'avatarPng');
 }
 
