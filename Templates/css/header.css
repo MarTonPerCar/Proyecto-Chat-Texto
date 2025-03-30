@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+body.body-header {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--white);
 }

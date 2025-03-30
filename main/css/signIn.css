@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-body {
+body.body-signIn {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   display: flex;
   flex-direction: column;

@@ -6,7 +6,7 @@
   --focus-shadow: 0 0 0 3px rgba(62, 201, 167, 0.2);
 }
 
-body {
+body.body-request-selector{
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   margin: 0;
   padding: 0;

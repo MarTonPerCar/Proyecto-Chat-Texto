@@ -11,7 +11,7 @@
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-body {
+body.body-register {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #f5f7fa;
   color: var(--text-color);

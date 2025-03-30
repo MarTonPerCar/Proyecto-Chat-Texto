@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-body {
+body.body-conversations {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #f8f9fa;
   display: flex;

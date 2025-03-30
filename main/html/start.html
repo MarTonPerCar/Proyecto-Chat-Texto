@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Estilo WhatsApp Web</title>
 
-    <title>Chat Estilo WhatsApp Web</title>
+  <script type="module" src="../javascript/start.js"></script>
 
-    <script type="module" src="../javascript/start.js"></script>
-    <link id="cssColorsLink" rel="stylesheet">
-    <link id="cssStartLink" rel="stylesheet">
-  </head>
-  <body>
+  <link id="cssStartLink" rel="stylesheet">
+</head>
+<body class = "body-start">
 
-    <header id="header-sign-in" ></header>
+<header id="header-sign-in"></header>
 
-    <div class="container">
-      <aside id="sidebar">
-        <div id="chat-header">
-          <span>Mis Chats</span>
-          <div class="chat-buttons">
-            <button class="icon-button" id="add-contact">
-              <a id = "addContact"><img src="/main/externalSource/addContact.png" alt="Añadir Contacto"></a>
-            </button>
-            <button class="icon-button" id="create-group">
-              <a id = "addGroup"><img src="/main/externalSource/addGroup.png" alt="Crear Grupo"></a>
-            </button>
-          </div>
-        </div>
-        <div class="chat-list" id="conversation">
-          <!-- Aquí se cargarán los templates de los chats -->
-          <div id = "conversations" class = "conversation"></div>
-          <div class = "conversation"></div>
-        </div>
-      </aside>
-
-      <!-- Área de chat principal -->
-      <main class="chat-container">
-        <div class="user-info-template" id="userInfo">
-          <!-- Aquí irá el template del avatar + nombre -->
-          <a id = 'avatar-nombre'><div id="avatar" ></div></a>
-        </div>
-        <div class="chat-messages" id="messageContainer">
-          <!-- Aquí se generarán los mensajes dinámicamente -->
-          <div class="messages">
-            <div id ="mensajes" class = "message sent"></div>
-            <div class="mensajes" ></div>
-          </div>
-        </div>
-
-        <!-- Barra de entrada de mensajes -->
-        <div class="chat-input">
-          <button class="emoji-btn">😊</button>
-          <button class="attach-btn">📎</button>
-          <input type="text" placeholder="Escribe un mensaje...">
-          <button class="send-btn">Enviar</button>
-        </div>
-      </main>
+<div class="container">
+  <aside id="sidebar">
+    <div id="chat-header">
+      <span>Mis Chats</span>
+      <div class="chat-buttons">
+        <button class="icon-button" id="add-contact">
+          <a id="addContact">
+            <img id="addContactImg" src="" alt="Añadir Contacto">
+          </a>
+        </button>
+        <button class="icon-button" id="create-group">
+          <a id="addGroup">
+            <img id="addGroupImg" src="" alt="Crear Grupo">
+          </a>
+        </button>
+      </div>
     </div>
 
-    <footer id="footer"></footer>
+    <div class="chat-list" id="conversation">
+      <div id="conversations" class="conversation"></div>
+      <div class="conversation"></div>
+    </div>
+  </aside>
 
-  </body>
+  <main class="chat-container">
+    <div class="user-info-template" id="userInfo">
+      <a id='avatar-nombre'>
+        <img id="avatar" src="" alt="Avatar">
+      </a>
+    </div>
+    <div class="chat-messages" id="messageContainer">
+      <div class="messages">
+        <div id="mensajes" class="message sent"></div>
+        <div class="mensajes"></div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <button class="emoji-btn">😊</button>
+      <button class="attach-btn">📎</button>
+      <input type="text" placeholder="Escribe un mensaje...">
+      <button class="send-btn">Enviar</button>
+    </div>
+  </main>
+</div>
+
+<footer id="footer"></footer>
+
+</body>
 </html>

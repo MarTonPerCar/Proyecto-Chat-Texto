@@ -1,24 +1,19 @@
 import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
-import {cargarImagenPorId} from "/js/cargarImagenes";
+import { cargarImagenPorId } from '/js/cargarImagenes';
 
 async function init() {
-  cargarImagenPorId('avatarPng', 'avatarPng');
-  cargarImagenPorId('avatarPng1', 'avatarPng');
-  cargarImagenPorId('avatarPng2', 'avatarPng');
-  cargarImagenPorId('avatarPng3', 'avatarPng');
+  // Configura las rutas de los enlaces antes de cargar la estructura
   document.getElementById("cssAddGroup").href = getAbsolutePath("main/css/addGroup.css");
+  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
   document.getElementById("startLink").href = getAbsolutePath("main/html/start.html");
   document.getElementById("startLink2").href = getAbsolutePath("main/html/start.html");
-  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
+  document.getElementById("editProfile").href = getAbsolutePath("main/html/profile.html");
 
-
-
-  await cargarEstructura();
 }
 
-// Ejecutar init() dependiendo del estado del DOM
+// Ejecutar init() cuando el DOM esté listo
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", init);
 } else {
-  await init(); // Si el DOM ya está cargado, ejecutarlo inmediatamente
+  await init();
 }

@@ -12,7 +12,7 @@
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-body {
+body.body-Editprofile{
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
   display: flex;

@@ -1,5 +1,5 @@
 /* Ajustar el body para que el footer no esté pegado */
-body {
+body.body-start {
   display: flex;
   flex-direction: column;
   min-height: 100vh;

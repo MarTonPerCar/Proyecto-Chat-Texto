@@ -5,7 +5,9 @@
   --text-color: #333;
   --transition: all 0.2s ease;
 }
+body.body-request{
 
+}
 .form-template {
   max-width: 100%;
   margin-bottom: 1.5rem;

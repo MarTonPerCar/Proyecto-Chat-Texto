@@ -1,6 +1,6 @@
 import { getAbsolutePath } from '../js/loadTemplate.js';
 
-// cargarImagenes.js (versión actualizada y robusta)
+
 export function cargarImagenPorId(id, contenedorID) {
   const jsonURL = getAbsolutePath("json/images.json");
   fetch(jsonURL)
