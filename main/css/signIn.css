@@ -1,3 +1,17 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --accent-color: #4cc9f0;
+  --text-color: #2b2d42;
+  --light-color: #f8f9fa;
+  --gray-color: #e9ecef;
+  --green-color: #4bb543;
+  --error-color: #f44336;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,79 +19,141 @@
 }
 
 body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Al menos la altura completa de la pantalla */
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: var(--white);
+  min-height: 100vh;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-#header {
-  margin-bottom: 20px; /* Espaciado con el main */
-}
-
-#footer {
-  margin-top: 20px; /* Espaciado con el main */
-}
-
+/* Main Content */
 main {
-  flex: 1; /* Hace que el main crezca y empuje el footer abajo */
-  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra todo dentro del formulario */
-  justify-content: center;
   width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 #input-group {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los elementos */
-  gap: 10px;
-  width: 50vw; /* Mismo ancho que los inputs */
+  gap: 1.5rem;
 }
 
+/* Form Elements */
 .form-container form div {
-  width: 100%; /* Asegura que los elementos dentro del form ocupen todo */
+  width: 100%;
 }
 
-.texto-container {
-  display: flex;
-  justify-content: center; /* Centrar el botón */
-  margin-top: 20px; /* Espaciado superior */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+/* Button Styles */
 .boton-container {
-  display: flex;
-  justify-content: center; /* Centrar el botón */
-  margin-top: 20px; /* Espaciado superior */
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 500px;
 }
 
-.boton-container a {
-  text-decoration: none; /* Quita el subrayado del enlace */
-}
-
-.boton-container button {
-  height: 20px; /* Misma altura que el input */
-  width: 50vw; /* Misma anchura que el input */
-  border: 1px solid var(--gray); /* Mismo borde que el input */
-  border-radius: 5px; /* Bordes redondeados */
-  background-color: var(--gray); /* Color de fondo similar al input */
-  color: white; /* Color del texto */
-  font-size: 16px; /* Tamaño de letra */
+#startLink {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  text-align: center;
 }
 
-.boton-container button:hover {
-  background-color: var(--green); /* Cambio de color al pasar el mouse */
+#startLink:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+#startLink:active {
+  transform: translateY(0);
+}
 
+/* Link Styles */
+.texto-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+#recoverPasswordEmail {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+#recoverPasswordEmail:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  #input-group {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  .form-container {
+    padding: 1.25rem;
+  }
+
+  #startLink {
+    padding: 0.875rem;
+  }
+}
 
