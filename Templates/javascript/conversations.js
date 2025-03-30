@@ -2,9 +2,8 @@ import { getAbsolutePath } from '../../js/loadTemplate.js';
 import { cargarImagenPorId } from '../../js/cargarImagenes.js';
 
 async function init() {
-  cargarImagenPorId('Logo', 'Logo');
-  cargarImagenPorId('Instagram', 'Instagram');
-  document.getElementById("cssFooterLink").href = getAbsolutePath("Templates/css/footer.css");
+  cargarImagenPorId('avatarPng', 'avatarPng');
+  document.getElementById("cssConversationsLink").href = getAbsolutePath("Templates/css/conversations.css");
   document.getElementById("indexLink").href = getAbsolutePath("main/html/index.html");
 }
 

@@ -20,7 +20,7 @@ export async function cargarEstructura() {
     await cargarTemplate('/Templates/html/avatarNombre.html', 'avatar-nombre');
   }
   if (document.getElementById('conversations')) {
-    await cargarTemplate('/Templates/html/conversations.html', 'conversations');
+    await cargarTemplate('/Templates/html/conversations.html', 'conversations', 'Templates/javascript/conversations.js');
   }
 
   // MENSAJES Y GRUPOS

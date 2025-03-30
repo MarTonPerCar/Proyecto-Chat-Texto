@@ -15,7 +15,7 @@ async function init() {
   cargarImagenPorId('Main_Icon', 'Main_Icon');
   cargarImagenPorId('Inicio', 'Inicio');
   cargarImagenPorId('Configuracion', 'Configuracion');
-  cargarImagenPorId('avatarPng', 'avatarPng');
+  cargarImagenPorId('avatarJpg', 'avatarPng');
 }
 
 // Ejecutar init() dependiendo del estado del DOM
