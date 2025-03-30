@@ -1,6 +1,3 @@
-@import url("../../colors.css");
-
-
 /* Ajustar el body para que el footer no esté pegado */
 body {
   display: flex;
