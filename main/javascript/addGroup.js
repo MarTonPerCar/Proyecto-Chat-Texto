@@ -1,9 +1,16 @@
 import { cargarEstructura, getAbsolutePath } from '../../js/loadTemplate.js';
+import {cargarImagenPorId} from "/js/cargarImagenes";
 
 async function init() {
+  cargarImagenPorId('avatarPng', 'avatarPng');
+  cargarImagenPorId('avatarPng1', 'avatarPng');
+  cargarImagenPorId('avatarPng2', 'avatarPng');
+  cargarImagenPorId('avatarPng3', 'avatarPng');
   document.getElementById("cssAddGroup").href = getAbsolutePath("main/css/addGroup.css");
   document.getElementById("startLink").href = getAbsolutePath("main/html/start.html");
   document.getElementById("startLink2").href = getAbsolutePath("main/html/start.html");
+  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
+
 
 
   await cargarEstructura();
