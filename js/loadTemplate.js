@@ -17,7 +17,7 @@ export async function cargarEstructura() {
 
   // AVATAR / CONVERSATIONS
   if (document.getElementById('avatar-nombre')) {
-    await cargarTemplate('/Templates/html/avatarNombre.html', 'avatar-nombre');
+    await cargarTemplate('/Templates/html/avatarNombre.html', 'avatar-nombre', 'Templates/javascript/avatarNombre.js');
   }
   if (document.getElementById('conversations')) {
     await cargarTemplate('/Templates/html/conversations.html', 'conversations', 'Templates/javascript/conversations.js');

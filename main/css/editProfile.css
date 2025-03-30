@@ -1,65 +1,121 @@
-@import url("colors.css");
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --text-color: #2b2d42;
+  --light-color: #f8f9fa;
+  --border-color: #e9ecef;
+  --link-color: #4361ee;
+  --success-color: #4bb543;
+  --border-radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
-/* Centrar el contenido en la pantalla */
-
-body{
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
-  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  justify-content: center; /* Centra verticalmente */
-  gap: 20px; /* Espaciado entre los elementos */
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
 }
 
 /* Contenedor del formulario */
 .form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 20px 0 20px;
-  width: 80%; /* Ancho del formulario */
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }
 
 /* Estilos del formulario */
-form {
+#input-group {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
   width: 100%;
-  gap: 15px;
-}
-
-.a {
-  display: inline-block;
 }
 
 /* Enlace de cambiar contraseña */
 #changePassword {
+  display: inline-block;
   text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-
+  color: var(--link-color);
+  font-weight: 600;
+  transition: var(--transition);
+  margin-top: 1rem;
 }
 
+#changePassword:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+/* Botón de actualizar */
 #edit-profile {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
+  max-width: 500px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
   color: white;
-
-  background: #222;
+  background-color: var(--primary-color);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 1rem;
 }
 
-a:hover {
-  text-decoration: underline;
+#edit-profile:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+#edit-profile:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  .form-container {
+    padding: 1.25rem;
+    width: 95%;
+  }
+
+  #input-group {
+    gap: 1.25rem;
+  }
 }

@@ -5,6 +5,7 @@ console.log("Profile Page cargada correctamente");
 async function init() {
   // Asignar ruta absoluta al CSS de profile
   document.getElementById("cssProfileLink").href = getAbsolutePath("main/css/profile.css");
+  document.getElementById("cssColorsLink").href = getAbsolutePath("colors.css");
 
   await cargarEstructura();
 }

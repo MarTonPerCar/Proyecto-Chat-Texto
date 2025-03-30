@@ -1,74 +1,153 @@
-@import url("colors.css");
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --dark-color: #2b2d42;
+  --light-color: #f8f9fa;
+  --border-color: #e9ecef;
+  --success-color: #4bb543;
+  --border-radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  min-height: 100vh; /* La página ocupará al menos el 100% de la pantalla */
-  background-color: var(--white);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  line-height: 1.6;
 }
 
-/* Contenedor principal de ajustes */
+/* Main Content */
 #settings-main {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: auto;
-  padding: 30px;
-  margin: auto; /* Centra el contenedor en la página */
-}
-
-/* Campos seleccionables */
-.selectable {
+  padding: 2rem;
+  max-width: 800px;
   width: 100%;
-  margin-bottom: 20px;
+  margin: 0 auto;
 }
 
-/* Asegurar que los inputs ocupen todo el ancho */
-.selectable select, .selectable input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-}
-
-/* Asegurar que el contenedor de botones mantiene la estructura */
-.buttons-container {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Enlace dentro de los botones: ocupa todo el ancho */
-.buttons-container a {
-  text-decoration: none;
-}
-
-/* Botón con enlace */
-.buttons-container a button {
-  width: 63vb;
-  padding: 14px;
-  font-size: 16px;
-  color: white;
-
-  background: #222;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#settings-main h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: var(--dark-color);
   text-align: center;
 }
 
-.buttons-container a button:hover {
-  background: #444;
+/* Selectable Fields */
+.selectable {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-#footer {
-  margin-top: auto;
+.selectable select,
+.selectable input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: white;
+  transition: var(--transition);
+  appearance: none;
+}
+
+.selectable select:focus,
+.selectable input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.buttons-container a {
+  text-decoration: none;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.buttons-container button {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--dark-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+#edit-profile {
+  background-color: var(--primary-color);
+}
+
+#apply-settings {
+  background-color: var(--success-color);
+}
+
+.buttons-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.buttons-container button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #settings-main {
+    padding: 1.5rem;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .buttons-container a {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #settings-main {
+    padding: 1rem;
+  }
+
+  #settings-main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .selectable {
+    margin-bottom: 1.25rem;
+  }
 }
