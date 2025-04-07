@@ -1,0 +1,49 @@
+.form-template {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #4CAF50; /* Verde cuando está enfocado */
+}
+
+.form-input::placeholder {
+  color: #888;
+}
+
+.form-input:required {
+  border-color: #ff0000; /* Rojo cuando es requerido */
+}
+
+.form-input.valid {
+  border-color: #4CAF50; /* Verde cuando el valor es válido */
+}
+
+.form-input.invalid {
+  border-color: #ff0000; /* Rojo cuando el valor está vacío o es inválido */
+}

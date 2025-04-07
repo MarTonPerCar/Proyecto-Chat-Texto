@@ -1,1 +1,16 @@
-<p>header works!</p>
+<header class="header">
+  <div class="logo">
+    <a [routerLink]="['/']" target="_self">
+      <img id="Main_Icon" [src]="logoSrc" alt="logo" />
+    </a>
+  </div>
+
+  <nav class="nav">
+    <a [routerLink]="['/login']" class="nav-link">
+      <button class="button sign-in">Sign in</button>
+    </a>
+    <a [routerLink]="['/register']" class="nav-link">
+      <button class="button register">Register</button>
+    </a>
+  </nav>
+</header>

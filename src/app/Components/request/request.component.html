@@ -1,1 +1,17 @@
-<p>request works!</p>
+<div class="form-template">
+  <div class="form-group">
+    <label class="form-label">{{ label }}</label>
+    <input
+      type="text"
+      class="form-input"
+      [placeholder]="placeholder"
+      [pattern]="pattern"
+      [(ngModel)]="inputValue"
+      [ngClass]="{
+        'valid': inputValue && inputValue.length > 0 && inputValue.match(pattern),
+        'invalid': inputValue && (inputValue.length === 0 || !inputValue.match(pattern))
+      }"
+      required
+    />
+  </div>
+</div>
