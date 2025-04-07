@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, ChangeDetectorRef, Input} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {NgClass} from '@angular/common';
 
@@ -15,5 +15,6 @@ export class RequestComponent {
   @Input() label: string = '';         // Recibe el label
   @Input() placeholder: string = '';    // Recibe el placeholder
   @Input() pattern: string = '';       // Recibe el patrón para la validación
-  @Input() inputValue: string = '';    // Recibe el valor del campo
+  @Input() value: string = '';    // Recibe el valor del campo
+
 }

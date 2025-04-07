@@ -6,11 +6,7 @@
       class="form-input"
       [placeholder]="placeholder"
       [pattern]="pattern"
-      [(ngModel)]="inputValue"
-      [ngClass]="{
-        'valid': inputValue && inputValue.length > 0 && inputValue.match(pattern),
-        'invalid': inputValue && (inputValue.length === 0 || !inputValue.match(pattern))
-      }"
+      [value]="value"
       required
     />
   </div>
