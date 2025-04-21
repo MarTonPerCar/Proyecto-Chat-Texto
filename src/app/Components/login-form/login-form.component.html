@@ -1,0 +1,46 @@
+<div class="login-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
+    <h2>Login</h2>
+
+    <!-- Email Field -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': form.get('email')?.invalid && form.get('email')?.touched }"
+        placeholder="Enter your email"
+      />
+      <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="invalid-feedback">
+        <div *ngIf="form.get('email')?.hasError('required')">Email is required.</div>
+        <div *ngIf="form.get('email')?.hasError('pattern')">Please enter a valid email.</div>
+      </div>
+    </div>
+
+    <!-- Password Field -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': form.get('password')?.invalid && form.get('password')?.touched }"
+        placeholder="Enter your password"
+      />
+      <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="invalid-feedback">
+        <div *ngIf="form.get('password')?.hasError('required')">Password is required.</div>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="error" class="alert alert-danger">
+      <strong>Error:</strong> Invalid email or password.
+    </div>
+
+    <!-- Submit and Guest Login Buttons -->
+    <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Login</button>
+  </form>
+</div>

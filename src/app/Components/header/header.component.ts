@@ -1,21 +1,29 @@
 import { Component } from '@angular/core';
 import {RouterLink} from '@angular/router';
+import {AuthService} from '../../services/auth.service';
+import {User} from '@angular/fire/auth';
+import {Observable} from 'rxjs';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-header',
   imports: [
-    RouterLink
+    RouterLink,
+    CommonModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  logoSrc: string = ''; // Ruta a tu logo
+  user$: Observable<User | null>;
 
-  constructor() {}
+  // Rutas de imágenes o íconos
+  logoSrc = 'assets/images/logo.png';
+  inicioIcon = 'assets/icons/home.png';
+  configIcon = 'assets/icons/settings.png';
+  avatarSrc = 'assets/images/default-avatar.png';
 
-  ngOnInit(): void {
-    // Inicialización del logo y/o lógica adicional
-    this.logoSrc = 'assets/logo.png'; // Cambiá según tu estructura
+  constructor(private authService: AuthService) {
+    this.user$ = this.authService.user$;
   }
 }

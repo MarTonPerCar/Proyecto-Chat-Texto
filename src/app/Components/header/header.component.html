@@ -1,16 +1,43 @@
-<header class="header">
-  <div class="logo">
+<header class="header" role="banner" *ngIf="user$ | async as user; else notLoggedIn">
+  <div class="logo-container">
     <a [routerLink]="['/']" target="_self">
       <img id="Main_Icon" [src]="logoSrc" alt="logo" />
     </a>
   </div>
 
-  <nav class="nav">
-    <a [routerLink]="['/login']" class="nav-link">
-      <button class="button sign-in">Sign in</button>
-    </a>
-    <a [routerLink]="['/register']" class="nav-link">
-      <button class="button register">Register</button>
-    </a>
-  </nav>
+  <div class="user-section-header">
+    <button class="button-header-login">
+      <a [routerLink]="['/chat']"><img id="Inicio" [src]="inicioIcon" alt="Inicio" /></a>
+    </button>
+
+    <button class="button-header-login">
+      <a [routerLink]="['/settings']"><img id="Configuracion" [src]="configIcon" alt="Configuración" /></a>
+    </button>
+
+    <span class="username">{{ user.email }}</span>
+
+    <div class="avatar-container">
+      <a [routerLink]="['/profile']"><img id="avatarPng" [src]="avatarSrc" alt="Avatar" /></a>
+    </div>
+  </div>
 </header>
+
+<!-- Si el usuario NO está logueado -->
+<ng-template #notLoggedIn>
+  <header class="header">
+    <div class="logo">
+      <a [routerLink]="['/']" target="_self">
+        <img id="Main_Icon" [src]="logoSrc" alt="logo" />
+      </a>
+    </div>
+
+    <nav class="nav">
+      <a [routerLink]="['/login']" class="nav-link">
+        <button class="button sign-in">Sign in</button>
+      </a>
+      <a [routerLink]="['/register']" class="nav-link">
+        <button class="button register">Register</button>
+      </a>
+    </nav>
+  </header>
+</ng-template>
