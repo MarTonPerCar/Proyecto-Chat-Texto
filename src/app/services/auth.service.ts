@@ -79,7 +79,7 @@ export class AuthService {
       this.firebaseAuth,
       email,
       password
-    ).then((credenciales: UserCredential) => {
+    ).then(async (credenciales: UserCredential) => {
       const uid = credenciales.user.uid;
 
       const usuario: Usuario = {
@@ -92,7 +92,9 @@ export class AuthService {
       };
 
       const userRef = doc(this.firestore, `usuarios/${uid}`);
-      return setDoc(userRef, usuario);
+      await setDoc(userRef, usuario);
+      await signOut(this.firebaseAuth);
+      return Promise.resolve();
     });
 
     return from(promise);

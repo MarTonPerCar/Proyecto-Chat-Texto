@@ -36,7 +36,7 @@
            formControlName="phone" [class.invalid]="isTouchedAndInvalid('phone')">
   </div>
 
-  <div class="error-message" *ngIf="registerForm.errors?.notMatching && registerForm.touched">
+  <div class="error-message" *ngIf="registerForm.errors?.['notMatching'] && registerForm.dirty">
     Las contraseñas no coinciden.
   </div>
 

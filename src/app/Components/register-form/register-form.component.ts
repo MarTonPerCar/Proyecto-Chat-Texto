@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
 import {NgIf} from '@angular/common';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-register-form',
@@ -60,8 +61,8 @@ export class RegisterFormComponent {
       const { email, password, firstName, lastName, phone } = this.registerForm.value;
 
       try {
-        await this.authService.register(email, password, firstName, lastName, phone).toPromise();
-        this.router.navigate(['/login']);
+        await lastValueFrom(this.authService.register(email, password, firstName, lastName, phone));
+        await this.router.navigate(['/login']);
       } catch (error: any) {
         console.error(error);
         switch (error.code) {
