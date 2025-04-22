@@ -1,10 +1,3 @@
-/* ===== RESET Y BASE ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :host {
   display: block;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,7 +14,7 @@ body.body-headerSignIn, html {
 @import url("../../colors.css");
 
 :root {
-  --header-height: 70px;
+  --header-height: 500px;
   --transition-speed: 0.3s;
   --border-radius: 10px;
   --hover-brightness: 1.2;
@@ -38,7 +31,7 @@ body.body-headerSignIn, html {
   align-items: center;
   background-color: var(--verde-primario, #3ec9a7);
   padding: 0 1.5rem;
-  height: var(--header-height);
+  height: 70px;
   border-bottom: var(--border-light);
   box-shadow: var(--shadow-sm);
   position: sticky;
