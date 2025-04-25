@@ -11,13 +11,22 @@
     </button>
 
     <button class="button-header-login">
-      <a [routerLink]="['/settings']"><img id="Configuracion" [src]="configIcon" alt="Configuración" /></a>
+      <a [routerLink]="['/settings']">
+        <ng-container *ngIf="datosImagen$ | async as img">
+          <img id="Configuracion" [src]="img.url" alt="Imagen de settings" />
+        </ng-container>
+
+      </a>
     </button>
 
     <span class="username">{{ user.email }}</span>
 
     <div class="avatar-container">
-      <a [routerLink]="['/profile']"><img id="avatarPng" [src]="avatarSrc" alt="Avatar" /></a>
+      <a [routerLink]="['/profile']">
+        <ng-container *ngIf="datosUsuario$ | async as datos">
+          <img id="avatarPng" [src]="datos.url" alt="Avatar" />
+        </ng-container>
+      </a>
     </div>
   </div>
 </header>

@@ -12,17 +12,11 @@ import {
   UserCredential
 } from '@angular/fire/auth';
 import { setPersistence } from 'firebase/auth';
-import { from, Observable } from 'rxjs';
-import { Firestore, doc, setDoc } from '@angular/fire/firestore';
-
-export interface Usuario {
-  uid?: string;
-  nombre: string;
-  apellido: string;
-  telefono: string;
-  email: string;
-  url: string;
-}
+import {firstValueFrom, from, Observable} from 'rxjs';
+import { Firestore, doc, setDoc, docData } from '@angular/fire/firestore';
+import { Usuario } from '../interfaces/usuario.interfaces';
+import { Imagen } from '../interfaces/imagenes.interfaces';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -80,18 +74,22 @@ export class AuthService {
       email,
       password
     ).then(async (credenciales: UserCredential) => {
-      const uid = credenciales.user.uid;
+      const avatar = await firstValueFrom(this.getImg('avatar'));
 
       const usuario: Usuario = {
-        uid,
         nombre,
         apellido,
         telefono,
         email,
-        url: this.generarUrlUnica()
+        url: avatar.url,
+        estado: '',
+        contactos: [],
+        grupos: []
       };
 
-      const userRef = doc(this.firestore, `usuarios/${uid}`);
+      const LowerEmail = email.toLowerCase().replace(/\./g, '(dot)');
+      const userRef = doc(this.firestore, `usuarios/${LowerEmail}`);
+
       await setDoc(userRef, usuario);
       await signOut(this.firebaseAuth);
       return Promise.resolve();
@@ -100,7 +98,19 @@ export class AuthService {
     return from(promise);
   }
 
-  private generarUrlUnica(): string {
-    return 'url-' + Math.random().toString(36).substring(2, 10);
+  // ──────────────────────────────────────────────
+  // LECTURA DE DATOS DEL USUARIO EN AUTH + FIRESTORE
+  // ──────────────────────────────────────────────
+
+  getDatosUsuario(email: string): Observable<Usuario> {
+    const emailSanitizado = email.toLowerCase().replace(/\./g, '(dot)');
+    const userRef = doc(this.firestore, `usuarios/${emailSanitizado}`);
+    console.log('[AuthService] getDatosUsuario(): email →', emailSanitizado);
+    return docData(userRef) as Observable<Usuario>;
+  }
+
+  getImg(name: string): Observable<Imagen> {
+    const ref = doc(this.firestore, `img/${name}`);
+    return docData(ref) as Observable<Imagen>;
   }
 }
