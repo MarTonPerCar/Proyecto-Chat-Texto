@@ -17,9 +17,6 @@ body.body-headerSignIn, html {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-/* ===== VARIABLES CSS ===== */
-@import url("../../colors.css");
-
 :root {
   --header-height: 70px;
   --transition-speed: 0.3s;

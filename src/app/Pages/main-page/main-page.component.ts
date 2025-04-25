@@ -6,7 +6,6 @@ import {HeaderComponent} from '../../Components/header/header.component';
   selector: 'app-main-page',
   imports: [
     AboutAppComponent,
-    HeaderComponent
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'
