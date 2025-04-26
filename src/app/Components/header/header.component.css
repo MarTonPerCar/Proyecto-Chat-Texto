@@ -29,7 +29,7 @@ body.body-headerSignIn, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--verde-primario, #3ec9a7);
+  background-color: #3ec9a7;
   padding: 0 1.5rem;
   height: 70px;
   border-bottom: var(--border-light);

@@ -13,7 +13,7 @@ import {
 } from '@angular/fire/auth';
 import { setPersistence } from 'firebase/auth';
 import {firstValueFrom, from, Observable} from 'rxjs';
-import { Firestore, doc, setDoc, docData } from '@angular/fire/firestore';
+import { Firestore, doc, setDoc, docData, updateDoc, arrayUnion } from '@angular/fire/firestore';
 import { Usuario } from '../interfaces/usuario.interfaces';
 import { Imagen } from '../interfaces/imagenes.interfaces';
 import { map } from 'rxjs/operators';
@@ -111,6 +111,19 @@ export class AuthService {
 
   getImg(name: string): Observable<Imagen> {
     const ref = doc(this.firestore, `img/${name}`);
+    console.log('[AuthService] getImg(): url →', ref);
     return docData(ref) as Observable<Imagen>;
   }
+
+  // ──────────────────────────────────────────────
+  // EDICIÓN DE DATOS DEL USUARIO EN AUTH + FIRESTORE
+  // ──────────────────────────────────────────────
+
+  addContacto(miEmail: string, contactoEmail: string) {
+    const userRef = doc(this.firestore, `usuarios/${miEmail}`);
+    return from(updateDoc(userRef, {
+      contactos: arrayUnion(contactoEmail)
+    }));
+  }
+
 }

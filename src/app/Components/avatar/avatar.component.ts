@@ -1,14 +1,39 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { User } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-avatar',
+  standalone: true,
   imports: [],
   templateUrl: './avatar.component.html',
   styleUrl: './avatar.component.css'
 })
-export class AvatarComponent {
+export class AvatarComponent implements OnInit {
+  @Input() nombreMini: string = '';
+  @Input() avatarUrlMini: string = '';
 
-  @Input() username: string = 'Usuario';  // Nombre por defecto
-  @Input() avatarUrl: string = '';  // URL de la imagen por defecto
+  userActual: User | null = null;
 
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.user$.subscribe(user => {
+      this.userActual = user;
+
+      if (!this.nombreMini && user) {
+        this.nombreMini = user.displayName || 'Usuario';
+      }
+
+      if (!this.avatarUrlMini) {
+        this.authService.getImg('avatar-contact').subscribe({
+          next: (img) => {
+            if (img && img.url) {
+              this.avatarUrlMini = img.url;
+            }
+          },
+        });
+      }
+    });
+  }
 }

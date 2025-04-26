@@ -1,1 +1,13 @@
-<p>conversation works!</p>
+<div
+  class="conversation"
+  [class.selected]="seleccionado"
+  (click)="seleccionarConversacion()">
+
+  <img [src]="avatarUrl" alt="Avatar" class="avatar-img" />
+
+  <div class="info">
+    <h4>{{ nombre }}</h4>
+    <p>{{ estado ? estado : 'Este usuario todavía no tiene un estado definido' }}</p>
+  </div>
+</div>
+

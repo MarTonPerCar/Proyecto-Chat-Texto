@@ -1,0 +1,29 @@
+<div class="login-container">
+  <!-- Imagen y nombre del contacto -->
+  <div class="avatar-container" *ngIf="imagenUrl && nombreContacto">
+    <img [src]="imagenUrl" class="avatar-img" alt="Avatar" />
+    <span class="nombre-completo">{{ nombreContacto }}</span>
+  </div>
+
+  <!-- Formulario -->
+  <form [formGroup]="form">
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Correo Electrónico</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        class="form-control"
+        placeholder="Ingrese su correo"
+        [ngClass]="{ 'is-invalid': form.get('email')?.invalid && form.get('email')?.touched }"
+      />
+    </div>
+
+    <!-- Botón -->
+    <button type="button" class="btn btn-primary" (click)="searchAndFindContact()">
+      {{ botonBuscar ? 'Buscar contacto' : 'Añadir contacto' }}
+    </button>
+  </form>
+</div>

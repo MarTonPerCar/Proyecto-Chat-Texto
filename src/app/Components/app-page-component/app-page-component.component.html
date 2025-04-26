@@ -1,0 +1,59 @@
+<div class="container">
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div id="chat-header">
+      <span>Mis Chats</span>
+      <div class="chat-buttons">
+        <button class="icon-button" id="add-contact">
+          <a id="addContactLink" [routerLink]="['/addContact']">
+            <img id="addContact" src="" alt="Añadir Contacto" />
+          </a>
+        </button>
+        <button class="icon-button" id="create-group">
+          <a id="addGroupLink"><img id="addGroup" src="" alt="Crear Grupo" /></a>
+        </button>
+      </div>
+    </div>
+
+    <div class="chat-list-Start">
+      <div *ngIf="contactos.length === 0" class="no-contactos">
+        Todavía no has agregado a nadie
+      </div>
+      <div *ngFor="let contacto of contactos">
+        <app-conversation
+          [nombre]="contacto.nombre"
+          [estado]="contacto.estado"
+          [avatarUrl]="contacto.avatarUrl"
+          (click)="seleccionarUsuario(contacto)">
+        </app-conversation>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Área principal de chat -->
+  <div class="chat-container">
+
+    <div class="top-chat">
+      <app-avatar
+        [avatarUrlMini]="miAvatarUrlMini"
+        [nombreMini]="miNombreMini">
+      </app-avatar>
+    </div>
+
+    <div class="chat-messages" id="messageContainer">
+      <div class="messages">
+        <!-- Mensajes de prueba -->
+        <div class="message">¡Hola! ¿Cómo estás?</div>
+        <div class="message">¿Vamos a jugar al padel hoy?</div>
+        <div class="message">No te olvides de traer la comida.</div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <button class="emoji-btn">😊</button>
+      <button class="attach-btn">📎</button>
+      <input type="text" placeholder="Escribe un mensaje..." />
+      <button class="send-btn">Enviar</button>
+    </div>
+  </div>
+</div>
