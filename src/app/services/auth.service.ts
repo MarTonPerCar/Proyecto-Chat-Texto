@@ -12,11 +12,22 @@ import {
   UserCredential
 } from '@angular/fire/auth';
 import { setPersistence } from 'firebase/auth';
-import {firstValueFrom, from, Observable} from 'rxjs';
-import { Firestore, doc, setDoc, docData, updateDoc, arrayUnion } from '@angular/fire/firestore';
+import { firstValueFrom, from, Observable, of } from 'rxjs';
+import {
+  Firestore,
+  doc,
+  setDoc,
+  docData,
+  updateDoc,
+  arrayUnion,
+  collection,
+  query,
+  where,
+  getDocs
+} from '@angular/fire/firestore';
 import { Usuario } from '../interfaces/usuario.interfaces';
 import { Imagen } from '../interfaces/imagenes.interfaces';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +37,7 @@ export class AuthService {
 
   constructor(
     private firebaseAuth: Auth,
-    private firestore: Firestore
+    public firestore: Firestore
   ) {
     this.setSessionStoragePersistence();
     this.user$ = user(this.firebaseAuth);
@@ -45,9 +56,7 @@ export class AuthService {
       this.firebaseAuth,
       email,
       password
-    ).then(() => {
-      //
-    });
+    ).then(() => {});
     return from(promise);
   }
 
@@ -87,9 +96,7 @@ export class AuthService {
         grupos: []
       };
 
-      const LowerEmail = email.toLowerCase().replace(/\./g, '(dot)');
-      const userRef = doc(this.firestore, `usuarios/${LowerEmail}`);
-
+      const userRef = doc(this.firestore, `usuarios/${credenciales.user.uid}`);
       await setDoc(userRef, usuario);
       await signOut(this.firebaseAuth);
       return Promise.resolve();
@@ -102,28 +109,47 @@ export class AuthService {
   // LECTURA DE DATOS DEL USUARIO EN AUTH + FIRESTORE
   // ──────────────────────────────────────────────
 
-  getDatosUsuario(email: string): Observable<Usuario> {
-    const emailSanitizado = email.toLowerCase().replace(/\./g, '(dot)');
-    const userRef = doc(this.firestore, `usuarios/${emailSanitizado}`);
-    console.log('[AuthService] getDatosUsuario(): email →', emailSanitizado);
+  getDatosUsuarioPorUID(uid: string): Observable<Usuario> {
+    const userRef = doc(this.firestore, `usuarios/${uid}`);
     return docData(userRef) as Observable<Usuario>;
   }
 
-  getImg(name: string): Observable<Imagen> {
-    const ref = doc(this.firestore, `img/${name}`);
-    console.log('[AuthService] getImg(): url →', ref);
-    return docData(ref) as Observable<Imagen>;
+  buscarUsuarioPorEmail(email: string): Observable<Usuario | null> {
+    const usuariosRef = collection(this.firestore, 'usuarios');
+    const q = query(usuariosRef, where('email', '==', email.toLowerCase()));
+
+    return from(getDocs(q)).pipe(
+      map(snapshot => {
+        if (snapshot.empty) {
+          return null;
+        }
+        const docSnap = snapshot.docs[0];
+        return docSnap.data() as Usuario;
+      })
+    );
   }
+
+  getImg(nombre: string): Observable<Imagen> {
+    const imgRef = doc(this.firestore, `img/${nombre}`);
+    console.log('[AuthService] getImg(): ref →', imgRef);
+    return docData(imgRef) as Observable<Imagen>;
+  }
+
+  getDatosUsuarioPorUid(uid: string): Observable<Usuario> {
+    const userRef = doc(this.firestore, `usuarios/${uid}`);
+    console.log('[AuthService] getDatosUsuarioPorUid(): uid →', uid);
+    return docData(userRef) as Observable<Usuario>;
+  }
+
 
   // ──────────────────────────────────────────────
   // EDICIÓN DE DATOS DEL USUARIO EN AUTH + FIRESTORE
   // ──────────────────────────────────────────────
 
-  addContacto(miEmail: string, contactoEmail: string) {
-    const userRef = doc(this.firestore, `usuarios/${miEmail}`);
+  addContacto(uidUsuario: string, emailContacto: string) {
+    const userRef = doc(this.firestore, `usuarios/${uidUsuario}`);
     return from(updateDoc(userRef, {
-      contactos: arrayUnion(contactoEmail)
+      contactos: arrayUnion(emailContacto)
     }));
   }
-
 }

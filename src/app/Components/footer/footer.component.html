@@ -1,7 +1,7 @@
 <footer class="fw-footer" role="contentinfo">
   <div class="fw-container">
     <div class="fw-logo">
-      <img id="Logo" [src]="logoSrc" alt="logo" />
+      <img id="Logo" *ngIf="datosImagenMainIcon$ | async as datosLogo" [src]="datosLogo.url" alt="Logo">
     </div>
 
     <div class="fw-columns">
@@ -35,7 +35,7 @@
 
     <div class="fw-social">
       <a href="#" class="fw-social__link" aria-label="Instagram">
-        <img id="Instagram" [src]="instagramIconSrc" alt="Instagram" />
+        <img id="Instagram" *ngIf="datosImagenInstagram$ | async as datosInstagram" [src]="datosInstagram.url" alt="Instagram">
       </a>
     </div>
   </div>

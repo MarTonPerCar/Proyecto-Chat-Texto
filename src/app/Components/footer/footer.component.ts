@@ -1,18 +1,32 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Observable, of} from 'rxjs';
+import {User} from '@angular/fire/auth';
+import {Imagen} from '../../interfaces/imagenes.interfaces';
+import {AuthService} from '../../services/auth.service';
+import {AsyncPipe, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [
+    AsyncPipe,
+    NgIf
+  ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+  user$: Observable<User | null>;
   logoSrc: string = '';
   instagramIconSrc: string = '';
+  datosImagenInstagram$: Observable<Imagen | null> = of(null);
+  datosImagenMainIcon$: Observable<Imagen | null> = of(null);
+
+  constructor(private authService: AuthService,) {
+    this.user$ = this.authService.user$;
+  }
 
   ngOnInit(): void {
-    // Ruta al logo y al icono de Instagram (adaptá si usás assets)
-    this.logoSrc = 'assets/logo.png';
-    this.instagramIconSrc = 'assets/icons/instagram.svg';
+    this.datosImagenMainIcon$ = this.authService.getImg("MainIcon");
+    this.datosImagenInstagram$ = this.authService.getImg("instagram");
   }
 }

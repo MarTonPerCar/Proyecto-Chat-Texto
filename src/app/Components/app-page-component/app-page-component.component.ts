@@ -24,15 +24,15 @@ import { User } from '@angular/fire/auth';
   styleUrl: './app-page-component.component.css'
 })
 export class AppPageComponentComponent implements OnInit {
-  contactos: any[] = [];  // Aquí se van a llenar los contactos de verdad
+  contactos: any[] = [];
   miAvatarUrl: string = '';
   miNombre: string = 'Usuario';
   userActual: User | null = null;
 
-  constructor(private authService: AuthService) {}
-
   miAvatarUrlMini = '';
   miNombreMini = 'Usuario';
+
+  constructor(private authService: AuthService) {}
 
   seleccionarUsuario(contacto: any) {
     this.miAvatarUrlMini = contacto.avatarUrl;
@@ -43,19 +43,19 @@ export class AppPageComponentComponent implements OnInit {
     this.authService.user$.pipe(
       switchMap((user) => {
         this.userActual = user;
-        const emailSanitizado = user?.email?.toLowerCase().replace(/\./g, '(dot)') || '';
-        if (!emailSanitizado) return of(null);
+        const uid = user?.uid || '';
+        if (!uid) return of(null);
 
-        return this.authService.getDatosUsuario(emailSanitizado);
+        return this.authService.getDatosUsuarioPorUid(uid);
       })
     ).subscribe((usuario: Usuario | null) => {
       if (usuario && usuario.contactos && usuario.contactos.length > 0) {
-        let primerContacto = true; // ⚡ Nueva bandera
+        let primerContacto = true;
 
-        usuario.contactos.forEach(contactoEmail => {
-          const contactoSanitizado = contactoEmail.toLowerCase().replace(/\./g, '(dot)');
+        usuario.contactos.forEach(contactoUid => {
+          // contactoUid ya es un UID válido
 
-          this.authService.getDatosUsuario(contactoSanitizado).subscribe(contacto => {
+          this.authService.getDatosUsuarioPorUid(contactoUid).subscribe(contacto => {
             const nuevoContacto = {
               nombre: `${contacto.nombre} ${contacto.apellido}`,
               estado: contacto.estado || 'Este usuario todavía no tiene un estado definido',
@@ -67,7 +67,7 @@ export class AppPageComponentComponent implements OnInit {
             if (primerContacto) {
               this.miNombreMini = nuevoContacto.nombre;
               this.miAvatarUrlMini = nuevoContacto.avatarUrl;
-              primerContacto = false; // Ya no queremos cambiarlo después
+              primerContacto = false;
             }
           });
         });

@@ -9,13 +9,12 @@
 
 /* Hero section - Centrado perfecto */
 .hero {
-  width: 100%;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5rem 2rem;
-  background-color: white;
+  background-color: #2b879e;
 }
 
 .hero-content {

@@ -4,18 +4,19 @@ import { AuthService } from '../../services/auth.service';
 import { Usuario } from '../../interfaces/usuario.interfaces';
 import { User } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import {NgClass, NgIf} from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import Swal from 'sweetalert2';
+import { collection, query, where, getDocs } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-add-contact',
+  standalone: true,
   imports: [
     ReactiveFormsModule,
     NgClass,
     NgIf
   ],
   templateUrl: './add-contact.component.html',
-  standalone: true,
   styleUrl: './add-contact.component.css'
 })
 export class AddContactComponent {
@@ -24,7 +25,7 @@ export class AddContactComponent {
   nombreContacto: string = 'usuario';
   imagenUrl: string = '';
   botonBuscar: boolean = true;
-  emailBuscado: string = '';
+  uidBuscado: string = '';
   userActual: User | null = null;
 
   constructor(
@@ -48,12 +49,8 @@ export class AddContactComponent {
 
     this.authService.getImg('avatar-contact').subscribe({
       next: (img) => {
-        if (img && img.url) {
-          this.imagenUrl = img.url;
-        } else {
-          this.imagenUrl = 'https://via.placeholder.com/100';
-        }
-      },
+        this.imagenUrl = img?.url || 'https://via.placeholder.com/100';
+      }
     });
   }
 
@@ -66,51 +63,82 @@ export class AddContactComponent {
   }
 
   private buscarContacto() {
-    const emailOriginal = this.form.get('email')?.value?.toLowerCase();
-    const emailSanitizado = emailOriginal?.replace(/\./g, '(dot)');
-
-    if (!emailOriginal || !emailSanitizado) {
+    const emailIntroducido = this.form.get('email')?.value;
+    if (!emailIntroducido) {
       console.warn('No hay email para buscar');
       return;
     }
 
-    this.authService.getDatosUsuario(emailSanitizado).subscribe({
-      next: (usuario: Usuario) => {
-        if (usuario) {
+    // ⚡ Restricción 1: No buscarte a ti mismo
+    if (emailIntroducido.toLowerCase() === this.userActual?.email?.toLowerCase()) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'No puedes agregarte a ti mismo',
+        text: 'Introduce el email de otra persona.',
+        timer: 2000,
+        showConfirmButton: false,
+      });
+      this.resetBusqueda('No puedes agregarte a ti mismo');
+      return;
+    }
+
+    const contactosCollection = collection(this.authService.firestore, 'usuarios');
+    const q = query(contactosCollection, where('email', '==', emailIntroducido));
+
+    getDocs(q).then(querySnapshot => {
+      if (!querySnapshot.empty) {
+        const docSnap = querySnapshot.docs[0];
+        const usuario = docSnap.data() as Usuario;
+        this.uidBuscado = docSnap.id;
+
+        // ⚡ Restricción 2: No agregar usuarios que ya tengas en tu lista
+        const miUid = this.userActual?.uid;
+        if (!miUid) {
+          console.error('No hay usuario logueado.');
+          return;
+        }
+
+        // Cogemos primero nuestro propio documento
+        this.authService.getDatosUsuarioPorUid(miUid).subscribe(miUsuario => {
+          if (miUsuario?.contactos?.includes(this.uidBuscado)) {
+            Swal.fire({
+              icon: 'warning',
+              title: 'Ya tienes agregado a este contacto',
+              text: 'No puedes agregarlo de nuevo.',
+              timer: 2000,
+              showConfirmButton: false,
+            });
+            this.resetBusqueda('Ya tienes agregado este contacto');
+            return;
+          }
+
+          // 💬 Si pasó todas las restricciones, mostramos el usuario
           this.nombreContacto = `${usuario.nombre} ${usuario.apellido}`;
-          this.imagenUrl = usuario.url;
+          this.imagenUrl = usuario.url || 'https://via.placeholder.com/100';
           this.mensajeArriba = 'Usuario encontrado';
           this.botonBuscar = false;
-          this.emailBuscado = emailOriginal; // 🔥 se guarda tal cual, sin sanitizar
-        }
-      },
-      error: () => {
-        this.mensajeArriba = 'No existe ese usuario';
-        this.nombreContacto = 'prueba';
-        this.imagenUrl = 'https://via.placeholder.com/100';
-        this.botonBuscar = true;
-        this.emailBuscado = '';
+        });
+
+      } else {
+        this.resetBusqueda('No existe ese usuario');
       }
+    }).catch(error => {
+      console.error('Error buscando usuario:', error);
+      this.resetBusqueda('Error buscando usuario');
     });
   }
 
   private añadirContacto() {
-    if (!this.userActual || !this.emailBuscado) {
-      console.warn('No hay usuario logueado o email buscado.');
+    if (!this.userActual || !this.uidBuscado) {
+      console.warn('No hay usuario logueado o UID buscado.');
       return;
     }
 
-    const miEmail = this.userActual.email?.toLowerCase()?.replace(/\./g, '(dot)');
-    if (!miEmail) {
-      console.error('Email del usuario logueado no disponible');
-      return;
-    }
+    const miUid = this.userActual.uid;
 
-    this.authService.addContacto(miEmail, this.emailBuscado).subscribe({
+    this.authService.addContacto(miUid, this.uidBuscado).subscribe({
       next: () => {
         this.mensajeArriba = '¡Contacto añadido!';
-        console.log('Contacto añadido correctamente');
-
         Swal.fire({
           icon: 'success',
           title: '¡Contacto añadido!',
@@ -121,14 +149,31 @@ export class AddContactComponent {
           this.router.navigate(['/chat']);
         });
 
-        // Reiniciar estado
-        this.botonBuscar = true;
-        this.nombreContacto = 'prueba';
-        this.imagenUrl = '';
-        this.form.reset();
+        this.resetFormulario();
       },
       error: (error) => {
         console.error('Error añadiendo contacto:', error);
+      }
+    });
+  }
+
+  private resetFormulario() {
+    this.botonBuscar = true;
+    this.nombreContacto = 'usuario';
+    this.imagenUrl = '';
+    this.uidBuscado = '';
+    this.form.reset();
+  }
+
+  private resetBusqueda(mensaje: string) {
+    this.mensajeArriba = mensaje;
+    this.nombreContacto = 'usuario';
+    this.uidBuscado = '';
+    this.botonBuscar = true;
+
+    this.authService.getImg('avatar-contact').subscribe({
+      next: (img) => {
+        this.imagenUrl = img?.url || 'https://via.placeholder.com/100';
       }
     });
   }

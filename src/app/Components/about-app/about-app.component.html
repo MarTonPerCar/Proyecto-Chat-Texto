@@ -3,7 +3,7 @@
     <div class="hero-content">
       <div class="hero-logo">
         <!-- Aquí podrás poner la ruta de tu logo -->
-        <img [src]="logoSrc" alt="Logo Principal" />
+        <img *ngIf="datosImagenFullLogo$ | async as datosFullLogo" [src]="datosFullLogo.url" alt="FullLogo">
       </div>
       <div class="hero-description">
         <h1>Instant Message</h1>
