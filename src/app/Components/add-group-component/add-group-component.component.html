@@ -1,0 +1,60 @@
+<div class="login-container">
+  <!-- Imagen y nombre del contacto -->
+  <div class="avatar-container" *ngIf="imagenUrl && nombreGrupo">
+    <img [src]="imagenUrl" class="avatar-img" alt="Avatar" />
+    <span class="nombre-completo">{{ nombreGrupo }}</span>
+  </div>
+
+  <!-- Formulario -->
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- Email -->
+    <div class="form-group" >
+      <label for="name">Nombre de el grupo</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        class="form-control"
+        placeholder="Ingrese nombre de el grupo"
+        [ngClass]="{ 'is-invalid': form.get('name')?.invalid && form.get('name')?.touched }"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Nombre de el grupo</label>
+      <input
+        id="descripcion"
+        type="text"
+        formControlName="descripcion"
+        class="form-control"
+        placeholder="Descripcion"
+        [ngClass]="{ 'is-invalid': form.get('descripcion')?.invalid && form.get('descripcion')?.touched }"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="contactos">Contactos</label>
+      <input
+        id="contactos"
+        type="text"
+        formControlName="contactos"
+        class="form-control"
+        placeholder="correo1@ej.com, correo2@ej.com"
+        [ngClass]="{ 'is-invalid': form.get('contactos')?.invalid && form.get('contactos')?.touched }"
+      />
+      <small>Separa los emails con comas.</small>
+    </div>
+
+
+
+    <!-- Botón -->
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
+      Crear Grupo
+    </button>
+
+
+  </form>
+</div>
+
+

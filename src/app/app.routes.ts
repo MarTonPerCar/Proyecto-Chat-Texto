@@ -4,6 +4,7 @@ import {LoginPageComponent} from './Pages/login-page/login-page.component';
 import {RegisterPageComponent} from './Pages/register-page/register-page.component';
 import {AppPageComponent} from './Pages/app-page/app-page.component';
 import {AddContactComponent} from './Components/add-contact/add-contact.component';
+import {AddGroupComponentComponent} from './Components/add-group-component/add-group-component.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
   { path: 'register', component: RegisterPageComponent },
   { path: 'chat', component: AppPageComponent },
   { path: 'addContact', component: AddContactComponent },
+  { path: 'addGroup', component: AddGroupComponentComponent }
 ];

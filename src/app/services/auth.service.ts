@@ -126,4 +126,11 @@ export class AuthService {
     }));
   }
 
+  addGroup(nombreGrupo: string, descripcion: string, contactos: string[]) {
+    const grupoRef = doc(this.firestore, `grupos/${nombreGrupo}`);
+    return from(setDoc(grupoRef, { descripcion, contactos }, { merge: true }));
+  }
+
+
+
 }
