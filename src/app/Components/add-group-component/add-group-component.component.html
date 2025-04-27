@@ -1,38 +1,49 @@
 <div class="login-container">
-  <!-- Imagen y nombre del contacto -->
-  <div class="avatar-container" *ngIf="imagenUrl && nombreGrupo">
+  <!-- Imagen y nombre del grupo (si los valores están presentes) -->
+  <div class="avatar-container" *ngIf="imagenUrl">
     <img [src]="imagenUrl" class="avatar-img" alt="Avatar" />
     <span class="nombre-completo">{{ nombreGrupo }}</span>
   </div>
 
-  <!-- Formulario -->
+  <!-- Formulario reactivo -->
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
-    <!-- Email -->
-    <div class="form-group" >
-      <label for="name">Nombre de el grupo</label>
+    <!-- Nombre del grupo -->
+    <div class="form-group">
+      <label for="name">Nombre del grupo</label>
       <input
         id="name"
         type="text"
         formControlName="name"
         class="form-control"
-        placeholder="Ingrese nombre de el grupo"
+        placeholder="Ingrese nombre del grupo"
         [ngClass]="{ 'is-invalid': form.get('name')?.invalid && form.get('name')?.touched }"
       />
+      <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="invalid-feedback">
+        <small *ngIf="form.get('name')?.errors?.['required']">
+          El nombre del grupo es obligatorio.
+        </small>
+      </div>
     </div>
 
+    <!-- Descripción -->
     <div class="form-group">
-      <label for="descripcion">Nombre de el grupo</label>
+      <label for="descripcion">Descripción del grupo</label>
       <input
         id="descripcion"
         type="text"
         formControlName="descripcion"
         class="form-control"
-        placeholder="Descripcion"
+        placeholder="Ingrese descripción del grupo"
         [ngClass]="{ 'is-invalid': form.get('descripcion')?.invalid && form.get('descripcion')?.touched }"
       />
+      <div *ngIf="form.get('descripcion')?.invalid && form.get('descripcion')?.touched" class="invalid-feedback">
+        <small *ngIf="form.get('descripcion')?.errors?.['required']">
+          La descripción es obligatoria.
+        </small>
+      </div>
     </div>
 
+    <!-- Contactos -->
     <div class="form-group">
       <label for="contactos">Contactos</label>
       <input
@@ -43,18 +54,20 @@
         placeholder="correo1@ej.com, correo2@ej.com"
         [ngClass]="{ 'is-invalid': form.get('contactos')?.invalid && form.get('contactos')?.touched }"
       />
+      <div *ngIf="form.get('contactos')?.invalid && form.get('contactos')?.touched" class="invalid-feedback">
+        <small *ngIf="form.get('contactos')?.errors?.['required']">
+          Debe ingresar al menos un contacto.
+        </small>
+        <small *ngIf="form.get('contactos')?.errors?.['invalidEmails']">
+          Uno o más correos tienen un formato inválido.
+        </small>
+      </div>
       <small>Separa los emails con comas.</small>
     </div>
 
-
-
-    <!-- Botón -->
+    <!-- Botón de envío -->
     <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
       Crear Grupo
     </button>
-
-
   </form>
 </div>
-
-

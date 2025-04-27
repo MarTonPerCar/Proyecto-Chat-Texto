@@ -17,6 +17,7 @@ import { Firestore, doc, setDoc, docData, updateDoc, arrayUnion } from '@angular
 import { Usuario } from '../interfaces/usuario.interfaces';
 import { Imagen } from '../interfaces/imagenes.interfaces';
 import { map } from 'rxjs/operators';
+import {Grupo} from '../interfaces/grupo.interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -129,6 +130,13 @@ export class AuthService {
   addGroup(nombreGrupo: string, descripcion: string, contactos: string[]) {
     const grupoRef = doc(this.firestore, `grupos/${nombreGrupo}`);
     return from(setDoc(grupoRef, { descripcion, contactos }, { merge: true }));
+  }
+
+  getDatosGrupo(nombreGrupo: string): Observable<Grupo> {
+    const grupoRef = doc(this.firestore, `grupos/${nombreGrupo}`);
+    console.log('[AuthService] getDatosGrupo(): grupo →', nombreGrupo);
+    // Usamos idField para que el id del documento se asigne a la propiedad "nombre".
+    return docData(grupoRef, { idField: 'nombre' }) as Observable<Grupo>;
   }
 
 

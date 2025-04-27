@@ -18,10 +18,11 @@
   text-align: left;
 }
 
+/* Ajustes en los inputs para que sean algo más pequeños */
 input.form-control,
 textarea.form-control {
-  width: 100%;
-  padding: 0.75rem;
+  width: 90%;           /* Se reduce el ancho del input */
+  padding: 0.65rem;     /* Se reduce un poco el padding */
   border-radius: 8px;
   border: 2px solid #ccc;
   background-color: #eaf1ff;
@@ -73,4 +74,20 @@ button.btn-primary:disabled {
     margin: 1rem;
     padding: 1.5rem;
   }
+}
+
+/* Reglas para el avatar */
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-img {
+  width: 80px !important;   /* Aumentado a 80px para verse un poco más grande */
+  height: 80px !important;  /* Aumentado a 80px */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
 }

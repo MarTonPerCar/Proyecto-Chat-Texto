@@ -1,25 +1,25 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 import { FormBuilder, Validators, FormGroup, ReactiveFormsModule, AbstractControl, ValidationErrors } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Grupo } from '../../interfaces/grupo.interfaces';
 import { User } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
-import Swal from 'sweetalert2'; // Importar SweetAlert2
+import Swal from 'sweetalert2';
 
 // Validador personalizado para emails separados por coma
 function multipleEmailsValidator(control: AbstractControl): ValidationErrors | null {
   const emailsStr: string = control.value;
-  if (!emailsStr) return null;
+  if (!emailsStr) return null; // Si se agrega también Validators.required, se mostrará otro mensaje en caso de campo vacío
 
-  // Dividir la cadena en emails
+  // Dividir la cadena en emails y limpiar espacios
   const emails: string[] = emailsStr.split(',').map(email => email.trim());
 
   // Regex para validar formato de email
   const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
   const invalidEmails = emails.filter(email => !emailRegex.test(email));
 
-  // Si hay alguno no válido, se retorna un error con el listado
+  // Si hay emails en formato incorrecto, se retorna un error con la lista
   return invalidEmails.length ? { invalidEmails } : null;
 }
 
@@ -42,13 +42,14 @@ export class AddGroupComponentComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router
-  ) {
-    // Configuración del formulario. Se añade el validador para el campo "contactos"
+    private router: Router,
+  private cd: ChangeDetectorRef
+) {
+    // Configuración del formulario. Se le agrega Validators.required a todos los campos
     this.form = this.fb.group({
       name: ['', Validators.required],
       descripcion: ['', Validators.required],
-      contactos: ['', multipleEmailsValidator]
+      contactos: ['', [Validators.required, multipleEmailsValidator]]
     });
 
     // Suscribirse al usuario actual
@@ -56,20 +57,32 @@ export class AddGroupComponentComponent {
       this.userActual = user;
     });
 
-    // Obtener la imagen de avatar
+    // Obtener la imagen de avatar (o usar un placeholder en su defecto).
     this.authService.getImg('avatar-contact').subscribe({
       next: (img) => {
+        console.log('Imagen recibida:', img);  // Verifica en consola que el servicio te retorna los datos esperados.
         if (img && img.url) {
           this.imagenUrl = img.url;
         } else {
           this.imagenUrl = 'https://via.placeholder.com/100';
         }
+        // Forzamos la actualización de la vista.
+        this.cd.markForCheck();
       },
+      error: (error) => {
+        console.error('Error al obtener la imagen:', error);
+        this.imagenUrl = 'https://via.placeholder.com/100';
+      }
     });
   }
 
   onSubmit(): void {
-    if (this.form.invalid) return;
+    // Si el formulario es inválido, no se envía y se muestran los errores correspondientes
+    if (this.form.invalid) {
+      // Puedes opcionalmente marcar todos los controles como tocados para que se muestren los errores:
+      this.form.markAllAsTouched();
+      return;
+    }
     this.crearGrupo();
   }
 
@@ -87,11 +100,10 @@ export class AddGroupComponentComponent {
       url: this.imagenUrl
     };
 
-    // Llamada al método del servicio para añadir el grupo
     this.authService.addGroup(nuevoGrupo.nombre, nuevoGrupo.descripcion, nuevoGrupo.contactos).subscribe({
       next: () => {
         console.log('Grupo creado correctamente');
-        // Se muestra la animación/notificación con SweetAlert2
+        // Visualización de animación con SweetAlert2
         Swal.fire({
           icon: 'success',
           title: '¡Grupo creado!',
@@ -99,7 +111,7 @@ export class AddGroupComponentComponent {
           timerProgressBar: true,
           showConfirmButton: false,
         }).then(() => {
-          // Una vez cerrada la alerta, redirigimos al usuario y reiniciamos el formulario
+          // Después de la notificación, redirigimos y reiniciamos el formulario
           this.router.navigate(['/chat']);
           this.form.reset();
         });
