@@ -86,39 +86,29 @@ export class AddGroupComponentComponent {
     this.crearGrupo();
   }
 
-  private crearGrupo(): void {
+  private async crearGrupo(): Promise<void> {
     if (!this.userActual) {
       console.warn('No hay usuario logueado.');
       return;
     }
 
     const { name, descripcion, contactos } = this.form.value;
-    const nuevoGrupo: Grupo = {
-      nombre: name,
-      descripcion: descripcion,
-      contactos: contactos ? contactos.split(',').map((c: string) => c.trim()) : [],
-      url: this.imagenUrl
-    };
 
-    this.authService.addGroup(nuevoGrupo.nombre, nuevoGrupo.descripcion, nuevoGrupo.contactos).subscribe({
-      next: () => {
-        console.log('Grupo creado correctamente');
-        // Visualización de animación con SweetAlert2
-        Swal.fire({
-          icon: 'success',
-          title: '¡Grupo creado!',
-          timer: 2000,
-          timerProgressBar: true,
-          showConfirmButton: false,
-        }).then(() => {
-          // Después de la notificación, redirigimos y reiniciamos el formulario
-          this.router.navigate(['/chat']);
-          this.form.reset();
-        });
-      },
-      error: (error) => {
-        console.error('Error creando grupo:', error);
-      }
-    });
+    try {
+      await this.authService.createGroup(name, contactos, descripcion);
+      console.log('Grupo creado correctamente');
+      Swal.fire({
+        icon: 'success',
+        title: '¡Grupo creado!',
+        timer: 2000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+      }).then(() => {
+        this.router.navigate(['/chat']);
+        this.form.reset();
+      });
+    } catch (error) {
+      console.error('Error creando grupo:', error);
+    }
   }
 }

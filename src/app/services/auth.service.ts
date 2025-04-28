@@ -13,7 +13,7 @@ import {
 } from '@angular/fire/auth';
 import { setPersistence } from 'firebase/auth';
 import {firstValueFrom, from, Observable} from 'rxjs';
-import { Firestore, doc, setDoc, docData, updateDoc, arrayUnion } from '@angular/fire/firestore';
+import {Firestore, doc, setDoc, docData, updateDoc, arrayUnion, collection} from '@angular/fire/firestore';
 import { Usuario } from '../interfaces/usuario.interfaces';
 import { Imagen } from '../interfaces/imagenes.interfaces';
 import { map } from 'rxjs/operators';
@@ -75,7 +75,7 @@ export class AuthService {
       email,
       password
     ).then(async (credenciales: UserCredential) => {
-      const avatar = await firstValueFrom(this.getImg('avatar'));
+      const avatar: Imagen = await firstValueFrom(this.getImg('avatar'));
 
       const usuario: Usuario = {
         nombre,
@@ -97,6 +97,24 @@ export class AuthService {
     });
 
     return from(promise);
+  }
+
+  async createGroup(
+    nombre: string,
+    contactos: string[],
+    descripcion: string,
+  ): Promise<void> {
+    const avatar = await firstValueFrom(this.getImg('avatar'));
+    const grupo: Grupo = {
+      nombre,
+      contactos,
+      descripcion,
+      gid: doc(collection(this.firestore, 'grupos')).id,
+      url: avatar.url
+    };
+
+    const userRef = doc(this.firestore, `grupos/${grupo.gid}`);
+    await setDoc(userRef, grupo);
   }
 
   // ──────────────────────────────────────────────
@@ -132,9 +150,9 @@ export class AuthService {
     return from(setDoc(grupoRef, { descripcion, contactos }, { merge: true }));
   }
 
-  getDatosGrupo(nombreGrupo: string): Observable<Grupo> {
-    const grupoRef = doc(this.firestore, `grupos/${nombreGrupo}`);
-    console.log('[AuthService] getDatosGrupo(): grupo →', nombreGrupo);
+  getDatosGrupo(gid: string): Observable<Grupo> {
+    const grupoRef = doc(this.firestore, `grupos/${gid}`);
+    console.log('[AuthService] getDatosGrupo(): gid →', gid);
     // Usamos idField para que el id del documento se asigne a la propiedad "nombre".
     return docData(grupoRef, { idField: 'nombre' }) as Observable<Grupo>;
   }
