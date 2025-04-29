@@ -7,6 +7,7 @@ import { AvatarComponent } from '../avatar/avatar.component';
 import { AuthService } from '../../services/auth.service';
 import { Usuario } from '../../interfaces/usuario.interfaces';
 import {switchMap, of, Observable} from 'rxjs';
+import { Grupo } from '../../interfaces/grupo.interfaces';
 import { User } from '@angular/fire/auth';
 import {Imagen} from '../../interfaces/imagenes.interfaces';
 import Swal from 'sweetalert2';
@@ -27,7 +28,10 @@ import Swal from 'sweetalert2';
   styleUrl: './app-page-component.component.css'
 })
 export class AppPageComponentComponent implements OnInit {
-  contactos: any[] = [];
+  contactos: any[] = [];  // Listado de contactos
+  grupos: Grupo[] = [];     // Listado de grupos
+  miAvatarUrl: string = '';
+  miNombre: string = 'Usuario';
   userActual: User | null = null;
 
   miAvatarUrlMini = '';
@@ -68,6 +72,12 @@ export class AppPageComponentComponent implements OnInit {
       this.miNombreMini = contacto.nombre;
       this.contactouid = contacto.uid;
     }
+  }
+
+  seleccionarGrupo(grupo: Grupo) {
+    // Al seleccionar un grupo, actualizamos los datos mini con la información del grupo.
+    this.miNombreMini = grupo.nombre;
+    this.miAvatarUrlMini = grupo.url || 'https://via.placeholder.com/100';
   }
 
   ngOnInit(): void {
@@ -132,6 +142,17 @@ export class AppPageComponentComponent implements OnInit {
       error: (error) => {
         console.error('Error eliminando contacto:', error);
         Swal.fire('Error', 'No se pudo eliminar el contacto.', 'error');
+      }
+    });
+
+    // Recuperar la lista completa de grupos creados
+    this.authService.getDatosGrupo('defaultGroupName').subscribe({
+      next: (grupo: Grupo) => {
+        this.grupos = [grupo];
+        console.log('Grupos recuperados:', this.grupos);
+      },
+      error:   (error) => {
+        console.error('Error al obtener grupos:', error);
       }
     });
   }

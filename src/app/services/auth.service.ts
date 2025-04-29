@@ -28,6 +28,7 @@ import {
 } from '@angular/fire/firestore';
 import { Usuario } from '../interfaces/usuario.interfaces';
 import { Imagen } from '../interfaces/imagenes.interfaces';
+import {Grupo} from '../interfaces/grupo.interfaces';
 import { map, switchMap } from 'rxjs/operators';
 
 @Injectable({
@@ -106,6 +107,24 @@ export class AuthService {
     return from(promise);
   }
 
+  async createGroup(
+    nombre: string,
+    contactos: string[],
+    descripcion: string,
+  ): Promise<void> {
+    const avatar = await firstValueFrom(this.getImg('avatar'));
+    const grupo: Grupo = {
+      nombre,
+      contactos,
+      descripcion,
+      gid: doc(collection(this.firestore, 'grupos')).id,
+      url: avatar.url
+    };
+
+    const userRef = doc(this.firestore, `grupos/${grupo.gid}`);
+    await setDoc(userRef, grupo);
+  }
+
   // ──────────────────────────────────────────────
   // LECTURA DE DATOS DEL USUARIO EN AUTH + FIRESTORE
   // ──────────────────────────────────────────────
@@ -160,4 +179,19 @@ export class AuthService {
       contactos: arrayRemove(uidContacto)
     }));
   }
+
+  addGroup(nombreGrupo: string, descripcion: string, contactos: string[]) {
+    const grupoRef = doc(this.firestore, `grupos/${nombreGrupo}`);
+    return from(setDoc(grupoRef, { descripcion, contactos }, { merge: true }));
+  }
+
+  getDatosGrupo(gid: string): Observable<Grupo> {
+    const grupoRef = doc(this.firestore, `grupos/${gid}`);
+    console.log('[AuthService] getDatosGrupo(): gid →', gid);
+    // Usamos idField para que el id del documento se asigne a la propiedad "nombre".
+    return docData(grupoRef, { idField: 'nombre' }) as Observable<Grupo>;
+  }
+
+
+
 }

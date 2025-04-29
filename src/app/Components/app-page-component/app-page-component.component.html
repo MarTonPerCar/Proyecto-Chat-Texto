@@ -23,7 +23,8 @@
     </div>
 
     <div class="chat-list-Start">
-      <div *ngIf="contactos.length === 0" class="no-contactos">
+      <!-- Si no hay contactos ni grupos, se muestra un mensaje -->
+      <div *ngIf="contactos.length === 0 && grupos.length === 0" class="no-contactos">
         Todavía no has agregado a nadie
       </div>
       <div *ngFor="let contacto of contactos; let i = index">
@@ -35,12 +36,37 @@
           (click)="seleccionarUsuario(contacto, i)">
         </app-conversation>
       </div>
+
+      <!-- Listado de Contactos -->
+      <ng-container *ngIf="contactos && contactos.length > 0">
+        <div class="section-header">Mis Contactos</div>
+        <div *ngFor="let contacto of contactos">
+          <app-conversation
+            [nombre]="contacto.nombre"
+            [estado]="contacto.estado"
+            [avatarUrl]="contacto.avatarUrl"
+            (click)="seleccionarUsuario(contacto)">
+          </app-conversation>
+        </div>
+      </ng-container>
+
+      <!-- Listado de Grupos -->
+      <ng-container *ngIf="grupos && grupos.length > 0">
+        <div class="section-header">Mis Grupos</div>
+        <div *ngFor="let grupo of grupos">
+          <app-conversation
+            [nombre]="grupo.nombre"
+            [estado]="grupo.descripcion"
+            [avatarUrl]="grupo.url"
+            (click)="seleccionarGrupo(grupo)">
+          </app-conversation>
+        </div>
+      </ng-container>
     </div>
   </aside>
 
   <!-- Área principal de chat -->
   <div class="chat-container">
-
     <div class="top-chat">
       <app-avatar
         [avatarUrlMini]="miAvatarUrlMini"
