@@ -62,22 +62,15 @@ export class AddContactComponent {
     }
   }
 
-  private buscarContacto() {
-    const emailIntroducido = this.form.get('email')?.value;
+  private async buscarContacto() {
+    const emailIntroducido = this.form.get('email')?.value?.trim();
     if (!emailIntroducido) {
-      console.warn('No hay email para buscar');
+      this.resetBusqueda('Introduce un email válido');
       return;
     }
 
-    // ⚡ Restricción 1: No buscarte a ti mismo
-    if (emailIntroducido.toLowerCase() === this.userActual?.email?.toLowerCase()) {
-      Swal.fire({
-        icon: 'warning',
-        title: 'No puedes agregarte a ti mismo',
-        text: 'Introduce el email de otra persona.',
-        timer: 2000,
-        showConfirmButton: false,
-      });
+    const miEmail = this.userActual?.email?.trim().toLowerCase();
+    if (miEmail && emailIntroducido.toLowerCase() === miEmail) {
       this.resetBusqueda('No puedes agregarte a ti mismo');
       return;
     }
@@ -85,47 +78,41 @@ export class AddContactComponent {
     const contactosCollection = collection(this.authService.firestore, 'usuarios');
     const q = query(contactosCollection, where('email', '==', emailIntroducido));
 
-    getDocs(q).then(querySnapshot => {
-      if (!querySnapshot.empty) {
-        const docSnap = querySnapshot.docs[0];
-        const usuario = docSnap.data() as Usuario;
-        this.uidBuscado = docSnap.id;
+    try {
+      const querySnapshot = await getDocs(q);
 
-        // ⚡ Restricción 2: No agregar usuarios que ya tengas en tu lista
-        const miUid = this.userActual?.uid;
-        if (!miUid) {
-          console.error('No hay usuario logueado.');
+      if (querySnapshot.empty) {
+        this.resetBusqueda('No existe ese usuario');
+        return;
+      }
+
+      const docSnap = querySnapshot.docs[0];
+      const usuario = docSnap.data() as Usuario;
+      this.uidBuscado = docSnap.id;
+
+      const miUid = this.userActual?.uid;
+      if (!miUid) {
+        this.resetBusqueda('No has iniciado sesión');
+        return;
+      }
+
+      this.authService.getDatosUsuarioPorUid(miUid).subscribe(miUsuario => {
+        if (miUsuario?.contactos?.includes(this.uidBuscado)) {
+          this.resetBusqueda('Ya tienes agregado este contacto');
           return;
         }
 
-        // Cogemos primero nuestro propio documento
-        this.authService.getDatosUsuarioPorUid(miUid).subscribe(miUsuario => {
-          if (miUsuario?.contactos?.includes(this.uidBuscado)) {
-            Swal.fire({
-              icon: 'warning',
-              title: 'Ya tienes agregado a este contacto',
-              text: 'No puedes agregarlo de nuevo.',
-              timer: 2000,
-              showConfirmButton: false,
-            });
-            this.resetBusqueda('Ya tienes agregado este contacto');
-            return;
-          }
+        // ✅ Todo correcto, actualizamos la vista
+        this.nombreContacto = `${usuario.nombre} ${usuario.apellido}`;
+        this.imagenUrl = usuario.url || 'https://via.placeholder.com/100';
+        this.mensajeArriba = 'Usuario encontrado';
+        this.botonBuscar = false;
+      });
 
-          // 💬 Si pasó todas las restricciones, mostramos el usuario
-          this.nombreContacto = `${usuario.nombre} ${usuario.apellido}`;
-          this.imagenUrl = usuario.url || 'https://via.placeholder.com/100';
-          this.mensajeArriba = 'Usuario encontrado';
-          this.botonBuscar = false;
-        });
-
-      } else {
-        this.resetBusqueda('No existe ese usuario');
-      }
-    }).catch(error => {
+    } catch (error) {
       console.error('Error buscando usuario:', error);
       this.resetBusqueda('Error buscando usuario');
-    });
+    }
   }
 
   private añadirContacto() {
@@ -165,11 +152,18 @@ export class AddContactComponent {
     this.form.reset();
   }
 
-  private resetBusqueda(mensaje: string) {
+  private resetBusqueda(mensaje: string, tipo: 'warning' | 'error' = 'warning') {
     this.mensajeArriba = mensaje;
     this.nombreContacto = 'usuario';
     this.uidBuscado = '';
     this.botonBuscar = true;
+
+    Swal.fire({
+      icon: tipo,
+      title: mensaje,
+      timer: 2000,
+      showConfirmButton: false,
+    });
 
     this.authService.getImg('avatar-contact').subscribe({
       next: (img) => {
@@ -177,4 +171,5 @@ export class AddContactComponent {
       }
     });
   }
+
 }

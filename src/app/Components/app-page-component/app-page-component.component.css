@@ -40,8 +40,13 @@
   background-color: #616668;
 }
 
+#chat-header.borrar-activo {
+  background-color: #ff0000 !important;
+}
+
 .chat-buttons {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -49,6 +54,27 @@
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.icon-button:hover {
+  transform: scale(1.1); /* Al pasar el ratón se agrandan */
+}
+
+.icon-button img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%; /* Opcional si quieres redondearlos */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-button img:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .chat-list-Start {

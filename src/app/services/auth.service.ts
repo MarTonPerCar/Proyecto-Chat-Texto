@@ -23,7 +23,8 @@ import {
   collection,
   query,
   where,
-  getDocs
+  getDocs,
+  arrayRemove
 } from '@angular/fire/firestore';
 import { Usuario } from '../interfaces/usuario.interfaces';
 import { Imagen } from '../interfaces/imagenes.interfaces';
@@ -150,6 +151,13 @@ export class AuthService {
     const userRef = doc(this.firestore, `usuarios/${uidUsuario}`);
     return from(updateDoc(userRef, {
       contactos: arrayUnion(emailContacto)
+    }));
+  }
+
+  deleteContacto(uidUsuario: string, uidContacto: string) {
+    const userRef = doc(this.firestore, `usuarios/${uidUsuario}`);
+    return from(updateDoc(userRef, {
+      contactos: arrayRemove(uidContacto)
     }));
   }
 }

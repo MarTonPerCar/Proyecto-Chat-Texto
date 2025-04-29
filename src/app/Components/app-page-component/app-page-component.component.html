@@ -1,16 +1,23 @@
 <div class="container">
   <!-- Sidebar -->
   <aside id="sidebar">
-    <div id="chat-header">
-      <span>Mis Chats</span>
+    <div id="chat-header" [ngClass]="{ 'borrar-activo': modoEliminarActivo }">
+      <span>{{ modoEliminarActivo ? '¿Eliminar?' : 'Mis Chats' }}</span>
       <div class="chat-buttons">
         <button class="icon-button" id="add-contact">
           <a id="addContactLink" [routerLink]="['/addContact']">
-            <img id="addContact" src="" alt="Añadir Contacto" />
+            <img id="addContact" *ngIf="datosImagenAddContanct$ | async as datosAddContact" [src]="datosAddContact.url" alt="AddContact">
           </a>
         </button>
         <button class="icon-button" id="create-group">
-          <a id="addGroupLink"><img id="addGroup" src="" alt="Crear Grupo" /></a>
+          <a id="addGroupLink">
+            <img id="addGroup" *ngIf="datosImagenAddGroup$ | async as datosAddGroup" [src]="datosAddGroup.url" alt="AddGroup">
+          </a>
+        </button>
+        <button class="icon-button" id="delete-contact" (click)="activarModoEliminar()">
+          <a id="deleteContactLink">
+            <img id="deleteContact" *ngIf="datosImagenDeleteContact$ | async as datosDeleteContact" [src]="datosDeleteContact.url" alt="DeleteContact">
+          </a>
         </button>
       </div>
     </div>
@@ -19,12 +26,13 @@
       <div *ngIf="contactos.length === 0" class="no-contactos">
         Todavía no has agregado a nadie
       </div>
-      <div *ngFor="let contacto of contactos">
+      <div *ngFor="let contacto of contactos; let i = index">
         <app-conversation
           [nombre]="contacto.nombre"
           [estado]="contacto.estado"
           [avatarUrl]="contacto.avatarUrl"
-          (click)="seleccionarUsuario(contacto)">
+          [class.selected]="selectedIndex === i"
+          (click)="seleccionarUsuario(contacto, i)">
         </app-conversation>
       </div>
     </div>
