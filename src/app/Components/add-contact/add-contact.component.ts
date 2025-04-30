@@ -96,7 +96,7 @@ export class AddContactComponent {
         return;
       }
 
-      this.authService.getDatosUsuarioPorUid(miUid).subscribe(miUsuario => {
+      this.authService.getDatosUsuarioPorUID(miUid).subscribe(miUsuario => {
         if (miUsuario?.contactos?.includes(this.uidBuscado)) {
           this.resetBusqueda('Ya tienes agregado este contacto');
           return;

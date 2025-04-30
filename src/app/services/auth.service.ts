@@ -29,7 +29,7 @@ import {
 import { Usuario } from '../interfaces/usuario.interfaces';
 import { Imagen } from '../interfaces/imagenes.interfaces';
 import {Grupo} from '../interfaces/grupo.interfaces';
-import { map, switchMap } from 'rxjs/operators';
+import { deleteDoc } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root',
@@ -108,21 +108,45 @@ export class AuthService {
   }
 
   async createGroup(
-    nombre: string,
-    contactos: string[],
-    descripcion: string,
+      nombre: string,
+      contactos: string[],
+      descripcion: string,
+      uidCreador: string
   ): Promise<void> {
-    const avatar = await firstValueFrom(this.getImg('avatar'));
+    const avatar = await firstValueFrom(this.getImg('avatar-grupo'));
+    const usuariosRef = collection(this.firestore, 'usuarios');
+    const uids: string[] = [];
+
+    for (const email of contactos) {
+      const q = query(usuariosRef, where('email', '==', email));
+      const snapshot = await getDocs(q);
+
+      if (!snapshot.empty) {
+        const docSnap = snapshot.docs[0];
+        uids.push(docSnap.id); // <-- UID real
+      }
+    }
+
+    uids.push(uidCreador);
+
+    const gid = doc(collection(this.firestore, 'grupos')).id;
     const grupo: Grupo = {
       nombre,
-      contactos,
+      contactos: uids,
       descripcion,
-      gid: doc(collection(this.firestore, 'grupos')).id,
+      gid,
       url: avatar.url
     };
 
-    const userRef = doc(this.firestore, `grupos/${grupo.gid}`);
-    await setDoc(userRef, grupo);
+    for (const uid of uids) {
+      const userRef = doc(this.firestore, `usuarios/${uid}`);
+      await updateDoc(userRef, {
+        grupos: arrayUnion(gid)
+      });
+    }
+
+    const grupoRef = doc(this.firestore, `grupos/${gid}`);
+    await setDoc(grupoRef, grupo);
   }
 
   // ──────────────────────────────────────────────
@@ -134,31 +158,10 @@ export class AuthService {
     return docData(userRef) as Observable<Usuario>;
   }
 
-  buscarUsuarioPorEmail(email: string): Observable<Usuario | null> {
-    const usuariosRef = collection(this.firestore, 'usuarios');
-    const q = query(usuariosRef, where('email', '==', email.toLowerCase()));
-
-    return from(getDocs(q)).pipe(
-      map(snapshot => {
-        if (snapshot.empty) {
-          return null;
-        }
-        const docSnap = snapshot.docs[0];
-        return docSnap.data() as Usuario;
-      })
-    );
-  }
-
   getImg(nombre: string): Observable<Imagen> {
     const imgRef = doc(this.firestore, `img/${nombre}`);
     console.log('[AuthService] getImg(): ref →', imgRef);
     return docData(imgRef) as Observable<Imagen>;
-  }
-
-  getDatosUsuarioPorUid(uid: string): Observable<Usuario> {
-    const userRef = doc(this.firestore, `usuarios/${uid}`);
-    console.log('[AuthService] getDatosUsuarioPorUid(): uid →', uid);
-    return docData(userRef) as Observable<Usuario>;
   }
 
 
@@ -189,9 +192,6 @@ export class AuthService {
     const grupoRef = doc(this.firestore, `grupos/${gid}`);
     console.log('[AuthService] getDatosGrupo(): gid →', gid);
     // Usamos idField para que el id del documento se asigne a la propiedad "nombre".
-    return docData(grupoRef, { idField: 'nombre' }) as Observable<Grupo>;
+    return docData(grupoRef) as Observable<Grupo>;
   }
-
-
-
 }

@@ -85,8 +85,8 @@ button.btn-primary:disabled {
 }
 
 .avatar-img {
-  width: 80px !important;   /* Aumentado a 80px para verse un poco más grande */
-  height: 80px !important;  /* Aumentado a 80px */
+  width: 60px !important;   /* Aumentado a 80px para verse un poco más grande */
+  height: 120px !important;  /* Aumentado a 80px */
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.5rem;

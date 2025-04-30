@@ -10,9 +10,6 @@ body.body-headerSignIn, html {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-/* ===== VARIABLES CSS ===== */
-@import url("../../colors.css");
-
 :root {
   --header-height: 500px;
   --transition-speed: 0.3s;
@@ -59,7 +56,7 @@ body.body-headerSignIn, html {
 .logo img,
 #Main_Icon {
   height: 40px;
-  width: auto;
+  width: 40%;
   object-fit: contain;
   transition: all var(--transition-speed);
   filter: drop-shadow(var(--shadow-sm));
@@ -229,7 +226,6 @@ body.body-headerSignIn, html {
 
   #avatarPng {
     width: 36px;
-    height: 36px;
   }
 }
 

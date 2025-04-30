@@ -1,67 +1,61 @@
 <div class="container">
   <!-- Sidebar -->
   <aside id="sidebar">
+    <!-- Header con botones -->
     <div id="chat-header" [ngClass]="{ 'borrar-activo': modoEliminarActivo }">
       <span>{{ modoEliminarActivo ? '¿Eliminar?' : 'Mis Chats' }}</span>
       <div class="chat-buttons">
         <button class="icon-button" id="add-contact">
-          <a id="addContactLink" [routerLink]="['/addContact']">
-            <img id="addContact" *ngIf="datosImagenAddContanct$ | async as datosAddContact" [src]="datosAddContact.url" alt="AddContact">
+          <a [routerLink]="['/addContact']">
+            <img *ngIf="datosImagenAddContanct$ | async as datosAddContact" [src]="datosAddContact.url" alt="Añadir Contacto">
           </a>
         </button>
         <button class="icon-button" id="create-group">
-          <a id="addGroupLink">
-            <img id="addGroup" *ngIf="datosImagenAddGroup$ | async as datosAddGroup" [src]="datosAddGroup.url" alt="AddGroup">
+          <a [routerLink]="['/addGroup']">
+            <img *ngIf="datosImagenAddGroup$ | async as datosAddGroup" [src]="datosAddGroup.url" alt="Crear Grupo">
           </a>
         </button>
         <button class="icon-button" id="delete-contact" (click)="activarModoEliminar()">
-          <a id="deleteContactLink">
-            <img id="deleteContact" *ngIf="datosImagenDeleteContact$ | async as datosDeleteContact" [src]="datosDeleteContact.url" alt="DeleteContact">
+          <a>
+            <img *ngIf="datosImagenDeleteContact$ | async as datosDeleteContact" [src]="datosDeleteContact.url" alt="Eliminar Contacto">
           </a>
         </button>
       </div>
     </div>
 
+    <!-- Listado de contactos y grupos -->
     <div class="chat-list-Start">
-      <!-- Si no hay contactos ni grupos, se muestra un mensaje -->
       <div *ngIf="contactos.length === 0 && grupos.length === 0" class="no-contactos">
         Todavía no has agregado a nadie
       </div>
-      <div *ngFor="let contacto of contactos; let i = index">
-        <app-conversation
-          [nombre]="contacto.nombre"
-          [estado]="contacto.estado"
-          [avatarUrl]="contacto.avatarUrl"
-          [class.selected]="selectedIndex === i"
-          (click)="seleccionarUsuario(contacto, i)">
-        </app-conversation>
-      </div>
 
-      <!-- Listado de Contactos -->
-      <ng-container *ngIf="contactos && contactos.length > 0">
+      <!-- 🔹 Contactos -->
+      <div *ngIf="contactos.length > 0">
         <div class="section-header">Mis Contactos</div>
-        <div *ngFor="let contacto of contactos">
+        <div *ngFor="let contacto of contactos; let i = index">
           <app-conversation
             [nombre]="contacto.nombre"
             [estado]="contacto.estado"
             [avatarUrl]="contacto.avatarUrl"
-            (click)="seleccionarUsuario(contacto)">
+            [class.selected]="selectedIndex === i"
+            (click)="seleccionarUsuario(contacto, i)">
           </app-conversation>
         </div>
-      </ng-container>
+      </div>
 
-      <!-- Listado de Grupos -->
-      <ng-container *ngIf="grupos && grupos.length > 0">
+      <!-- 🔹 Grupos -->
+      <div *ngIf="grupos.length > 0">
         <div class="section-header">Mis Grupos</div>
-        <div *ngFor="let grupo of grupos">
+        <div *ngFor="let grupo of grupos; let j = index">
           <app-conversation
             [nombre]="grupo.nombre"
             [estado]="grupo.descripcion"
             [avatarUrl]="grupo.url"
-            (click)="seleccionarGrupo(grupo)">
+            [class.selected]="selectedGrupoIndex === j"
+            (click)="seleccionarGrupo(grupo, j)">
           </app-conversation>
         </div>
-      </ng-container>
+      </div>
     </div>
   </aside>
 
@@ -78,7 +72,7 @@
       <div class="messages">
         <!-- Mensajes de prueba -->
         <div class="message">¡Hola! ¿Cómo estás?</div>
-        <div class="message">¿Vamos a jugar al padel hoy?</div>
+        <div class="message">¿Vamos a jugar al pádel hoy?</div>
         <div class="message">No te olvides de traer la comida.</div>
       </div>
     </div>
