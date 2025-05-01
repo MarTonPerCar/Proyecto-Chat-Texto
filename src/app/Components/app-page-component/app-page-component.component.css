@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +15,7 @@
 /* Layout principal */
 .container {
   display: flex;
-  height: 100vh; /* Mejor que calc(100vh - 40px) */
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -62,14 +61,14 @@
 }
 
 .icon-button:hover {
-  transform: scale(1.1); /* Al pasar el ratón se agrandan */
+  transform: scale(1.1);
 }
 
 .icon-button img {
   width: 32px;
   height: 32px;
   object-fit: cover;
-  border-radius: 50%; /* Opcional si quieres redondearlos */
+  border-radius: 50%;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -91,7 +90,6 @@
   font-style: italic;
 }
 
-/* Chat principal */
 .chat-container {
   width: 70%;
   display: flex;
@@ -119,12 +117,12 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: transparent; /* Sin fondo raro */
+  background-color: transparent;
   border-radius: var(--border-radius);
-  box-shadow: none; /* Quitamos la sombra fea */
+  box-shadow: none;
   transition: var(--transition);
   width: 100%;
-  margin: 0; /* Pegado */
+  margin: 0;
   position: relative;
   max-height: 60px;
 }
@@ -197,9 +195,9 @@ footer {
   line-height: 40px;
 }
 .section-header {
-  background-color: #ddd;         /* Fondo gris claro */
-  color: black;                /* Color de texto azul */
-  font-family: 'Montserrat', sans-serif; /* Nueva fuente */
+  background-color: #ddd;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
   padding: 8px 10px;
   margin: 10px 0;
   border-radius: 4px;

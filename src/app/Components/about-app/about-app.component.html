@@ -2,7 +2,6 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-logo">
-        <!-- Aquí podrás poner la ruta de tu logo -->
         <img *ngIf="datosImagenFullLogo$ | async as datosFullLogo" [src]="datosFullLogo.url" alt="FullLogo">
       </div>
       <div class="hero-description">

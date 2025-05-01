@@ -1,7 +1,7 @@
 export interface Grupo {
   nombre: string;
   url: string;
-  descripcion: string;       // nuevo
+  descripcion: string;
   contactos: string[];
   gid: string;
 }

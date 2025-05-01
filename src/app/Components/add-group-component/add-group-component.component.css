@@ -18,11 +18,10 @@
   text-align: left;
 }
 
-/* Ajustes en los inputs para que sean algo más pequeños */
 input.form-control,
 textarea.form-control {
-  width: 90%;           /* Se reduce el ancho del input */
-  padding: 0.65rem;     /* Se reduce un poco el padding */
+  width: 90%;
+  padding: 0.65rem;
   border-radius: 8px;
   border: 2px solid #ccc;
   background-color: #eaf1ff;
@@ -85,8 +84,8 @@ button.btn-primary:disabled {
 }
 
 .avatar-img {
-  width: 60px !important;   /* Aumentado a 80px para verse un poco más grande */
-  height: 120px !important;  /* Aumentado a 80px */
+  width: 60px !important;
+  height: 120px !important;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.5rem;

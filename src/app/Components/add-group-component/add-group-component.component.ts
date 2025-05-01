@@ -58,7 +58,6 @@ export class AddGroupComponentComponent {
       this.userActual = user;
     });
 
-    // Imagen por defecto para grupo
     this.authService.getImg('avatar-grupo').subscribe({
       next: (img) => {
         this.imagenUrl = img?.url;
@@ -89,7 +88,6 @@ export class AddGroupComponentComponent {
       return;
     }
 
-// Validar si el email actual está incluido (ignorando mayúsculas/minúsculas)
     const incluyePropioCorreo = listaEmails.some(e => e.toLowerCase() === emailActual.toLowerCase());
 
     if (incluyePropioCorreo) {

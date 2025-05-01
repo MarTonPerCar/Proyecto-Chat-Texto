@@ -4,7 +4,7 @@ export interface Usuario {
   telefono: string;
   email: string;
   url: string;
-  estado: string;       // nuevo
+  estado: string;
   contactos: string[];
   grupos: string[];
 }

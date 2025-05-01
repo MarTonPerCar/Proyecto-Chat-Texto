@@ -9,14 +9,14 @@ body.footer-body {
 
 main {
   flex: 1;
-  padding-bottom: 120px; /* Espacio para el footer */
+  padding-bottom: 120px;
 }
 
 .fw-footer {
   background-color: #3ec9a7;
   color: black;
   width: 100%;
-  margin-top: auto; /* Sticky footer */
+  margin-top: auto;
   padding: 20px 0;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
   overflow-x: hidden;

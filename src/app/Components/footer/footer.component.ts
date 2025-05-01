@@ -16,8 +16,6 @@ import {AsyncPipe, NgIf} from '@angular/common';
 })
 export class FooterComponent implements OnInit {
   user$: Observable<User | null>;
-  logoSrc: string = '';
-  instagramIconSrc: string = '';
   datosImagenInstagram$: Observable<Imagen | null> = of(null);
   datosImagenMainIcon$: Observable<Imagen | null> = of(null);
 

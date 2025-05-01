@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   Auth,
   browserSessionPersistence,
-  GoogleAuthProvider,
   signInWithEmailAndPassword,
-  signInWithPopup,
   signOut,
   user,
   User,
@@ -12,7 +10,7 @@ import {
   UserCredential
 } from '@angular/fire/auth';
 import { setPersistence } from 'firebase/auth';
-import { firstValueFrom, from, Observable, of } from 'rxjs';
+import { firstValueFrom, from, Observable } from 'rxjs';
 import {
   Firestore,
   doc,
@@ -29,7 +27,6 @@ import {
 import { Usuario } from '../interfaces/usuario.interfaces';
 import { Imagen } from '../interfaces/imagenes.interfaces';
 import {Grupo} from '../interfaces/grupo.interfaces';
-import { deleteDoc } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root',
@@ -160,7 +157,6 @@ export class AuthService {
 
   getImg(nombre: string): Observable<Imagen> {
     const imgRef = doc(this.firestore, `img/${nombre}`);
-    console.log('[AuthService] getImg(): ref →', imgRef);
     return docData(imgRef) as Observable<Imagen>;
   }
 
@@ -190,8 +186,6 @@ export class AuthService {
 
   getDatosGrupo(gid: string): Observable<Grupo> {
     const grupoRef = doc(this.firestore, `grupos/${gid}`);
-    console.log('[AuthService] getDatosGrupo(): gid →', gid);
-    // Usamos idField para que el id del documento se asigne a la propiedad "nombre".
     return docData(grupoRef) as Observable<Grupo>;
   }
 }

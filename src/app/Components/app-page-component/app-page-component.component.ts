@@ -12,7 +12,6 @@ import { switchMap, of, Observable, from, Subscription } from 'rxjs';
 import Swal from 'sweetalert2';
 import { arrayRemove, doc, updateDoc, deleteDoc } from '@angular/fire/firestore';
 import { catchError } from 'rxjs/operators';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-app-page-component',
@@ -156,7 +155,7 @@ export class AppPageComponentComponent implements OnInit, OnDestroy {
         cancelButtonText: 'Cancelar'
       }).then((result) => {
         if (result.isConfirmed) {
-          this.eliminarGrupo(grupo, index);
+          this.eliminarGrupo(grupo);
         }
       });
     } else {
@@ -167,7 +166,7 @@ export class AppPageComponentComponent implements OnInit, OnDestroy {
     }
   }
 
-  eliminarGrupo(grupo: Grupo, index: number) {
+  eliminarGrupo(grupo: Grupo) {
     if (!this.userActual) return;
 
     const miUid = this.userActual.uid;

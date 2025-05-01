@@ -29,7 +29,7 @@
 }
 
 .form-input:focus {
-  border-color: #4CAF50; /* Verde cuando está enfocado */
+  border-color: #4CAF50;
 }
 
 .form-input::placeholder {
@@ -37,13 +37,13 @@
 }
 
 .form-input:required {
-  border-color: #ff0000; /* Rojo cuando es requerido */
+  border-color: #ff0000;
 }
 
 .form-input.valid {
-  border-color: #4CAF50; /* Verde cuando el valor es válido */
+  border-color: #4CAF50;
 }
 
 .form-input.invalid {
-  border-color: #ff0000; /* Rojo cuando el valor está vacío o es inválido */
+  border-color: #ff0000;
 }
