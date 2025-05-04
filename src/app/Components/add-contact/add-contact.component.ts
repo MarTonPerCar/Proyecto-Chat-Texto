@@ -102,7 +102,6 @@ export class AddContactComponent {
           return;
         }
 
-        // ✅ Todo correcto, actualizamos la vista
         this.nombreContacto = `${usuario.nombre} ${usuario.apellido}`;
         this.imagenUrl = usuario.url || 'https://via.placeholder.com/100';
         this.mensajeArriba = 'Usuario encontrado';

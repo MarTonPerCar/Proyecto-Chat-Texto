@@ -120,7 +120,7 @@ export class AuthService {
 
       if (!snapshot.empty) {
         const docSnap = snapshot.docs[0];
-        uids.push(docSnap.id); // <-- UID real
+        uids.push(docSnap.id);
       }
     }
 
