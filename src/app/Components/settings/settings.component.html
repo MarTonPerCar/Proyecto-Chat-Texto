@@ -1,0 +1,33 @@
+<main id="settings-main">
+  <h2>Ajustes de Usuario</h2>
+
+  <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+    <div class="selectable">
+      <label for="language">Idioma</label>
+      <select id="language" formControlName="language">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+
+    <div class="selectable">
+      <label for="theme">Tema</label>
+      <select id="theme" formControlName="theme">
+        <option value="light">Claro</option>
+        <option value="dark">Oscuro</option>
+      </select>
+    </div>
+
+    <div class="selectable">
+      <label for="fontSize">Tamaño de fuente: {{ settingsForm.value.fontSize }}px</label>
+      <input type="range" id="fontSize" formControlName="fontSize" min="12" max="24" />
+    </div>
+
+    <div class="buttons-container">
+      <button type="submit" id="apply-settings">Aplicar Cambios</button>
+      <a [routerLink]="['/profile/edit']" id="edit-profile-btn" class="button-link">Editar Perfil</a>
+      <a [routerLink]="['/chat']" class="button-link">Volver al Chat</a>
+    </div>
+  </form>
+</main>

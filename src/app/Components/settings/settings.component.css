@@ -1,0 +1,119 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa;
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  padding: 1rem;
+}
+
+#settings-main {
+  flex: 1;
+  width: 90%;
+  max-width: 900px; /* ampliado */
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+#settings-main:hover {
+  transform: translateY(-3px);
+}
+
+#settings-main h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.selectable {
+  margin-bottom: 1.75rem;
+}
+.selectable label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+.selectable select,
+.selectable input[type='range'] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+.selectable select:focus,
+.selectable input[type='range']:focus {
+  border-color: #5a8dee;
+  box-shadow: 0 0 0 3px rgba(90,141,238,0.2);
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+#apply-settings {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg,#5a8dee 0%,#4361ee 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#apply-settings:hover {
+  transform: translateY(-2px);
+}
+
+#edit-profile-btn {
+  padding: 0.75rem 1.5rem;
+  background: #f0f2f5;
+  color: #2c3e50;
+  border: 2px solid #5a8dee;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+#edit-profile-btn:hover {
+  background: #e8ecf8;
+  border-color: #4361ee;
+}
+
+.button-link {
+  padding: 0.75rem 1.5rem;
+  background: #e4e8ec;
+  color: #2c3e50;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+.button-link:hover {
+  background: #d1d5db;
+}
+
+@media (max-width: 768px) {
+  #settings-main {
+    width: 95%;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+  .buttons-container {
+    flex-direction: column;
+  }
+}

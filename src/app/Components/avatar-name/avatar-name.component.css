@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  /* Centrado si quieres que ocupe todo el ancho */
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#avatar-nombre {
+  width: 120px;
+  height: 120px;
+  background-color: #ccc;
+  border-radius: 50%;
+  /* Centrar posible: */
+  margin: 1vw auto;
+}

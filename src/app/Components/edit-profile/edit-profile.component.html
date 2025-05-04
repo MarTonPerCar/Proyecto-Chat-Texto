@@ -1,0 +1,32 @@
+<header id="header-sign-in"></header>
+
+<main>
+  <div class="form-container">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" id="input-group">
+      <div id="request-name" class="form-group">
+        <label for="name">Nombre</label>
+        <input formControlName="name" id="name" type="text" placeholder="Ingresa tu nombre">
+      </div>
+
+      <div id="request-surname" class="form-group">
+        <label for="surname">Apellido</label>
+        <input formControlName="surname" id="surname" type="text" placeholder="Ingresa tu apellido">
+      </div>
+
+      <div id="request-phonenumber" class="form-group">
+        <label for="phone">Teléfono</label>
+        <input formControlName="phone" id="phone" type="tel" placeholder="Ejemplo: +123456789">
+      </div>
+      <a [routerLink]="['/settings']">
+      <button type="submit" id="edit-profile">Actualizar Información</button>
+      </a>
+    </form>
+  </div>
+
+  <a [routerLink]="['/resetPassword']" id="changePassword">
+    Cambiar la contraseña
+  </a>
+</main>
+
+<footer id="footer"></footer>
+

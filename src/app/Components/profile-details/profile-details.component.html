@@ -1,0 +1,16 @@
+<ng-container *ngIf="userData$ | async as user; else noUser">
+  <div class="notChan"><strong>Nombre:</strong> {{ user.nombre }} {{ user.apellido }}</div>
+  <div class="notChan"><strong>Correo:</strong> {{ user.email }}</div>
+  <div class="notChan"><strong>Teléfono:</strong> {{ user.telefono }}</div>
+  <div class="notChan"><strong>Estado:</strong> {{ user.estado }}</div>
+
+  <div class="buttons-container">
+    <button id="change-status-btn" (click)="changeStatus(user.estado)">Cambiar Estado</button>
+    <button id="logout-btn" (click)="logout()">Cerrar Sesión</button>
+  </div>
+</ng-container>
+
+<ng-template #noUser>
+  <p>No hay usuario autenticado.</p>
+  <a [routerLink]="['/login']">Iniciar sesión</a>
+</ng-template>
