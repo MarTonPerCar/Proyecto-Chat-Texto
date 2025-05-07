@@ -1,0 +1,7 @@
+{
+  "name": "Sprint4",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
