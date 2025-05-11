@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mis Contactos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-spinner *ngIf="cargando" name="dots"></ion-spinner>
+
+  <ion-text color="danger" *ngIf="error">
+    <p>{{ error }}</p>
+  </ion-text>
+
+  <ion-list *ngIf="!cargando && contactos.length > 0">
+    <ion-item *ngFor="let contacto of contactos" (click)="verDetalle(contacto.uid)">
+      <ion-avatar slot="start">
+        <img [src]="contacto.url || 'https://via.placeholder.com/100'" alt="Avatar" />
+      </ion-avatar>
+
+      <ion-label>
+        <h2 class="contacto-nombre">
+          {{ contacto.nombre }} {{ contacto.apellido }}
+          <ion-text color="danger" *ngIf="contacto.esFavorito">
+            <p>Favorito</p>
+          </ion-text>
+        </h2>
+        <p class="contacto-email">{{ contacto.email }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-text *ngIf="!cargando && contactos.length === 0">
+    <p>No tienes contactos registrados.</p>
+  </ion-text>
+</ion-content>

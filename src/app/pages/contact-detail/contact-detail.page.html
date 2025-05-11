@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle del Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-spinner *ngIf="cargando"></ion-spinner>
+
+  <ion-text color="danger" *ngIf="error">
+    <p>{{ error }}</p>
+  </ion-text>
+
+  <ng-container *ngIf="!cargando && contacto as c">
+    <ion-avatar class="avatar-grande">
+      <img [src]="c.url || 'https://via.placeholder.com/100'" alt="avatar" />
+    </ion-avatar>
+
+    <h2>{{ c.nombre }} {{ c.apellido }}</h2>
+    <p><strong>Email:</strong> {{ c.email }}</p>
+    <p><strong>Teléfono:</strong> {{ c.telefono }}</p>
+    <p><strong>Estado:</strong> {{ c.estado || 'Sin estado' }}</p>
+
+    <ion-button expand="block" color="warning" (click)="toggleFavorito()">
+      {{ esFavorito ? 'Quitar de Favoritos' : 'Agregar a Favoritos' }}
+    </ion-button>
+  </ng-container>
+</ion-content>

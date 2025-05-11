@@ -1,0 +1,35 @@
+.contenido-bienvenida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #ffffff;
+
+  .contenedor {
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+  }
+
+  .titulo {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 24px;
+  }
+
+  .boton {
+    margin-bottom: 12px;
+    border: 2px solid #000;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
