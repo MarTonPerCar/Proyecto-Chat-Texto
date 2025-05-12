@@ -11,12 +11,8 @@ import {RouterModule} from "@angular/router";
   standalone: true,
   imports: [IonContent, CommonModule, FormsModule, IonButton, IonRouterLink, RouterModule],
 })
-export class HomePage implements OnInit {
+export class HomePage{
 
   constructor() { }
-
-  ngOnInit(): void {
-        throw new Error('Method not implemented.');
-    }
 
 }

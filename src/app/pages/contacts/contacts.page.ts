@@ -1,10 +1,10 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { FavoritesService } from 'src/app/services/favorites.service';
 import { Usuario } from 'src/app/interfaces/usuario.interfaces';
-import {firstValueFrom} from 'rxjs';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { firstValueFrom } from 'rxjs';
 import {
   IonAvatar,
   IonContent,
@@ -33,10 +33,10 @@ import {CommonModule} from "@angular/common";
     IonItem,
     IonAvatar,
     IonLabel,
-    CommonModule,
+    CommonModule
   ]
 })
-export class ContactsPage{
+export class ContactsPage {
   contactos: (Usuario & { esFavorito?: boolean })[] = [];
   cargando = true;
   error: string | null = null;
@@ -55,35 +55,49 @@ export class ContactsPage{
   async cargarContactos() {
     this.cargando = true;
     this.error = null;
+    const mapaContactos = new Map<string, Usuario & { esFavorito?: boolean }>();
 
     try {
-      // Obtener el usuario actual
+      // 1. Obtener favoritos desde SQLite
+      const favoritosUIDs = await this.favoritosService.getTodosFavoritos();
+
+      const favoritos = await Promise.all(
+        favoritosUIDs.map(async uid => {
+          const ref = doc(this.firestore, `usuarios/${uid}`);
+          const snapshot = await getDoc(ref);
+          if (!snapshot.exists()) return null;
+          const data = snapshot.data() as Usuario;
+          return { ...data, uid, esFavorito: true };
+        })
+      );
+
+      for (const contacto of favoritos.filter(c => !!c)) {
+        mapaContactos.set(contacto!.uid, contacto!);
+      }
+
+      // 2. Obtener el usuario actual y sus contactos
       const user = await firstValueFrom(this.authService.user$);
       if (!user?.uid) throw new Error('Usuario no autenticado');
 
-      // Obtener los contactos desde Firestore
       const usuario = await firstValueFrom(this.authService.getDatosUsuarioPorUID(user.uid));
       const contactosUIDs = usuario.contactos || [];
 
-      const contactos = await Promise.all(
+      const otrosContactos = await Promise.all(
         contactosUIDs.map(async uid => {
+          if (mapaContactos.has(uid)) return null; // evitar duplicado
           const ref = doc(this.firestore, `usuarios/${uid}`);
           const snapshot = await getDoc(ref);
+          if (!snapshot.exists()) return null;
           const data = snapshot.data() as Usuario;
           return { ...data, uid };
         })
       );
 
-      // Obtener los favoritos desde SQLite
-      const favoritos = await this.favoritosService.getTodosFavoritos();
+      for (const contacto of otrosContactos.filter(c => !!c)) {
+        mapaContactos.set(contacto!.uid, contacto!);
+      }
 
-      // Marcar los que son favoritos
-      this.contactos = contactos
-        .filter(c => !!c)
-        .map(c => ({
-          ...c,
-          esFavorito: favoritos.includes(c.uid!)
-        }));
+      this.contactos = Array.from(mapaContactos.values());
 
     } catch (err) {
       console.error('Error al cargar contactos:', err);
