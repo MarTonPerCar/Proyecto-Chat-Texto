@@ -5,12 +5,8 @@ import { ToastController } from '@ionic/angular';
 import {
   IonButton,
   IonContent,
-  IonHeader,
   IonInput,
-  IonItem,
-  IonLabel,
-  IonTitle,
-  IonToolbar
+
 } from "@ionic/angular/standalone";
 import {FormsModule} from "@angular/forms";
 
@@ -18,19 +14,15 @@ import {FormsModule} from "@angular/forms";
   selector: 'app-login',
   templateUrl: './login.page.html',
   imports: [
-    IonHeader,
-    IonToolbar,
-    IonTitle,
     IonContent,
-    IonItem,
-    IonLabel,
     IonInput,
     FormsModule,
-    IonButton
+    IonButton,
   ],
   styleUrls: ['./login.page.scss']
 })
 export class LoginPage {
+
   email = '';
   password = '';
   cargando = false;
@@ -40,6 +32,12 @@ export class LoginPage {
     private router: Router,
     private toastController: ToastController
   ) {}
+
+  ionViewWillEnter() {
+    this.authService.logout().subscribe(() => {
+      console.log('Sesión cerrada automáticamente al volver al login.');
+    });
+  }
 
   async login() {
     this.cargando = true;

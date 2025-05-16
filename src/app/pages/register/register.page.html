@@ -1,36 +1,68 @@
 <ion-header class="espaciador-header">
   <ion-toolbar class="toolbar-blanco">
-    <ion-title></ion-title> <!-- Vacío a propósito -->
+    <ion-title></ion-title> <!-- Espaciador visual -->
   </ion-toolbar>
 </ion-header>
 
-
-<ion-content class="ion-padding">
+<ion-content class="registro-page" [fullscreen]="true">
   <form (ngSubmit)="registrar()">
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
-    </ion-item>
+    <label>
+      <span>Nombre *</span>
+      <ion-input
+        fill="outline"
+        [(ngModel)]="nombre"
+        name="nombre"
+        [required]="true"
+        placeholder="Tu nombre">
+      </ion-input>
+    </label>
 
-    <ion-item>
-      <ion-label position="floating">Apellido</ion-label>
-      <ion-input [(ngModel)]="apellido" name="apellido" required></ion-input>
-    </ion-item>
+    <label>
+      <span>Apellido *</span>
+      <ion-input
+        fill="outline"
+        [(ngModel)]="apellido"
+        name="apellido"
+        [required]="true"
+        placeholder="Tu apellido">
+      </ion-input>
+    </label>
 
-    <ion-item>
-      <ion-label position="floating">Teléfono</ion-label>
-      <ion-input type="tel" [(ngModel)]="telefono" name="telefono" required></ion-input>
-    </ion-item>
+    <label>
+      <span>Teléfono *</span>
+      <ion-input
+        fill="outline"
+        type="tel"
+        [(ngModel)]="telefono"
+        name="telefono"
+        [required]="true"
+        placeholder="Tu teléfono">
+      </ion-input>
+    </label>
 
-    <ion-item>
-      <ion-label position="floating">Correo electrónico</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
-    </ion-item>
+    <label>
+      <span>Correo electrónico *</span>
+      <ion-input
+        fill="outline"
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        [required]="true"
+        placeholder="tucorreo@ejemplo.com">
+      </ion-input>
+    </label>
 
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
-    </ion-item>
+    <label>
+      <span>Contraseña *</span>
+      <ion-input
+        fill="outline"
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        [required]="true"
+        placeholder="Tu contraseña">
+      </ion-input>
+    </label>
 
     <ion-button
       expand="block"

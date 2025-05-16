@@ -1,14 +1,98 @@
-ion-content {
+.login-page {
+  --background: var(--ion-background-color);
+  color: var(--ion-text-color);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 100%;
+  padding: 0;
+
+  .formulario {
+    width: 100%;
+    max-width: 320px;
+    padding: 24px;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: var(--ion-text-color);
+  }
+
+  .subtitulo {
+    font-size: 14px;
+    color: var(--ion-color-medium);
+    margin-bottom: 24px;
+
+    a {
+      color: var(--ion-color-primary);
+      text-decoration: underline;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      font-weight: 500;
+      gap: 4px;
+      color: var(--ion-text-color);
+    }
+
+    ion-input {
+      --background: var(--ion-item-background, #fff);
+      --border-color: var(--ion-color-medium);
+      --color: var(--ion-text-color);
+      --padding-start: 12px;
+      --padding-end: 12px;
+      --border-radius: 4px;
+      height: 44px;
+      font-size: 15px;
+      border: 1px solid var(--ion-color-medium);
+    }
+
+    .acciones {
+      text-align: right;
+      margin-top: 4px;
+
+      a {
+        font-size: 13px;
+        color: var(--ion-color-primary);
+        text-decoration: underline;
+      }
+    }
+
+    ion-button {
+      margin-top: 12px;
+      --background: var(--ion-text-color);
+      --color: var(--ion-background-color);
+      --border-radius: 4px;
+      text-transform: none;
+      font-weight: bold;
+      height: 48px;
+
+      &::part(native) {
+        border-radius: 4px;
+      }
+
+      &:disabled {
+        opacity: 0.4;
+      }
+    }
+  }
 }
 
-form {
-  width: 90%;
-  max-width: 400px;
+ion-content.login-page::part(scroll) {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
+

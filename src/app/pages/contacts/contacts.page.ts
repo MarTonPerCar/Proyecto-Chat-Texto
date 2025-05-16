@@ -58,16 +58,20 @@ export class ContactsPage {
     const mapaContactos = new Map<string, Usuario & { esFavorito?: boolean }>();
 
     try {
-      // 1. Obtener favoritos desde SQLite
       const favoritosUIDs = await this.favoritosService.getTodosFavoritos();
 
       const favoritos = await Promise.all(
         favoritosUIDs.map(async uid => {
-          const ref = doc(this.firestore, `usuarios/${uid}`);
-          const snapshot = await getDoc(ref);
-          if (!snapshot.exists()) return null;
-          const data = snapshot.data() as Usuario;
-          return { ...data, uid, esFavorito: true };
+          try {
+            const ref = doc(this.firestore, `usuarios/${uid}`);
+            const snapshot = await getDoc(ref);
+            if (!snapshot.exists()) return null;
+            const data = snapshot.data() as Usuario;
+            return { ...data, uid, esFavorito: true };
+          } catch (e) {
+            console.warn('Error cargando favorito:', uid, e);
+            return null;
+          }
         })
       );
 
@@ -75,21 +79,29 @@ export class ContactsPage {
         mapaContactos.set(contacto!.uid, contacto!);
       }
 
-      // 2. Obtener el usuario actual y sus contactos
       const user = await firstValueFrom(this.authService.user$);
-      if (!user?.uid) throw new Error('Usuario no autenticado');
+      if (!user?.uid) {
+        this.error = 'Usuario no autenticado';
+        this.cargando = false;
+        return;
+      }
 
       const usuario = await firstValueFrom(this.authService.getDatosUsuarioPorUID(user.uid));
-      const contactosUIDs = usuario.contactos || [];
+      const contactosUIDs = (usuario.contactos || []).filter(uid => uid.trim() !== '');
 
       const otrosContactos = await Promise.all(
         contactosUIDs.map(async uid => {
-          if (mapaContactos.has(uid)) return null; // evitar duplicado
-          const ref = doc(this.firestore, `usuarios/${uid}`);
-          const snapshot = await getDoc(ref);
-          if (!snapshot.exists()) return null;
-          const data = snapshot.data() as Usuario;
-          return { ...data, uid };
+          try {
+            if (mapaContactos.has(uid)) return null;
+            const ref = doc(this.firestore, `usuarios/${uid}`);
+            const snapshot = await getDoc(ref);
+            if (!snapshot.exists()) return null;
+            const data = snapshot.data() as Usuario;
+            return { ...data, uid };
+          } catch (e) {
+            console.warn('Error cargando contacto UID:', uid, e);
+            return null;
+          }
         })
       );
 
@@ -101,7 +113,7 @@ export class ContactsPage {
 
     } catch (err) {
       console.error('Error al cargar contactos:', err);
-      this.error = 'No se pudieron cargar los contactos.';
+      this.error = (err as Error).message || 'No se pudieron cargar los contactos.';
     } finally {
       this.cargando = false;
     }

@@ -1,27 +1,38 @@
-<ion-header class="espaciador-header">
-  <ion-toolbar class="toolbar-blanco">
-    <ion-title></ion-title> <!-- Vacío a propósito -->
-  </ion-toolbar>
-</ion-header>
+<ion-content class="login-page" [fullscreen]="true">
+  <div class="formulario">
+    <h1>Iniciar sesión</h1>
 
+    <form (ngSubmit)="login()">
+      <label>
+        <span>Email *</span>
+        <ion-input
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Email"
+          [required]="true"
+          fill="outline">
+        </ion-input>
+      </label>
 
-<ion-content class="ion-padding">
-  <form (ngSubmit)="login()">
-    <ion-item>
-      <ion-label position="floating">Correo electrónico</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
-    </ion-item>
+      <label>
+        <span>Contraseña *</span>
+        <ion-input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Contraseña"
+          [required]="true"
+          fill="outline">
+        </ion-input>
+      </label>
 
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
-    </ion-item>
-
-    <ion-button
-      expand="block"
-      type="submit"
-      [disabled]="cargando || !email || !password">
-      {{ cargando ? 'Ingresando...' : 'Iniciar sesión' }}
-    </ion-button>
-  </form>
+      <ion-button
+        expand="block"
+        type="submit"
+        [disabled]="cargando || !email || !password">
+        {{ cargando ? 'Ingresando...' : 'Iniciar sesión' }}
+      </ion-button>
+    </form>
+  </div>
 </ion-content>

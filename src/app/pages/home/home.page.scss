@@ -1,0 +1,60 @@
+.contenido-bienvenida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--ion-background-color);
+
+  .contenedor {
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .titulo {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--ion-text-color);
+  }
+
+  .subtitulo {
+    font-size: 16px;
+    color: var(--ion-color-medium);
+    margin-bottom: 24px;
+  }
+
+  ion-button.boton {
+    --border-radius: 12px;
+    --box-shadow: none;
+    --background-activated: transparent;
+    --ripple-color: transparent;
+    --background-hover: transparent;
+
+    border: none; // ❌ elimina el borde blanco
+    background: transparent;
+    color: var(--ion-text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+
+    &::part(native) {
+      border-radius: 12px;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    ion-ripple-effect {
+      display: none !important;
+    }
+
+    &:focus,
+    &:active {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}

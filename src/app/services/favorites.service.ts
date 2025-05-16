@@ -4,19 +4,29 @@ import {
   SQLiteConnection,
   SQLiteDBConnection
 } from '@capacitor-community/sqlite';
+import { Capacitor } from '@capacitor/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FavoritesService {
-  private sqlite: SQLiteConnection;
+  private sqlite: SQLiteConnection | null = null;
   private db: SQLiteDBConnection | null = null;
 
   constructor() {
-    this.sqlite = new SQLiteConnection(CapacitorSQLite);
+    if (Capacitor.getPlatform() !== 'web' && CapacitorSQLite) {
+      this.sqlite = new SQLiteConnection(CapacitorSQLite);
+    } else {
+      console.warn('SQLite no está disponible en esta plataforma.');
+    }
   }
 
-  async initDB(): Promise<void> {
+  private async initDB(): Promise<void> {
+    if (!this.sqlite) {
+      console.warn('SQLite no inicializado');
+      return;
+    }
+
     if (this.db) return;
 
     this.db = await this.sqlite.createConnection('favoritos', false, 'no-encryption', 1, false);

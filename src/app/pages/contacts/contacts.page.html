@@ -4,15 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content class="ion-padding">
   <ion-spinner *ngIf="cargando" name="dots"></ion-spinner>
 
+  <!-- Mostrar error si existe -->
   <ion-text color="danger" *ngIf="error">
     <p>{{ error }}</p>
   </ion-text>
 
-  <ion-list *ngIf="!cargando && contactos.length > 0">
+  <!-- Lista de contactos si hay datos y no hay error -->
+  <ion-list *ngIf="!cargando && !error && contactos.length > 0">
     <ion-item *ngFor="let contacto of contactos" (click)="verDetalle(contacto.uid)">
       <ion-avatar slot="start">
         <img [src]="contacto.url || 'https://via.placeholder.com/100'" alt="Avatar" />
@@ -30,7 +31,8 @@
     </ion-item>
   </ion-list>
 
-  <ion-text *ngIf="!cargando && contactos.length === 0">
+  <!-- Mostrar mensaje de lista vacía solo si no hay error -->
+  <ion-text *ngIf="!cargando && !error && contactos.length === 0">
     <p>No tienes contactos registrados.</p>
   </ion-text>
 </ion-content>

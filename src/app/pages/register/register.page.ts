@@ -7,8 +7,6 @@ import {
   IonContent,
   IonHeader,
   IonInput,
-  IonItem,
-  IonLabel,
   IonTitle,
   IonToolbar
 } from "@ionic/angular/standalone";
@@ -23,8 +21,6 @@ import {FormsModule} from "@angular/forms";
     IonTitle,
     IonContent,
     FormsModule,
-    IonItem,
-    IonLabel,
     IonInput,
     IonButton
   ],
